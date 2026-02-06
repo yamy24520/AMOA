@@ -27,6 +27,7 @@
     <link rel="stylesheet" href="css/typography.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
     <link rel="stylesheet" href="css/responsive.css">
     <script type="application/ld+json">
 {
@@ -1277,15 +1278,29 @@ On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 
                 <div id="tab-cycle-v" class="tab-content active">
                     <h4>Cycle en V - Approche Séquentielle</h4>
                     <p>Méthodologie traditionnelle structurée en phases descendantes (spécification, conception, réalisation) puis ascendantes (tests unitaires, intégration, recette). Chaque phase produit des livrables validés avant passage à la suivante.</p>
-                    <div class="diagram">
-Spécifications Générales ──────────────────── Recette Utilisateur<br>
-&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
-&nbsp;&nbsp;Spécifications Détaillées ────────────── Tests d'Intégration<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Conception Technique ──────────── Tests Unitaires<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CODAGE / REALISATION
+
+                    <div class="cycle-v-diagram">
+                        <div class="v-left">
+                            <div class="v-phase">Spécifications Générales</div>
+                            <div class="v-arrow">↓</div>
+                            <div class="v-phase">Spécifications Détaillées</div>
+                            <div class="v-arrow">↓</div>
+                            <div class="v-phase">Conception Technique</div>
+                            <div class="v-arrow">↓</div>
+                        </div>
+                        <div class="v-center">
+                            <div class="v-bottom">CODAGE / RÉALISATION</div>
+                        </div>
+                        <div class="v-right">
+                            <div class="v-phase">Recette Utilisateur</div>
+                            <div class="v-arrow">↑</div>
+                            <div class="v-phase">Tests d'Intégration</div>
+                            <div class="v-arrow">↑</div>
+                            <div class="v-phase">Tests Unitaires</div>
+                            <div class="v-arrow">↑</div>
+                        </div>
                     </div>
+
                     <p><strong>Avantages :</strong> Documentation exhaustive, jalons clairs, adapté aux marchés publics forfaitaires.</p>
                     <p><strong>Limites :</strong> Rigide face aux changements, effet tunnel, retour utilisateur tardif.</p>
                 </div>
@@ -1297,27 +1312,27 @@ Spécifications Générales ─────────────────�
                     <div class="scrum-flow">
                         <div class="sprint-box">
                             <div class="sprint-title">Sprint 1 (2-4 sem.)</div>
-                            <div class="sprint-phase">📋 Planning</div>
-                            <div class="sprint-phase">🗣️ Daily Standups</div>
-                            <div class="sprint-phase">💻 Dev + Tests</div>
-                            <div class="sprint-phase">✅ Review + Retro</div>
-                            <div class="sprint-output">→ Increment</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
                         </div>
                         <div class="sprint-box">
                             <div class="sprint-title">Sprint 2 (2-4 sem.)</div>
-                            <div class="sprint-phase">📋 Planning</div>
-                            <div class="sprint-phase">🗣️ Daily Standups</div>
-                            <div class="sprint-phase">💻 Dev + Tests</div>
-                            <div class="sprint-phase">✅ Review + Retro</div>
-                            <div class="sprint-output">→ Increment</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
                         </div>
                         <div class="sprint-box">
                             <div class="sprint-title">Sprint 3 (2-4 sem.)</div>
-                            <div class="sprint-phase">📋 Planning</div>
-                            <div class="sprint-phase">🗣️ Daily Standups</div>
-                            <div class="sprint-phase">💻 Dev + Tests</div>
-                            <div class="sprint-phase">✅ Review + Retro</div>
-                            <div class="sprint-output">→ Increment</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
                         </div>
                         <div class="sprint-continue">...</div>
                     </div>
