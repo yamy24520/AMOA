@@ -434,3 +434,47 @@ body.dark-mode .gantt-chart {
 body.dark-mode .gantt-bar-container {
     background: rgba(255, 255, 255, 0.05);
 }
+
+/* Glossary Grid */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.glossary-item {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+    border-radius: 6px;
+    padding: 1rem;
+    transition: all 0.2s ease;
+}
+
+.glossary-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.glossary-term {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.glossary-def {
+    font-size: 0.9rem;
+    color: var(--primary);
+    line-height: 1.5;
+}
+
+body.dark-mode .glossary-item {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .glossary-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
