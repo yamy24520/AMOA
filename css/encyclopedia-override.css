@@ -1,0 +1,134 @@
+/* ===================================
+   ENCYCLOPEDIA STYLE OVERRIDES
+   Style encyclopédique sobre global
+   =================================== */
+
+/* Barre de progression - sobre */
+.reading-progress {
+    background: linear-gradient(90deg, var(--accent), var(--accent));
+}
+
+/* Bouton mode sombre - sobre */
+.dark-toggle {
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.dark-toggle:hover {
+    background: var(--border-light);
+}
+
+/* Bouton retour en haut - sobre */
+.back-to-top {
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+.back-to-top.visible {
+    opacity: 1;
+}
+
+.back-to-top:hover {
+    background: var(--border-light);
+    transform: translateY(-3px);
+}
+
+/* Statistiques - style sobre */
+.stat-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    color: var(--primary);
+}
+
+.stat-number {
+    color: var(--primary);
+}
+
+.stat-label {
+    color: var(--secondary);
+}
+
+body.dark-mode .stat-card {
+    background: var(--bg-tertiary);
+    border-color: var(--border);
+}
+
+body.dark-mode .stat-number {
+    color: var(--primary);
+}
+
+/* Matrice de risque - style sobre */
+.risk-green {
+    background: #e8f5e9;
+    color: var(--primary);
+    border: 1px solid #a5d6a7;
+}
+
+.risk-yellow {
+    background: #fff9c4;
+    color: var(--primary);
+    border: 1px solid #fff176;
+}
+
+.risk-orange {
+    background: #ffe0b2;
+    color: var(--primary);
+    border: 1px solid #ffb74d;
+}
+
+.risk-red {
+    background: #ffcdd2;
+    color: var(--primary);
+    border: 1px solid #e57373;
+}
+
+body.dark-mode .risk-green {
+    background: #2e4a2e;
+    border-color: #4a6f4a;
+}
+
+body.dark-mode .risk-yellow {
+    background: #4a4a2e;
+    border-color: #6f6f4a;
+}
+
+body.dark-mode .risk-orange {
+    background: #4a3a2e;
+    border-color: #6f5a4a;
+}
+
+body.dark-mode .risk-red {
+    background: #4a2e2e;
+    border-color: #6f4a4a;
+}
+
+/* Tags - sobre */
+.tag {
+    background: var(--bg-tertiary);
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
+
+/* Infobox header - sobre */
+.infobox-header {
+    background: var(--bg-tertiary);
+    border-bottom: 2px solid var(--border);
+}
+
+body.dark-mode .infobox-header {
+    background: var(--bg-tertiary);
+}
+
+/* Tabs - sobre */
+.tab-btn.active {
+    border-bottom-color: var(--primary);
+}
+
+/* Diagramme Gantt - sobre */
+.gantt-bar {
+    background: var(--bg-tertiary) !important;
+    color: var(--primary);
+    border: 1px solid var(--border);
+}
