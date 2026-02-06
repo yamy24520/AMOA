@@ -6,17 +6,25 @@
     <title>Assistance à Maîtrise d'Ouvrage (AMOA) - Wikipédia</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1a1a1a;
-            --secondary: #4a4a4a;
-            --accent: #c9302c;
-            --border: #d4d4d4;
+            --primary: #202122;
+            --secondary: #54595d;
+            --accent: #0645ad;
+            --accent-hover: #0b0080;
+            --accent-visited: #0b0080;
+            --border: #a2a9b1;
+            --border-light: #c8ccd1;
             --bg-main: #ffffff;
             --bg-secondary: #f8f9fa;
-            --bg-tertiary: #eef1f3;
+            --bg-tertiary: #eaecf0;
             --highlight: #fef6e4;
+            --infobox-bg: #f8f9fa;
+            --infobox-header: #ccccff;
+            --table-header: #eaecf0;
+            --sidebar-hover: #eaecf0;
+            --wiki-blue: #3366cc;
         }
 
         * {
@@ -26,21 +34,22 @@
         }
 
         body {
-            font-family: 'IBM Plex Sans', -apple-system, sans-serif;
-            line-height: 1.7;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Lato, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
             color: var(--primary);
             background: var(--bg-main);
+            font-size: 14px;
         }
 
         .header {
-            background: var(--primary);
-            color: white;
-            padding: 1rem 0;
-            border-bottom: 4px solid var(--accent);
+            background: #ffffff;
+            color: var(--primary);
+            padding: 0.75rem 0;
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
         }
 
         .header-content {
@@ -53,39 +62,44 @@
         }
 
         .logo {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            letter-spacing: -0.5px;
+            font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            letter-spacing: 0;
+            color: var(--primary);
         }
 
         .logo-accent {
-            color: var(--accent);
+            font-style: italic;
+            color: var(--secondary);
+            font-size: 0.8em;
         }
 
         .search-bar {
             flex: 1;
             max-width: 500px;
+            position: relative;
         }
 
         .search-bar input {
             width: 100%;
-            padding: 0.6rem 1rem;
-            border: none;
-            border-radius: 4px;
-            font-size: 0.95rem;
-            background: rgba(255,255,255,0.15);
-            color: white;
-            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--border);
+            border-radius: 2px;
+            font-size: 13px;
+            background: #ffffff;
+            color: var(--primary);
+            transition: all 0.2s ease;
         }
 
         .search-bar input::placeholder {
-            color: rgba(255,255,255,0.6);
+            color: var(--secondary);
         }
 
         .search-bar input:focus {
             outline: none;
-            background: rgba(255,255,255,0.25);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 1px var(--accent);
         }
 
         .container {
@@ -99,104 +113,113 @@
 
         .sidebar {
             background: var(--bg-secondary);
-            padding: 1.5rem;
-            border-radius: 6px;
+            padding: 1rem;
+            border: 1px solid var(--border-light);
             height: fit-content;
             position: sticky;
             top: 100px;
-            border: 1px solid var(--border);
+            font-size: 13px;
         }
 
         .sidebar h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
             color: var(--primary);
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--accent);
+            padding: 0.5rem 0.75rem;
+            background: var(--table-header);
+            border-left: 3px solid var(--accent);
         }
 
         .sidebar ul {
             list-style: none;
+            padding: 0.5rem 0;
         }
 
         .sidebar li {
-            margin-bottom: 0.6rem;
+            margin-bottom: 0;
         }
 
         .sidebar a {
-            color: var(--secondary);
+            color: var(--accent);
             text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
+            font-size: 13px;
+            transition: background 0.15s;
             display: block;
-            padding: 0.3rem 0;
+            padding: 0.4rem 0.75rem;
         }
 
         .sidebar a:hover {
-            color: var(--accent);
+            background: var(--sidebar-hover);
+            text-decoration: underline;
+        }
+
+        .sidebar a:visited {
+            color: var(--accent-visited);
         }
 
         .main-content {
             background: white;
-            padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            border: 1px solid var(--border);
+            padding: 1.5rem 2rem;
+            border: 1px solid var(--border-light);
+            border-top: none;
         }
 
         .article-header {
-            border-bottom: 3px solid var(--primary);
-            padding-bottom: 1.5rem;
-            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .article-title {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            letter-spacing: -1px;
-            line-height: 1.1;
+            font-family: 'Linux Libertine', Georgia, 'Times New Roman', serif;
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 0.3rem;
+            letter-spacing: 0;
+            line-height: 1.3;
+            color: var(--primary);
         }
 
         .article-subtitle {
-            font-size: 1.1rem;
+            font-size: 14px;
             color: var(--secondary);
-            font-style: italic;
+            font-style: normal;
         }
 
         .infobox {
             float: right;
-            width: 320px;
-            margin: 0 0 1.5rem 1.5rem;
-            background: var(--bg-tertiary);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            overflow: hidden;
+            width: 300px;
+            margin: 0 0 1rem 1rem;
+            background: var(--infobox-bg);
+            border: 1px solid var(--border-light);
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         .infobox-header {
-            background: var(--primary);
-            color: white;
-            padding: 1rem;
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.3rem;
+            background: var(--infobox-header);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            font-family: sans-serif;
+            font-size: 14px;
             font-weight: 600;
             text-align: center;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .infobox-content {
-            padding: 1.5rem;
+            padding: 1rem;
         }
 
         .infobox-row {
             display: grid;
-            grid-template-columns: 120px 1fr;
-            gap: 0.8rem;
-            padding: 0.8rem 0;
-            border-bottom: 1px solid var(--border);
-            font-size: 0.9rem;
+            grid-template-columns: 100px 1fr;
+            gap: 0.5rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid var(--border-light);
+            font-size: 13px;
         }
 
         .infobox-row:last-child {
@@ -205,7 +228,7 @@
 
         .infobox-label {
             font-weight: 600;
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         .infobox-value {
@@ -213,78 +236,86 @@
         }
 
         h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            margin: 2.5rem 0 1rem;
+            font-family: 'Linux Libertine', Georgia, serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            margin: 2rem 0 0.5rem;
             color: var(--primary);
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border-light);
+            padding-bottom: 0.2rem;
         }
 
         h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            margin: 2rem 0 1rem;
+            font-family: 'Linux Libertine', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 1.5rem 0 0.5rem;
             color: var(--primary);
         }
 
         h4 {
-            font-family: 'IBM Plex Sans', sans-serif;
-            font-size: 1.1rem;
-            margin: 1.5rem 0 0.8rem;
+            font-family: sans-serif;
+            font-size: 1rem;
+            margin: 1rem 0 0.5rem;
             font-weight: 600;
-            color: var(--secondary);
+            color: var(--primary);
         }
 
         p {
-            margin-bottom: 1rem;
-            text-align: justify;
+            margin-bottom: 0.5rem;
+            text-align: left;
+            line-height: 1.6;
         }
 
         .note {
-            background: var(--highlight);
-            border-left: 4px solid var(--accent);
-            padding: 1rem 1.5rem;
-            margin: 1.5rem 0;
-            border-radius: 0 4px 4px 0;
-            font-size: 0.95rem;
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            border-left: 3px solid #36c;
+            padding: 0.75rem 1rem;
+            margin: 1rem 0;
+            font-size: 13px;
+            line-height: 1.6;
         }
 
         .note strong {
-            color: var(--accent);
+            color: var(--primary);
+            font-weight: 600;
         }
 
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
-            font-size: 0.9rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            margin: 1rem 0;
+            font-size: 13px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border-light);
         }
 
         thead {
-            background: var(--primary);
-            color: white;
+            background: var(--table-header);
+            color: var(--primary);
         }
 
         th {
-            padding: 1rem;
+            padding: 0.5rem 0.75rem;
             text-align: left;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 13px;
+            border: 1px solid var(--border-light);
         }
 
         td {
-            padding: 0.9rem 1rem;
-            border-bottom: 1px solid var(--border);
+            padding: 0.5rem 0.75rem;
+            border: 1px solid var(--border-light);
+            background: #ffffff;
         }
 
-        tbody tr:nth-child(even) {
+        tbody tr:nth-child(even) td {
             background: var(--bg-secondary);
         }
 
-        tbody tr:hover {
-            background: var(--highlight);
+        tbody tr:hover td {
+            background: #f0f0f0;
         }
 
         .code-block {
@@ -425,6 +456,270 @@
             }
         }
 
+        /* === READING PROGRESS BAR === */
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #e74c3c, #f39c12);
+            z-index: 9999;
+            transition: width 0.1s linear;
+            width: 0%;
+        }
+
+        /* === DARK MODE === */
+        body.dark-mode {
+            --primary: #e0e0e0;
+            --secondary: #b0b0b0;
+            --accent: #e74c3c;
+            --border: #3a3a3a;
+            --bg-main: #1a1a2e;
+            --bg-secondary: #16213e;
+            --bg-tertiary: #0f3460;
+            --highlight: #1a1a2e;
+        }
+        body.dark-mode .header { background: #0a0a1a; }
+        body.dark-mode .main-content { background: #16213e; box-shadow: 0 1px 3px rgba(0,0,0,0.3); }
+        body.dark-mode .code-block { background: #0a0a1a; }
+        body.dark-mode .infobox-header { background: #0f3460; }
+        body.dark-mode thead { background: #0f3460; }
+        body.dark-mode a { color: #5dade2; }
+        body.dark-mode .search-bar input { background: rgba(255,255,255,0.1); }
+        body.dark-mode .diagram { background: #0f3460; border-color: #3a3a3a; }
+        body.dark-mode td { border-color: #3a3a3a; }
+
+        .dark-toggle {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--accent);
+            padding: 0.4rem 0.8rem;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 13px;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .dark-toggle:hover {
+            background: var(--table-header);
+            text-decoration: underline;
+        }
+
+        /* === BACK TO TOP === */
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 1.4rem;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s;
+            z-index: 999;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        .back-to-top.visible { opacity: 1; transform: translateY(0); }
+        .back-to-top:hover { background: #a02520; transform: translateY(-2px); }
+
+        /* === TABS === */
+        .tabs { display: flex; gap: 0; margin: 1.5rem 0 0; border-bottom: 2px solid var(--border); }
+        .tab-btn {
+            padding: 0.8rem 1.5rem;
+            border: none;
+            background: none;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--secondary);
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        .tab-btn:hover { color: var(--accent); background: var(--bg-secondary); }
+        .tab-btn.active { color: var(--accent); border-bottom-color: var(--accent); }
+        .tab-content { display: none; padding: 1.5rem 0; }
+        .tab-content.active { display: block; }
+
+        /* === ACCORDION === */
+        .accordion-item { border: 1px solid var(--border); border-radius: 6px; margin: 0.5rem 0; overflow: hidden; }
+        .accordion-header {
+            padding: 1rem 1.5rem;
+            background: var(--bg-secondary);
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .accordion-header:hover { background: var(--bg-tertiary); }
+        .accordion-header::after { content: "+"; font-size: 1.4rem; color: var(--accent); transition: transform 0.3s; }
+        .accordion-item.open .accordion-header::after { content: "−"; }
+        .accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 1.5rem; }
+        .accordion-item.open .accordion-body { max-height: 2000px; padding: 1rem 1.5rem; }
+
+        /* === STATS COUNTERS === */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .stat-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+        .stat-number { font-size: 2.5rem; font-weight: 700; color: var(--accent); font-family: 'Crimson Pro', serif; }
+        .stat-label { font-size: 0.85rem; color: var(--secondary); margin-top: 0.5rem; }
+
+        /* === TIMELINE === */
+        .timeline { position: relative; padding-left: 40px; margin: 2rem 0; }
+        .timeline::before { content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+        .timeline-item { position: relative; margin-bottom: 2rem; }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -33px;
+            top: 5px;
+            width: 14px;
+            height: 14px;
+            background: var(--accent);
+            border-radius: 50%;
+            border: 3px solid var(--bg-main);
+        }
+        .timeline-item h4 { margin-top: 0; color: var(--accent); }
+        .timeline-item p { margin-bottom: 0.5rem; }
+
+        /* === TOOLTIP === */
+        .tooltip-term {
+            border-bottom: 2px dotted var(--accent);
+            cursor: help;
+            position: relative;
+        }
+        .tooltip-term:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 120%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: white;
+            padding: 0.6rem 1rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            white-space: nowrap;
+            max-width: 300px;
+            white-space: normal;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+
+        /* === RISK MATRIX VISUAL === */
+        .risk-matrix-grid {
+            display: grid;
+            grid-template-columns: 40px repeat(4, 1fr);
+            grid-template-rows: repeat(4, 60px) 40px;
+            gap: 2px;
+            margin: 1.5rem auto;
+            max-width: 500px;
+        }
+        .risk-cell {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: white;
+            border-radius: 4px;
+        }
+        .risk-green { background: #27ae60; }
+        .risk-yellow { background: #f1c40f; color: #333; }
+        .risk-orange { background: #e67e22; }
+        .risk-red { background: #e74c3c; }
+        .risk-label { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 600; color: var(--secondary); writing-mode: vertical-rl; transform: rotate(180deg); }
+        .risk-label-h { display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 600; color: var(--secondary); }
+
+        /* === GANTT CHART === */
+        .gantt-chart { margin: 1.5rem 0; overflow-x: auto; }
+        .gantt-row { display: flex; align-items: center; margin: 0.4rem 0; }
+        .gantt-label { width: 160px; min-width: 160px; font-size: 0.85rem; font-weight: 600; color: var(--secondary); }
+        .gantt-bar-container { flex: 1; height: 30px; background: var(--bg-secondary); border-radius: 4px; position: relative; }
+        .gantt-bar {
+            position: absolute;
+            height: 100%;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: white;
+            transition: width 1s ease;
+        }
+        .gantt-months { display: flex; margin-left: 160px; margin-bottom: 0.5rem; }
+        .gantt-months span { flex: 1; text-align: center; font-size: 0.75rem; color: var(--secondary); font-weight: 600; }
+
+        /* === FOOTER === */
+        .footer {
+            background: var(--primary);
+            color: rgba(255,255,255,0.7);
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 2rem;
+        }
+        body.dark-mode .footer { background: #0a0a1a; }
+        .footer-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        .footer h4 { color: white; font-family: 'Crimson Pro', serif; margin-bottom: 1rem; font-size: 1.1rem; }
+        .footer ul { list-style: none; }
+        .footer li { margin-bottom: 0.5rem; font-size: 0.9rem; }
+        .footer a { color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.3s; }
+        .footer a:hover { color: white; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1.5rem; text-align: center; font-size: 0.85rem; }
+
+        /* === GLOSSARY === */
+        .glossary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+        .glossary-item { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 6px; padding: 1rem 1.2rem; }
+        .glossary-term { font-weight: 700; color: var(--accent); margin-bottom: 0.3rem; }
+        .glossary-def { font-size: 0.9rem; color: var(--secondary); }
+
+        /* === CASE STUDY BOX === */
+        .case-study {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 2px solid var(--accent);
+            border-radius: 8px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        .case-study-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+        .case-study-icon { width: 50px; height: 50px; background: var(--accent); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 700; flex-shrink: 0; }
+        .case-study h4 { margin: 0; font-size: 1.2rem; color: var(--primary); }
+
+        /* === PRINT === */
+        @media print {
+            .header, .sidebar, .meta-sidebar, .back-to-top, .dark-toggle, .reading-progress, .footer { display: none !important; }
+            .container { grid-template-columns: 1fr !important; }
+            .main-content { box-shadow: none; border: none; padding: 0; }
+            .infobox { float: none; width: 100%; margin: 1rem 0; }
+            body { font-size: 11pt; }
+        }
+
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
@@ -446,14 +741,18 @@
     </style>
 </head>
 <body>
+    <div class="reading-progress" id="readingProgress"></div>
     <header class="header">
         <div class="header-content">
             <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
             <div class="search-bar">
-                <input type="text" placeholder="Rechercher dans l'encyclopédie...">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
             </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
         </div>
     </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
     <div class="container">
         <aside class="sidebar">
@@ -471,6 +770,13 @@
                 <li><a href="#controles">Liste de Contrôles</a></li>
                 <li><a href="#juridique">Volet Juridique</a></li>
                 <li><a href="#reglementation">Réglementation</a></li>
+                <li><a href="#cas-pratique">Cas Pratique</a></li>
+                <li><a href="#methodologies">Méthodologies</a></li>
+                <li><a href="#gouvernance">Gouvernance Projet</a></li>
+                <li><a href="#conduite-changement">Conduite du Changement</a></li>
+                <li><a href="#recette">Recette & VABF</a></li>
+                <li><a href="#kpi">KPI & Indicateurs</a></li>
+                <li><a href="#glossaire">Glossaire</a></li>
                 <li><a href="#references">Références</a></li>
             </ul>
         </aside>
@@ -520,6 +826,25 @@
 
                 <div class="note">
                     <strong>Note historique :</strong> La fonction AMOA s'est structurée en France dans les années 1990, en réponse à l'accroissement de la complexité des systèmes d'information et aux difficultés rencontrées par les organisations pour piloter efficacement leurs projets informatiques.
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="72">0</div>
+                        <div class="stat-label">% des projets SI en échec sans AMOA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-label">% de réduction des risques avec AMOA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="89">0</div>
+                        <div class="stat-label">% de satisfaction MOA accompagnée</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">x ROI moyen d'une mission AMOA</div>
+                    </div>
                 </div>
             </section>
 
@@ -647,8 +972,42 @@
                 <div class="note">
                     <strong>Seuil d'alerte :</strong> Un risque dont la criticité C ≥ 8 nécessite une inscription au registre des risques et un plan d'action formalisé.
                 </div>
+
+                <h3>3.1 Matrice Visuelle Probabilité / Impact</h3>
+                <div class="risk-matrix-grid">
+                    <div class="risk-label">Impact</div>
+                    <div class="risk-cell risk-yellow">4</div>
+                    <div class="risk-cell risk-orange">8</div>
+                    <div class="risk-cell risk-red">R3=8</div>
+                    <div class="risk-cell risk-red">R1=12</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">3</div>
+                    <div class="risk-cell risk-yellow">6</div>
+                    <div class="risk-cell risk-orange">R2=9</div>
+                    <div class="risk-cell risk-red">12</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">2</div>
+                    <div class="risk-cell risk-green">4</div>
+                    <div class="risk-cell risk-yellow">R4=6</div>
+                    <div class="risk-cell risk-orange">8</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">1</div>
+                    <div class="risk-cell risk-green">2</div>
+                    <div class="risk-cell risk-green">3</div>
+                    <div class="risk-cell risk-yellow">4</div>
+
+                    <div class="risk-label-h"></div>
+                    <div class="risk-label-h">1</div>
+                    <div class="risk-label-h">2</div>
+                    <div class="risk-label-h">3</div>
+                    <div class="risk-label-h">4</div>
+                </div>
+                <p style="text-align:center;font-size:0.85rem;color:var(--secondary);"><em>Axe horizontal : Probabilité | Axe vertical : Impact | Cases colorées : Vert (faible) > Jaune > Orange > Rouge (critique)</em></p>
                 
-                <h3>3.1 Banque de Risques par Catégorie</h3>
+                <h3>3.2 Banque de Risques par Catégorie</h3>
                 
                 <table>
                     <thead>
@@ -1135,6 +1494,33 @@
                 <div class="note">
                     <strong>Acronymes :</strong> VABF = Vérification d'Aptitude au Bon Fonctionnement | VSR = Vérification de Service Régulier | GO LIVE = Mise en service effective
                 </div>
+
+                <h3>8.1 Diagramme de Gantt Simplifié</h3>
+                <div class="gantt-chart">
+                    <div class="gantt-months">
+                        <span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Cadrage</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:0%;width:16.6%;background:#3498db;">M1</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Réalisation</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:16.6%;width:33.3%;background:#2ecc71;">M2-M3</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Recette</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:50%;width:16.6%;background:#e67e22;">M4</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Déploiement</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:66.6%;width:16.6%;background:#e74c3c;">M5</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">VSR</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:83.3%;width:16.6%;background:#9b59b6;">M6</div></div>
+                    </div>
+                </div>
             </section>
 
             <section id="benchmark">
@@ -1522,6 +1908,374 @@
                 </table>
             </section>
 
+            <!-- === SECTION 13: CAS PRATIQUE === -->
+            <section id="cas-pratique">
+                <h2>13. Cas Pratique Complet</h2>
+                <p>Ce cas pratique illustre une mission AMOA complète, de l'expression du besoin initial jusqu'à la mise en production, dans le contexte d'une collectivité territoriale souhaitant moderniser son système de gestion de la restauration scolaire.</p>
+
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="case-study-icon">C</div>
+                        <div>
+                            <h4>Commune de Villeneuve-les-Bois (12 500 habitants)</h4>
+                            <p style="margin:0;color:var(--secondary);font-size:0.9rem;">Modernisation du SI de restauration scolaire - Budget : 95 000 EUR HT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>13.1 Expression du Besoin Initial (Verbatim Client)</h3>
+                <div class="code-block" style="background:#2d2d2d;">
+<em>"On a un vieux logiciel sous Access qui plante tout le temps. Les parents appellent sans arrêt
+pour inscrire leurs enfants a la cantine. On perd des inscriptions, les factures sont fausses
+une fois sur trois, et on ne sait jamais combien de repas commander.
+Il nous faudrait un truc moderne, en ligne, ou les parents peuvent s'inscrire eux-memes.
+On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 euros."</em>
+                </div>
+
+                <h3>13.2 Reformulation AMOA Structurée</h3>
+                <p><strong>Contexte :</strong> La commune de Villeneuve-les-Bois (12 500 hab.) gère la restauration scolaire de <strong>1 800 élèves</strong> répartis sur <strong>6 groupes scolaires</strong> via un applicatif Access monoposte déployé en 2009, devenu obsolète et source de dysfonctionnements critiques impactant la qualité de service.</p>
+
+                <p><strong>Problématiques identifiées :</strong></p>
+                <ul>
+                    <li><strong>P1 - Fiabilité :</strong> Taux d'erreur de facturation estimé à 33%, générant des réclamations et un surcoût de traitement administratif</li>
+                    <li><strong>P2 - Accessibilité :</strong> Inscription uniquement par téléphone/guichet, créant des files d'attente et une charge excessive sur le secrétariat (estimée à 2 ETP)</li>
+                    <li><strong>P3 - Pilotage :</strong> Absence de prévisionnel fiable des commandes de repas, entraînant un gaspillage alimentaire estimé à 15%</li>
+                    <li><strong>P4 - Conformité :</strong> Non-conformité aux exigences RGPD (données sur serveur local non sécurisé) et Loi EGalim (pas de traçabilité des produits)</li>
+                </ul>
+
+                <p><strong>Objectifs SMART :</strong></p>
+                <table>
+                    <thead><tr><th>Réf</th><th>Objectif</th><th>Indicateur cible</th><th>Échéance</th></tr></thead>
+                    <tbody>
+                        <tr><td>O1</td><td>Dématérialiser 100% des inscriptions</td><td>0 inscription papier/téléphone</td><td>Rentrée 2026</td></tr>
+                        <tr><td>O2</td><td>Fiabiliser la facturation</td><td>Taux d'erreur < 1%</td><td>M+4</td></tr>
+                        <tr><td>O3</td><td>Optimiser les commandes de repas</td><td>Gaspillage < 5%</td><td>M+6</td></tr>
+                        <tr><td>O4</td><td>Mise en conformité RGPD et EGalim</td><td>Audit conforme</td><td>M+5</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>13.3 Budget Détaillé du Cas</h3>
+                <table>
+                    <thead><tr><th>Poste</th><th>Détail</th><th>Montant HT</th></tr></thead>
+                    <tbody>
+                        <tr><td>Mission AMOA</td><td>20 JH x 800 EUR</td><td>16 000 EUR</td></tr>
+                        <tr><td>Licences SaaS (An 1)</td><td>1 800 élèves x 8 EUR</td><td>14 400 EUR</td></tr>
+                        <tr><td>Paramétrage / Intégration</td><td>35 JH x 650 EUR</td><td>22 750 EUR</td></tr>
+                        <tr><td>Reprise de données</td><td>10 JH x 650 EUR</td><td>6 500 EUR</td></tr>
+                        <tr><td>Formation</td><td>5 jours (agents + admin)</td><td>5 000 EUR</td></tr>
+                        <tr><td>Bornes tactiles (x6)</td><td>6 x 1 200 EUR</td><td>7 200 EUR</td></tr>
+                        <tr><td>Badges RFID</td><td>2 000 x 1,50 EUR</td><td>3 000 EUR</td></tr>
+                        <tr><td>Recette / VABF</td><td>10 JH x 750 EUR</td><td>7 500 EUR</td></tr>
+                        <tr><td><strong>Sous-total</strong></td><td></td><td><strong>82 350 EUR</strong></td></tr>
+                        <tr><td>Aléas (10%)</td><td></td><td>8 235 EUR</td></tr>
+                        <tr><td><strong>TOTAL</strong></td><td></td><td><strong>90 585 EUR</strong></td></tr>
+                    </tbody>
+                </table>
+                <div class="note"><strong>Marge résiduelle :</strong> 95 000 - 90 585 = 4 415 EUR de marge sur l'enveloppe votée, soit 4,6%. Conforme aux bonnes pratiques.</div>
+            </section>
+
+            <!-- === SECTION 14: METHODOLOGIES === -->
+            <section id="methodologies">
+                <h2>14. Méthodologies de Gestion de Projet</h2>
+                <p>Le choix de la méthodologie de gestion de projet conditionne l'organisation des travaux, la fréquence des livrables et le mode de collaboration entre MOA et MOE. L'AMOA doit recommander l'approche la plus adaptée au contexte du projet.</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-cycle-v')">Cycle en V</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-agile')">Agile / Scrum</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-safe')">SAFe</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-comparatif')">Comparatif</button>
+                </div>
+
+                <div id="tab-cycle-v" class="tab-content active">
+                    <h4>Cycle en V - Approche Séquentielle</h4>
+                    <p>Méthodologie traditionnelle structurée en phases descendantes (spécification, conception, réalisation) puis ascendantes (tests unitaires, intégration, recette). Chaque phase produit des livrables validés avant passage à la suivante.</p>
+                    <div class="diagram">
+Spécifications Générales ──────────────────── Recette Utilisateur<br>
+&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
+&nbsp;&nbsp;Spécifications Détaillées ────────────── Tests d'Intégration<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Conception Technique ──────────── Tests Unitaires<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↑<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CODAGE / REALISATION
+                    </div>
+                    <p><strong>Avantages :</strong> Documentation exhaustive, jalons clairs, adapté aux marchés publics forfaitaires.</p>
+                    <p><strong>Limites :</strong> Rigide face aux changements, effet tunnel, retour utilisateur tardif.</p>
+                </div>
+
+                <div id="tab-agile" class="tab-content">
+                    <h4>Agile / Scrum - Approche Itérative</h4>
+                    <p>Méthodologie itérative organisée en sprints de 2 à 4 semaines, permettant des livraisons incrémentales et un feedback continu du Product Owner (représentant la MOA).</p>
+                    <div class="diagram">
+Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
+┌──────────────┐&nbsp;&nbsp;&nbsp;&nbsp;┌──────────────┐&nbsp;&nbsp;&nbsp;&nbsp;┌──────────────┐<br>
+│ Planning      │&nbsp;&nbsp;&nbsp;&nbsp;│ Planning      │&nbsp;&nbsp;&nbsp;&nbsp;│ Planning      │<br>
+│ Daily Standups│&nbsp;&nbsp;&nbsp;&nbsp;│ Daily Standups│&nbsp;&nbsp;&nbsp;&nbsp;│ Daily Standups│<br>
+│ Dev + Tests   │&nbsp;&nbsp;&nbsp;&nbsp;│ Dev + Tests   │&nbsp;&nbsp;&nbsp;&nbsp;│ Dev + Tests   │<br>
+│ Review + Retro│&nbsp;&nbsp;&nbsp;&nbsp;│ Review + Retro│&nbsp;&nbsp;&nbsp;&nbsp;│ Review + Retro│<br>
+└──────┬───────┘&nbsp;&nbsp;&nbsp;&nbsp;└──────┬───────┘&nbsp;&nbsp;&nbsp;&nbsp;└──────┬───────┘<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment
+                    </div>
+                    <table>
+                        <thead><tr><th>Role Scrum</th><th>Equivalent AMOA</th><th>Responsabilités</th></tr></thead>
+                        <tbody>
+                            <tr><td>Product Owner</td><td>MOA / AMOA</td><td>Priorise le backlog, valide les incréments</td></tr>
+                            <tr><td>Scrum Master</td><td>Chef de projet MOE</td><td>Facilite, lève les obstacles</td></tr>
+                            <tr><td>Dev Team</td><td>Equipe MOE</td><td>Réalise les user stories</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="tab-safe" class="tab-content">
+                    <h4>SAFe - Scaled Agile Framework</h4>
+                    <p>Framework d'agilité à l'échelle, adapté aux grandes organisations avec plusieurs équipes travaillant sur un même programme. Il organise le travail en <strong>Agile Release Trains (ART)</strong> synchronisés sur des <strong>Program Increments (PI)</strong> de 8 à 12 semaines.</p>
+                    <div class="diagram">
+┌─────────────────────────────────────────────┐<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PORTFOLIO LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;Epics strategiques / Budget Lean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+├─────────────────────────────────────────────┤<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROGRAM LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+│&nbsp;&nbsp;&nbsp;Agile Release Train (ART)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+│&nbsp;&nbsp;&nbsp;PI Planning → Sprints → System Demo&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+├─────────────────────────────────────────────┤<br>
+│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEAM LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+│&nbsp;&nbsp;&nbsp;Equipe 1 │ Equipe 2 │ Equipe 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
+└─────────────────────────────────────────────┘
+                    </div>
+                    <p><strong>Usage :</strong> Projets SI de grande envergure (> 50 personnes), programmes multi-équipes, transformation digitale d'entreprise.</p>
+                </div>
+
+                <div id="tab-comparatif" class="tab-content">
+                    <h4>Tableau Comparatif des Méthodologies</h4>
+                    <table>
+                        <thead><tr><th>Critère</th><th>Cycle en V</th><th>Agile / Scrum</th><th>SAFe</th></tr></thead>
+                        <tbody>
+                            <tr><td>Taille projet</td><td>Moyen à Grand</td><td>Petit à Moyen</td><td>Grand à Très Grand</td></tr>
+                            <tr><td>Flexibilité</td><td>Faible</td><td>Très élevée</td><td>Élevée</td></tr>
+                            <tr><td>Documentation</td><td>Exhaustive</td><td>Minimale</td><td>Modérée</td></tr>
+                            <tr><td>Feedback client</td><td>Tardif (recette)</td><td>Continu (sprint review)</td><td>Régulier (PI demo)</td></tr>
+                            <tr><td>Adapté marchés publics</td><td>Oui (forfait)</td><td>Difficile</td><td>Possible (contrat cadre)</td></tr>
+                            <tr><td>Gestion du risque</td><td>Identifié en amont</td><td>Mitigé à chaque sprint</td><td>PI Risk Roster</td></tr>
+                            <tr><td>Durée type</td><td>6 - 18 mois</td><td>3 - 9 mois</td><td>12 - 36 mois</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- === SECTION 15: GOUVERNANCE === -->
+            <section id="gouvernance">
+                <h2>15. Gouvernance de Projet</h2>
+                <p>La gouvernance projet définit les instances de décision, les circuits de validation et les mécanismes d'escalade. Une gouvernance bien structurée est un facteur clé de succès, permettant de maintenir l'alignement stratégique et de résoudre rapidement les points de blocage.</p>
+
+                <h3>15.1 Instances de Pilotage</h3>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">COPIL - Comité de Pilotage (Stratégique)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Mensuelle ou bimestrielle</p>
+                        <p><strong>Participants :</strong> Direction générale, DSI, MOA, AMOA, Direction MOE</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Valider les orientations stratégiques et arbitrages budgétaires</li>
+                            <li>Décider des évolutions de périmètre (go/no-go)</li>
+                            <li>Traiter les risques de niveau critique (C >= 12)</li>
+                            <li>Valider les jalons majeurs (passage en recette, mise en production)</li>
+                        </ul>
+                        <p><strong>Livrables :</strong> Compte-rendu de décision, tableau de bord projet, registre des risques mis à jour</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">COPROJ - Comité de Projet (Opérationnel)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Hebdomadaire</p>
+                        <p><strong>Participants :</strong> Chef de projet MOA, AMOA, Chef de projet MOE, Référents métier</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Suivre l'avancement opérationnel (% réalisation, reste à faire)</li>
+                            <li>Identifier et traiter les points bloquants</li>
+                            <li>Valider les livrables intermédiaires</li>
+                            <li>Planifier les actions de la semaine suivante</li>
+                        </ul>
+                        <p><strong>Livrables :</strong> Relevé de décisions, plan d'actions mis à jour, rapport d'avancement</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">Comité Technique (Expert)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Selon besoin (convoqué par le COPROJ)</p>
+                        <p><strong>Participants :</strong> Architecte SI, DBA, Expert sécurité, Lead développeur</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Instruire les choix techniques (architecture, intégration, performance)</li>
+                            <li>Évaluer les impacts techniques des demandes de changement</li>
+                            <li>Valider la conformité de la solution aux exigences non-fonctionnelles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>15.2 Matrice RACI</h3>
+                <p>La matrice RACI clarifie les rôles et responsabilités de chaque acteur sur les activités clés du projet.</p>
+                <table>
+                    <thead><tr><th>Activité</th><th>MOA</th><th>AMOA</th><th>MOE</th><th>DSI</th><th>DG</th></tr></thead>
+                    <tbody>
+                        <tr><td>Expression du besoin</td><td><strong>R</strong></td><td>A</td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Rédaction du CDC</td><td>A</td><td><strong>R</strong></td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Choix de solution</td><td>A</td><td><strong>R</strong></td><td>C</td><td>C</td><td>I</td></tr>
+                        <tr><td>Développement</td><td>I</td><td>C</td><td><strong>R</strong></td><td>A</td><td>I</td></tr>
+                        <tr><td>Recette fonctionnelle</td><td>A</td><td><strong>R</strong></td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Mise en production</td><td>A</td><td>C</td><td><strong>R</strong></td><td>A</td><td>I</td></tr>
+                        <tr><td>Validation budget</td><td>C</td><td>C</td><td>I</td><td>C</td><td><strong>R/A</strong></td></tr>
+                    </tbody>
+                </table>
+                <div class="note"><strong>Légende RACI :</strong> <strong>R</strong> = Réalise | <strong>A</strong> = Approuve (Accountable) | <strong>C</strong> = Consulté | <strong>I</strong> = Informé</div>
+            </section>
+
+            <!-- === SECTION 16: CONDUITE DU CHANGEMENT === -->
+            <section id="conduite-changement">
+                <h2>16. Conduite du Changement</h2>
+                <p>La conduite du changement vise à accompagner les utilisateurs dans l'adoption de la nouvelle solution. Elle constitue un facteur de succès déterminant, les résistances humaines étant la première cause d'échec des projets SI.</p>
+
+                <h3>16.1 Plan de Communication</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>M-2 : Annonce du projet</h4>
+                        <p>Communication officielle de la direction sur les objectifs et le calendrier. Nomination des référents métier dans chaque service.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>M-1 : Ateliers de découverte</h4>
+                        <p>Présentation de la solution aux utilisateurs clés. Recueil des craintes et questions. Démonstration des fonctionnalités principales.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>M0 : Formation initiale</h4>
+                        <p>Sessions de formation par groupes de 10-15 personnes. Remise des guides utilisateurs. Mise en place du support de proximité.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>M+1 : Accompagnement renforcé</h4>
+                        <p>Présence d'un référent AMOA sur site. Hotline dédiée. Traitement prioritaire des remontées utilisateurs.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>M+3 : Bilan et ajustements</h4>
+                        <p>Enquête de satisfaction utilisateurs. Formations complémentaires ciblées. Optimisation des workflows selon les retours terrain.</p>
+                    </div>
+                </div>
+
+                <h3>16.2 Modèle ADKAR</h3>
+                <table>
+                    <thead><tr><th>Etape</th><th>Description</th><th>Actions AMOA</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>A</strong>wareness</td><td>Prise de conscience du besoin de changer</td><td>Communication direction, présentation des dysfonctionnements actuels</td></tr>
+                        <tr><td><strong>D</strong>esire</td><td>Envie de participer au changement</td><td>Implication dans la conception, valorisation des bénéfices individuels</td></tr>
+                        <tr><td><strong>K</strong>nowledge</td><td>Savoir comment changer</td><td>Formations, tutoriels, guides, FAQ</td></tr>
+                        <tr><td><strong>A</strong>bility</td><td>Capacité à mettre en pratique</td><td>Accompagnement terrain, support, exercices pratiques</td></tr>
+                        <tr><td><strong>R</strong>einforcement</td><td>Ancrage du changement dans la durée</td><td>Suivi KPI adoption, feedback, améliorations continues</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- === SECTION 17: RECETTE === -->
+            <section id="recette">
+                <h2>17. Recette et Validation (VABF/VSR)</h2>
+                <p>La recette constitue la phase de vérification formelle de la conformité de la solution livrée aux exigences du cahier des charges. Elle se décompose en deux étapes successives : la VABF et la VSR.</p>
+
+                <h3>17.1 Stratégie de Tests</h3>
+                <table>
+                    <thead><tr><th>Type de test</th><th>Responsable</th><th>Objectif</th><th>Outils types</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Tests unitaires</strong></td><td>MOE</td><td>Vérifier chaque composant isolément</td><td>JUnit, pytest, Jest</td></tr>
+                        <tr><td><strong>Tests d'intégration</strong></td><td>MOE</td><td>Vérifier les interactions entre modules</td><td>Postman, SoapUI</td></tr>
+                        <tr><td><strong>Tests fonctionnels</strong></td><td>AMOA / MOA</td><td>Valider la conformité aux spécifications</td><td>Cahier de recette</td></tr>
+                        <tr><td><strong>Tests de charge</strong></td><td>MOE</td><td>Vérifier la performance sous charge</td><td>JMeter, Gatling, k6</td></tr>
+                        <tr><td><strong>Tests de sécurité</strong></td><td>Expert sécu</td><td>Identifier les vulnérabilités</td><td>OWASP ZAP, Burp Suite</td></tr>
+                        <tr><td><strong>Tests d'accessibilité</strong></td><td>AMOA</td><td>Conformité RGAA</td><td>Axe, Lighthouse, Wave</td></tr>
+                        <tr><td><strong>Recette utilisateur (UAT)</strong></td><td>MOA</td><td>Validation métier en conditions réelles</td><td>Scénarios métier</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>17.2 Modèle de Fiche de Test</h3>
+                <div class="case-study">
+                    <table style="margin:0;">
+                        <tbody>
+                            <tr><td style="width:150px;"><strong>Réf. test :</strong></td><td>T-SF02-001</td></tr>
+                            <tr><td><strong>Spécification :</strong></td><td>SF-02 - Confirmation automatique de réservation</td></tr>
+                            <tr><td><strong>Prérequis :</strong></td><td>Utilisateur connecté, au moins 1 créneau disponible</td></tr>
+                            <tr><td><strong>Scénario :</strong></td><td>1. Se connecter en tant que parent<br>2. Sélectionner un créneau de restauration<br>3. Valider la réservation<br>4. Vérifier la réception de l'email de confirmation</td></tr>
+                            <tr><td><strong>Résultat attendu :</strong></td><td>Email reçu sous 5 minutes avec récapitulatif complet</td></tr>
+                            <tr><td><strong>Résultat obtenu :</strong></td><td style="color:#27ae60;font-weight:600;">CONFORME - Email reçu en 12 secondes</td></tr>
+                            <tr><td><strong>Statut :</strong></td><td><span class="tag" style="background:#27ae60;">PASSE</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>17.3 Critères de Prononcé de la Recette</h3>
+                <ul>
+                    <li><strong>100%</strong> des tests bloquants (priorité Haute) : statut PASSE</li>
+                    <li><strong>95%</strong> des tests majeurs (priorité Moyenne) : statut PASSE</li>
+                    <li><strong>0</strong> anomalie bloquante ou critique non corrigée</li>
+                    <li>Performance conforme aux SLA contractuels</li>
+                    <li>Documentation technique et utilisateur livrée et validée</li>
+                </ul>
+            </section>
+
+            <!-- === SECTION 18: KPI === -->
+            <section id="kpi">
+                <h2>18. KPI et Indicateurs de Pilotage</h2>
+                <p>Les indicateurs clés de performance (KPI) permettent de mesurer objectivement l'avancement du projet et la qualité des livrables. Ils alimentent les tableaux de bord présentés en COPIL et COPROJ.</p>
+
+                <h3>18.1 KPI Projet (Pendant la réalisation)</h3>
+                <table>
+                    <thead><tr><th>KPI</th><th>Formule</th><th>Cible</th><th>Fréquence</th></tr></thead>
+                    <tbody>
+                        <tr><td>Avancement réel</td><td>Nb tâches terminées / Nb tâches total</td><td>>= avancement prévu</td><td>Hebdomadaire</td></tr>
+                        <tr><td>Taux de conformité</td><td>Tests passés / Tests exécutés</td><td>> 95%</td><td>Par phase</td></tr>
+                        <tr><td>Dérive planning</td><td>(Date réelle - Date prévue) / Durée phase</td><td>< 10%</td><td>Hebdomadaire</td></tr>
+                        <tr><td>Consommation budget</td><td>Dépenses réelles / Budget alloué</td><td>< 100%</td><td>Mensuelle</td></tr>
+                        <tr><td>Densité d'anomalies</td><td>Nb anomalies / Nb fonctionnalités livrées</td><td>< 0,5</td><td>Par sprint</td></tr>
+                        <tr><td>Vélocité équipe</td><td>Story points livrés / Sprint</td><td>Stable ou croissant</td><td>Par sprint</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>18.2 KPI Post-Déploiement (Après mise en production)</h3>
+                <table>
+                    <thead><tr><th>KPI</th><th>Formule</th><th>Cible</th></tr></thead>
+                    <tbody>
+                        <tr><td>Taux d'adoption</td><td>Utilisateurs actifs / Utilisateurs formés</td><td>> 80% à M+3</td></tr>
+                        <tr><td>Satisfaction utilisateur</td><td>Note moyenne enquête (1-5)</td><td>>= 4/5</td></tr>
+                        <tr><td>Disponibilité</td><td>Uptime / Temps total</td><td>>= 99,5%</td></tr>
+                        <tr><td>Temps moyen de réponse</td><td>Moyenne temps chargement pages</td><td>< 2 secondes</td></tr>
+                        <tr><td>Tickets support</td><td>Nb incidents / mois</td><td>Décroissant</td></tr>
+                        <tr><td>ROI</td><td>(Gains - Coût projet) / Coût projet</td><td>> 1 à 18 mois</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- === SECTION 19: GLOSSAIRE === -->
+            <section id="glossaire">
+                <h2>19. Glossaire</h2>
+                <p>Définitions des termes et acronymes utilisés dans le domaine de l'AMOA et de la gestion de projet SI.</p>
+
+                <div class="glossary-grid">
+                    <div class="glossary-item"><div class="glossary-term">AMOA</div><div class="glossary-def">Assistance a Maitrise d'Ouvrage. Fonction de conseil et d'accompagnement du maitre d'ouvrage.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">MOA</div><div class="glossary-def">Maitrise d'Ouvrage. Entité porteuse du besoin et commanditaire du projet.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">MOE</div><div class="glossary-def">Maitrise d'Oeuvre. Entité en charge de la réalisation technique de la solution.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">CDC</div><div class="glossary-def">Cahier des Charges. Document contractuel décrivant l'ensemble des exigences du projet.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">VABF</div><div class="glossary-def">Vérification d'Aptitude au Bon Fonctionnement. Phase de validation de la conformité fonctionnelle.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">VSR</div><div class="glossary-def">Vérification de Service Régulier. Phase de validation du fonctionnement en conditions réelles sur une période définie.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">SLA</div><div class="glossary-def">Service Level Agreement. Engagement contractuel de niveau de service (disponibilité, performance, support).</div></div>
+                    <div class="glossary-item"><div class="glossary-term">COPIL</div><div class="glossary-def">Comité de Pilotage. Instance de décision stratégique du projet.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">COPROJ</div><div class="glossary-def">Comité de Projet. Instance de suivi opérationnel du projet.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">RACI</div><div class="glossary-def">Responsible, Accountable, Consulted, Informed. Matrice de clarification des rôles et responsabilités.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">TCO</div><div class="glossary-def">Total Cost of Ownership. Coût total de possession incluant acquisition, exploitation et maintenance.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">MAPA</div><div class="glossary-def">Marché a Procédure Adaptée. Procédure de passation de marché public simplifiée sous un seuil défini.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">RGPD</div><div class="glossary-def">Reglement Général sur la Protection des Données. Réglementation européenne sur la protection des données personnelles.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">DPO</div><div class="glossary-def">Data Protection Officer. Délégué à la Protection des Données, responsable de la conformité RGPD.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">POC</div><div class="glossary-def">Proof of Concept. Preuve de concept permettant de valider la faisabilité technique d'une solution.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">SaaS</div><div class="glossary-def">Software as a Service. Modèle de distribution logicielle via le cloud, accessible par abonnement.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">UAT</div><div class="glossary-def">User Acceptance Testing. Tests d'acceptation utilisateur, dernière phase de validation avant production.</div></div>
+                    <div class="glossary-item"><div class="glossary-term">RGAA</div><div class="glossary-def">Référentiel Général d'Amélioration de l'Accessibilité. Norme française d'accessibilité numérique.</div></div>
+                </div>
+            </section>
+
             <section id="references" class="reference-box">
                 <h3>Références et Bibliographie</h3>
                 
@@ -1593,5 +2347,172 @@
             </div>
         </aside>
     </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour etudiants, consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="#definition">Definition et Perimetre</a></li>
+                    <li><a href="#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="#methodologies">Methodologies</a></li>
+                    <li><a href="#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="#budget">Budget et Tarifs</a></li>
+                    <li><a href="#benchmark">Matrice de Choix</a></li>
+                    <li><a href="#glossaire">Glossaire</a></li>
+                    <li><a href="#references">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cadre Legal</h4>
+                <ul>
+                    <li><a href="#juridique">Marches et Contrats</a></li>
+                    <li><a href="#reglementation">Reglementation</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL - RGPD</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative | Derniere mise a jour : Fevrier 2026 | Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <script>
+    // === READING PROGRESS BAR ===
+    window.addEventListener('scroll', function() {
+        const scrollTop = document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const progress = (scrollTop / scrollHeight) * 100;
+        document.getElementById('readingProgress').style.width = progress + '%';
+
+        // Back to top button
+        const btn = document.getElementById('backToTop');
+        if (scrollTop > 500) { btn.classList.add('visible'); }
+        else { btn.classList.remove('visible'); }
+    });
+
+    // === DARK MODE ===
+    function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        const isDark = document.body.classList.contains('dark-mode');
+        document.getElementById('darkToggle').textContent = isDark ? 'Mode clair' : 'Mode sombre';
+        localStorage.setItem('darkMode', isDark);
+    }
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('darkToggle').textContent = 'Mode clair';
+    }
+
+    // === TABS ===
+    function openTab(evt, tabId) {
+        var contents = evt.target.closest('section').querySelectorAll('.tab-content');
+        var btns = evt.target.closest('.tabs').querySelectorAll('.tab-btn');
+        contents.forEach(function(c) { c.classList.remove('active'); });
+        btns.forEach(function(b) { b.classList.remove('active'); });
+        document.getElementById(tabId).classList.add('active');
+        evt.target.classList.add('active');
+    }
+
+    // === ACCORDION ===
+    function toggleAccordion(header) {
+        var item = header.parentElement;
+        item.classList.toggle('open');
+    }
+
+    // === ANIMATED COUNTERS ===
+    function animateCounters() {
+        var counters = document.querySelectorAll('.stat-number[data-target]');
+        counters.forEach(function(counter) {
+            var target = parseInt(counter.getAttribute('data-target'));
+            var current = 0;
+            var increment = target / 60;
+            var timer = setInterval(function() {
+                current += increment;
+                if (current >= target) {
+                    counter.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    counter.textContent = Math.floor(current);
+                }
+            }, 25);
+        });
+    }
+
+    // Observe stats for animation trigger
+    var statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCounters();
+                statsObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    var statsGrid = document.querySelector('.stats-grid');
+    if (statsGrid) statsObserver.observe(statsGrid);
+
+    // === SEARCH ===
+    function handleSearch(query) {
+        var resultsDiv = document.getElementById('searchResults');
+        if (query.length < 2) { resultsDiv.style.display = 'none'; return; }
+        var sections = document.querySelectorAll('section[id]');
+        var results = [];
+        sections.forEach(function(section) {
+            var text = section.textContent.toLowerCase();
+            var title = section.querySelector('h2');
+            if (text.indexOf(query.toLowerCase()) !== -1 && title) {
+                results.push({ id: section.id, title: title.textContent, excerpt: text.substring(text.indexOf(query.toLowerCase()) - 30, text.indexOf(query.toLowerCase()) + 60) });
+            }
+        });
+        if (results.length === 0) {
+            resultsDiv.innerHTML = '<div style="padding:1rem;color:var(--secondary);font-size:0.9rem;">Aucun resultat trouve.</div>';
+        } else {
+            resultsDiv.innerHTML = results.map(function(r) {
+                return '<a href="#' + r.id + '" style="display:block;padding:0.8rem 1rem;border-bottom:1px solid var(--border);text-decoration:none;color:var(--primary);font-size:0.9rem;" onclick="document.getElementById(\'searchResults\').style.display=\'none\';document.getElementById(\'searchInput\').value=\'\';"><strong>' + r.title + '</strong></a>';
+            }).join('');
+        }
+        resultsDiv.style.display = 'block';
+    }
+    document.addEventListener('click', function(e) {
+        if (!e.target.closest('.search-bar')) document.getElementById('searchResults').style.display = 'none';
+    });
+
+    // === SMOOTH SCROLL ===
+    document.querySelectorAll('a[href^="#"]').forEach(function(a) {
+        a.addEventListener('click', function(e) {
+            e.preventDefault();
+            var target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+
+    // === ACTIVE SIDEBAR LINK ===
+    var sidebarLinks = document.querySelectorAll('.sidebar a');
+    window.addEventListener('scroll', function() {
+        var current = '';
+        document.querySelectorAll('section[id]').forEach(function(section) {
+            if (window.scrollY >= section.offsetTop - 150) current = section.getAttribute('id');
+        });
+        sidebarLinks.forEach(function(link) {
+            link.style.color = '';
+            link.style.fontWeight = '';
+            if (link.getAttribute('href') === '#' + current) {
+                link.style.color = 'var(--accent)';
+                link.style.fontWeight = '600';
+            }
+        });
+    });
+    </script>
 </body>
 </html>
