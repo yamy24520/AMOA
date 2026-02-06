@@ -478,3 +478,107 @@ body.dark-mode .glossary-item {
 body.dark-mode .glossary-item:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+/* Risk Matrix Grid */
+.risk-matrix-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(4, 1fr);
+    gap: 4px;
+    margin: 1.5rem auto;
+    max-width: 600px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.risk-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary);
+    font-size: 14px;
+}
+
+.risk-label-h {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: var(--primary);
+    padding: 0.5rem;
+    font-size: 13px;
+}
+
+.risk-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    border-radius: 4px;
+    font-weight: 600;
+    color: white;
+    min-height: 60px;
+    text-align: center;
+}
+
+.risk-green {
+    background: #27ae60;
+}
+
+.risk-yellow {
+    background: #f39c12;
+}
+
+.risk-orange {
+    background: #e67e22;
+}
+
+.risk-red {
+    background: #e74c3c;
+}
+
+body.dark-mode .risk-label,
+body.dark-mode .risk-label-h {
+    color: var(--primary);
+}
+
+/* Statistics Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--accent) 0%, #0b0080 100%);
+    padding: 2rem 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+body.dark-mode .stat-card {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+}
