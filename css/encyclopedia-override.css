@@ -132,3 +132,77 @@ body.dark-mode .infobox-header {
     color: var(--primary);
     border: 1px solid var(--border);
 }
+
+/* Dark mode - boutons et éléments interactifs */
+body.dark-mode .dark-toggle {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .dark-toggle:hover {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .back-to-top {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .back-to-top:hover {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .tag {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+/* Dark mode - meta boxes et image boxes */
+body.dark-mode .meta-box {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .meta-box h4 {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .meta-box li {
+    border-bottom-color: var(--border-light);
+}
+
+body.dark-mode .image-box {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .image-box h4 {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .sidebar-image {
+    border-color: var(--border);
+    background: var(--bg-tertiary);
+}
+
+/* Dark mode - liens sidebar */
+body.dark-mode .sidebar a {
+    color: var(--accent);
+}
+
+body.dark-mode .sidebar a:visited {
+    color: var(--accent-visited);
+}
+
+body.dark-mode .sidebar a:hover {
+    background: var(--sidebar-hover);
+}
+
+/* Dark mode - footer */
+body.dark-mode .footer-grid h4 {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .footer-bottom {
+    border-top-color: var(--border);
+}

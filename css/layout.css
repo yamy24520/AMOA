@@ -186,11 +186,27 @@
 }
 
 /* Dark Mode Overrides */
+body.dark-mode {
+    background: var(--bg-main);
+}
+
 body.dark-mode .header {
-    background: #0a0a1a;
+    background: #0d1117;
+    border-bottom-color: var(--border);
 }
 
 body.dark-mode .main-content {
-    background: #16213e;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    background: var(--bg-main);
+    border-color: var(--border);
+    box-shadow: none;
+}
+
+body.dark-mode .sidebar {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .footer {
+    background: #0d1117;
+    border-top-color: var(--border);
 }

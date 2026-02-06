@@ -179,11 +179,50 @@
 }
 
 /* Dark mode adjustments */
-body.dark-mode .v-phase,
-body.dark-mode .sprint-box {
+body.dark-mode .cycle-v-diagram {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .v-phase {
+    background: var(--bg-main);
+    border-color: var(--border);
+}
+
+body.dark-mode .v-bottom {
     background: var(--bg-tertiary);
+    border-color: var(--border);
+}
+
+body.dark-mode .sprint-box {
+    background: var(--bg-main);
+    border-color: var(--border);
+}
+
+body.dark-mode .sprint-title {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .sprint-phase {
+    background: var(--bg-secondary);
+    border-color: var(--border);
 }
 
 body.dark-mode .sprint-output {
-    background: var(--primary);
+    background: var(--bg-tertiary);
+    color: var(--primary);
+}
+
+body.dark-mode .safe-level {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+body.dark-mode .safe-level-title {
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .safe-team {
+    background: var(--bg-tertiary);
+    border-color: var(--border);
 }
