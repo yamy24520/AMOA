@@ -1293,15 +1293,33 @@ Spécifications Générales ─────────────────�
                 <div id="tab-agile" class="tab-content">
                     <h4>Agile / Scrum - Approche Itérative</h4>
                     <p>Méthodologie itérative organisée en sprints de 2 à 4 semaines, permettant des livraisons incrémentales et un feedback continu du Product Owner (représentant la MOA).</p>
-                    <div class="diagram">
-Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
-┌──────────────┐&nbsp;&nbsp;&nbsp;&nbsp;┌──────────────┐&nbsp;&nbsp;&nbsp;&nbsp;┌──────────────┐<br>
-│ Planning      │&nbsp;&nbsp;&nbsp;&nbsp;│ Planning      │&nbsp;&nbsp;&nbsp;&nbsp;│ Planning      │<br>
-│ Daily Standups│&nbsp;&nbsp;&nbsp;&nbsp;│ Daily Standups│&nbsp;&nbsp;&nbsp;&nbsp;│ Daily Standups│<br>
-│ Dev + Tests   │&nbsp;&nbsp;&nbsp;&nbsp;│ Dev + Tests   │&nbsp;&nbsp;&nbsp;&nbsp;│ Dev + Tests   │<br>
-│ Review + Retro│&nbsp;&nbsp;&nbsp;&nbsp;│ Review + Retro│&nbsp;&nbsp;&nbsp;&nbsp;│ Review + Retro│<br>
-└──────┬───────┘&nbsp;&nbsp;&nbsp;&nbsp;└──────┬───────┘&nbsp;&nbsp;&nbsp;&nbsp;└──────┬───────┘<br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓ Increment
+
+                    <div class="scrum-flow">
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 1 (2-4 sem.)</div>
+                            <div class="sprint-phase">📋 Planning</div>
+                            <div class="sprint-phase">🗣️ Daily Standups</div>
+                            <div class="sprint-phase">💻 Dev + Tests</div>
+                            <div class="sprint-phase">✅ Review + Retro</div>
+                            <div class="sprint-output">→ Increment</div>
+                        </div>
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 2 (2-4 sem.)</div>
+                            <div class="sprint-phase">📋 Planning</div>
+                            <div class="sprint-phase">🗣️ Daily Standups</div>
+                            <div class="sprint-phase">💻 Dev + Tests</div>
+                            <div class="sprint-phase">✅ Review + Retro</div>
+                            <div class="sprint-output">→ Increment</div>
+                        </div>
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 3 (2-4 sem.)</div>
+                            <div class="sprint-phase">📋 Planning</div>
+                            <div class="sprint-phase">🗣️ Daily Standups</div>
+                            <div class="sprint-phase">💻 Dev + Tests</div>
+                            <div class="sprint-phase">✅ Review + Retro</div>
+                            <div class="sprint-output">→ Increment</div>
+                        </div>
+                        <div class="sprint-continue">...</div>
                     </div>
                     <table>
                         <thead><tr><th>Role Scrum</th><th>Equivalent AMOA</th><th>Responsabilités</th></tr></thead>
@@ -1316,18 +1334,27 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
                 <div id="tab-safe" class="tab-content">
                     <h4>SAFe - Scaled Agile Framework</h4>
                     <p>Framework d'agilité à l'échelle, adapté aux grandes organisations avec plusieurs équipes travaillant sur un même programme. Il organise le travail en <strong>Agile Release Trains (ART)</strong> synchronisés sur des <strong>Program Increments (PI)</strong> de 8 à 12 semaines.</p>
-                    <div class="diagram">
-┌─────────────────────────────────────────────┐<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PORTFOLIO LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;Epics strategiques / Budget Lean&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-├─────────────────────────────────────────────┤<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PROGRAM LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-│&nbsp;&nbsp;&nbsp;Agile Release Train (ART)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-│&nbsp;&nbsp;&nbsp;PI Planning → Sprints → System Demo&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-├─────────────────────────────────────────────┤<br>
-│&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TEAM LEVEL&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-│&nbsp;&nbsp;&nbsp;Equipe 1 │ Equipe 2 │ Equipe 3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;│<br>
-└─────────────────────────────────────────────┘
+
+                    <div class="safe-levels">
+                        <div class="safe-level portfolio">
+                            <div class="safe-level-title">PORTFOLIO LEVEL</div>
+                            <div class="safe-level-content">Epics stratégiques / Budget Lean</div>
+                        </div>
+                        <div class="safe-arrow">↓</div>
+                        <div class="safe-level program">
+                            <div class="safe-level-title">PROGRAM LEVEL</div>
+                            <div class="safe-level-content">Agile Release Train (ART)</div>
+                            <div class="safe-level-content">PI Planning → Sprints → System Demo</div>
+                        </div>
+                        <div class="safe-arrow">↓</div>
+                        <div class="safe-level team">
+                            <div class="safe-level-title">TEAM LEVEL</div>
+                            <div class="safe-teams">
+                                <span class="safe-team">Équipe 1</span>
+                                <span class="safe-team">Équipe 2</span>
+                                <span class="safe-team">Équipe 3</span>
+                            </div>
+                        </div>
                     </div>
                     <p><strong>Usage :</strong> Projets SI de grande envergure (> 50 personnes), programmes multi-équipes, transformation digitale d'entreprise.</p>
                 </div>
