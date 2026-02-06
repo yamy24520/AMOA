@@ -95,7 +95,6 @@
                 <li><a href="#definition">Définition</a></li>
                 <li><a href="#contexte">Reformulation Besoin</a></li>
                 <li><a href="#analyse-risques">Analyse des Risques</a></li>
-                <li><a href="#diagrammes">Diagrammes</a></li>
                 <li><a href="#specifications">Spécifications</a></li>
                 <li><a href="#cahier-charges">Cahier des Charges</a></li>
                 <li><a href="#budget">Budget & Tarifs</a></li>
@@ -386,53 +385,8 @@
                 </table>
             </section>
 
-            <section id="diagrammes">
-                <h2>4. Schémas et Diagrammes</h2>
-                
-                <p>Les diagrammes constituent des outils de communication essentiels en AMOA. Ils permettent de représenter visuellement les interactions système-acteurs, l'architecture technique, ou encore les flux de processus métier. Leur production répond à un double objectif : clarifier la compréhension du besoin et faciliter le dialogue entre maîtrise d'ouvrage et maîtrise d'œuvre.</p>
-                
-                <h3>4.1 Diagramme de Cas d'Utilisation (Use Case)</h3>
-                
-                <p>Le diagramme de cas d'utilisation permet de modéliser les interactions entre les acteurs et le système. Il constitue un outil de communication privilégié entre MOA et MOE.</p>
-
-                <div class="diagram">
-                    ┌─────────────────────────────────────┐<br>
-                    │     SYSTÈME DE GESTION              │<br>
-                    └─────────────────────────────────────┘<br>
-                    <br>
-                    [Utilisateur Standard]  →  (Consulter données)<br>
-                                           →  (Créer réservation)<br>
-                                           →  (Modifier réservation)<br>
-                    <br>
-                    [Administrateur]       →  (Gérer utilisateurs)<br>
-                                           →  (Paramétrer système)<br>
-                                           →  (Exporter rapports)<br>
-                    <br>
-                    [Système Externe]      →  (Synchroniser données)
-                </div>
-
-                <h3>4.2 Architecture Technique Cible</h3>
-                
-                <p>L'architecture technique décrit l'infrastructure et les flux de données du système cible. Elle sert de référence pour l'évaluation des solutions proposées par les prestataires.</p>
-
-                <div class="code-block">
-[Poste Utilisateur / Terminal Mobile]
-         |
-         | HTTPS (TLS 1.3)
-         ↓
-[Serveur Applicatif / Cloud (AWS/Azure)]
-         |
-         ├──→ [Base de Données SQL] (PostgreSQL/MySQL)
-         |
-         └──→ [Services Externes]
-               ├──→ API Paiement (Stripe/PayPal)
-               ├──→ Service Email (SendGrid)
-               └──→ API Métier (ERP/CRM)
-                </div>
-            </section>
-
             <section id="specifications">
-                <h2>5. Spécifications Fonctionnelles et Techniques</h2>
+                <h2>4. Spécifications Fonctionnelles et Techniques</h2>
                 
                 <p>Les spécifications constituent le référentiel contractuel entre maîtrise d'ouvrage et maîtrise d'œuvre. Elles se décomposent en deux volets complémentaires : les spécifications fonctionnelles, qui décrivent le "quoi" (ce que le système doit faire), et les spécifications techniques, qui précisent le "comment" (les contraintes d'implémentation, de performance et de sécurité).</p>
                 
@@ -520,7 +474,7 @@
             </section>
 
             <section id="cahier-charges">
-                <h2>6. Cahier des Charges (CDC)</h2>
+                <h2>5. Cahier des Charges (CDC)</h2>
                 
                 <p>Le cahier des charges constitue le document contractuel central d'un projet AMOA. Il formalise de manière exhaustive et non ambiguë l'ensemble des exigences du maître d'ouvrage, définit le périmètre précis des prestations attendues, et établit les critères de réception et de contrôle. Sa rédaction requiert une précision juridique et technique permettant son utilisation comme base d'un marché public ou privé.</p>
                 
@@ -584,7 +538,7 @@
             </section>
 
             <section id="budget">
-                <h2>7. Estimation des Coûts (Budget)</h2>
+                <h2>6. Estimation des Coûts (Budget)</h2>
                 
                 <p>L'estimation budgétaire constitue un exercice délicat qui conditionne la viabilité économique du projet. Elle doit être exhaustive et intégrer l'ensemble des postes de dépense prévisibles : prestations intellectuelles, licences logicielles, équipements matériels, et coûts récurrents de maintenance. La méthodologie repose sur une décomposition analytique par nature de prestation, permettant une traçabilité et une justification de chaque ligne budgétaire.</p>
                 
@@ -778,7 +732,7 @@
             </section>
 
             <section id="planning">
-                <h2>8. Rétroplanning Global</h2>
+                <h2>7. Rétroplanning Global</h2>
                 
                 <p>Le rétroplanning constitue l'outil de pilotage temporel du projet. Il structure l'enchaînement des phases, identifie les jalons de validation, et permet d'anticiper les ressources nécessaires à chaque étape. Sa construction s'effectue classiquement en partant de la date butoir de mise en production pour remonter vers la phase de cadrage, d'où son appellation de "rétroplanning".</p>
 
@@ -858,7 +812,7 @@
             </section>
 
             <section id="benchmark">
-                <h2>9. Matrice de Choix / Benchmark Solutions</h2>
+                <h2>8. Matrice de Choix / Benchmark Solutions</h2>
                 
                 <p>La matrice de choix est un outil d'aide à la décision permettant de comparer objectivement plusieurs solutions candidates selon des critères pondérés. Elle garantit la transparence et la traçabilité du processus de sélection, critères essentiels dans le cadre des marchés publics. La méthodologie repose sur l'identification de critères discriminants, leur pondération en fonction des priorités stratégiques, et l'évaluation de chaque solution selon un barème normalisé.</p>
 
@@ -954,7 +908,7 @@
             </section>
 
             <section id="controles">
-                <h2>10. Liste de Contrôles (Ordonnée)</h2>
+                <h2>9. Liste de Contrôles (Ordonnée)</h2>
                 
                 <p>La liste de contrôles organise le processus de vérification de la conformité de la solution livrée par rapport aux spécifications du cahier des charges. Elle doit être structurée de manière chronologique, suivant les différentes phases de recette : contrôles préalables (configuration, sécurité), contrôles fonctionnels (conformité aux spécifications), contrôles techniques (performance, intégration), et contrôles de clôture (documentation, transfert de compétences).</p>
 
@@ -1000,7 +954,7 @@
             </section>
             
             <section id="juridique">
-                <h2>11. Volet Juridique - Marchés & Contrats</h2>
+                <h2>10. Volet Juridique - Marchés & Contrats</h2>
                 
                 <h3>11.1 Seuils des Marchés Publics (2024)</h3>
                 
@@ -1098,7 +1052,7 @@
             </section>
             
             <section id="reglementation">
-                <h2>12. Cadre Réglementaire</h2>
+                <h2>11. Cadre Réglementaire</h2>
                 
                 <table>
                     <thead>
@@ -1244,7 +1198,7 @@
 
             <!-- === SECTION 13: CAS PRATIQUE === -->
             <section id="cas-pratique">
-                <h2>13. Cas Pratique Complet</h2>
+                <h2>12. Cas Pratique Complet</h2>
                 <p>Ce cas pratique illustre une mission AMOA complète, de l'expression du besoin initial jusqu'à la mise en production, dans le contexte d'une collectivité territoriale souhaitant moderniser son système de gestion de la restauration scolaire.</p>
 
                 <div class="case-study">
@@ -1310,7 +1264,7 @@ On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 
 
             <!-- === SECTION 14: METHODOLOGIES === -->
             <section id="methodologies">
-                <h2>14. Méthodologies de Gestion de Projet</h2>
+                <h2>13. Méthodologies de Gestion de Projet</h2>
                 <p>Le choix de la méthodologie de gestion de projet conditionne l'organisation des travaux, la fréquence des livrables et le mode de collaboration entre MOA et MOE. L'AMOA doit recommander l'approche la plus adaptée au contexte du projet.</p>
 
                 <div class="tabs">
@@ -1397,7 +1351,7 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
 
             <!-- === SECTION 15: GOUVERNANCE === -->
             <section id="gouvernance">
-                <h2>15. Gouvernance de Projet</h2>
+                <h2>14. Gouvernance de Projet</h2>
                 <p>La gouvernance projet définit les instances de décision, les circuits de validation et les mécanismes d'escalade. Une gouvernance bien structurée est un facteur clé de succès, permettant de maintenir l'alignement stratégique et de résoudre rapidement les points de blocage.</p>
 
                 <h3>15.1 Instances de Pilotage</h3>
@@ -1467,7 +1421,7 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
 
             <!-- === SECTION 16: CONDUITE DU CHANGEMENT === -->
             <section id="conduite-changement">
-                <h2>16. Conduite du Changement</h2>
+                <h2>15. Conduite du Changement</h2>
                 <p>La conduite du changement vise à accompagner les utilisateurs dans l'adoption de la nouvelle solution. Elle constitue un facteur de succès déterminant, les résistances humaines étant la première cause d'échec des projets SI.</p>
 
                 <h3>16.1 Plan de Communication</h3>
@@ -1509,7 +1463,7 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
 
             <!-- === SECTION 17: RECETTE === -->
             <section id="recette">
-                <h2>17. Recette et Validation (VABF/VSR)</h2>
+                <h2>16. Recette et Validation (VABF/VSR)</h2>
                 <p>La recette constitue la phase de vérification formelle de la conformité de la solution livrée aux exigences du cahier des charges. Elle se décompose en deux étapes successives : la VABF et la VSR.</p>
 
                 <h3>17.1 Stratégie de Tests</h3>
@@ -1553,7 +1507,7 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
 
             <!-- === SECTION 18: KPI === -->
             <section id="kpi">
-                <h2>18. KPI et Indicateurs de Pilotage</h2>
+                <h2>17. KPI et Indicateurs de Pilotage</h2>
                 <p>Les indicateurs clés de performance (KPI) permettent de mesurer objectivement l'avancement du projet et la qualité des livrables. Ils alimentent les tableaux de bord présentés en COPIL et COPROJ.</p>
 
                 <h3>18.1 KPI Projet (Pendant la réalisation)</h3>
@@ -1585,7 +1539,7 @@ Sprint 1 (2-4 sem.) → Sprint 2 (2-4 sem.) → Sprint 3 (2-4 sem.) → ...<br>
 
             <!-- === SECTION 19: GLOSSAIRE === -->
             <section id="glossaire">
-                <h2>19. Glossaire</h2>
+                <h2>18. Glossaire</h2>
                 <p>Définitions des termes et acronymes utilisés dans le domaine de l'AMOA et de la gestion de projet SI.</p>
 
                 <div class="glossary-grid">
