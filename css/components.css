@@ -1,0 +1,335 @@
+/* ===================================
+   COMPONENTS
+   Composants réutilisables
+   =================================== */
+
+/* Search Bar */
+.search-bar {
+    flex: 1;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    font-size: 13px;
+    background: #ffffff;
+    color: var(--primary);
+    transition: all 0.2s ease;
+}
+
+.search-bar input::placeholder {
+    color: var(--secondary);
+}
+
+.search-bar input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 1px var(--accent);
+}
+
+body.dark-mode .search-bar input {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Infobox */
+.infobox {
+    float: right;
+    width: 300px;
+    margin: 0 0 1rem 1rem;
+    background: var(--infobox-bg);
+    border: 1px solid var(--border-light);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.infobox-header {
+    background: var(--infobox-header);
+    color: var(--primary);
+    padding: 0.4rem 1rem;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.infobox-content {
+    padding: var(--spacing-md);
+}
+
+.infobox-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 0.5rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border-light);
+    font-size: 13px;
+}
+
+.infobox-row:last-child {
+    border-bottom: none;
+}
+
+.infobox-label {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.infobox-value {
+    color: var(--primary);
+}
+
+body.dark-mode .infobox-header {
+    background: #0f3460;
+}
+
+/* Note Box */
+.note {
+    background: #f8f9fa;
+    border: 1px solid #a2a9b1;
+    border-left: 3px solid #36c;
+    padding: 0.75rem 1rem;
+    margin: 1rem 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.note strong {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 13px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-light);
+}
+
+thead {
+    background: var(--table-header);
+    color: var(--primary);
+}
+
+th {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    font-weight: 600;
+    font-size: 13px;
+    border: 1px solid var(--border-light);
+}
+
+td {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-light);
+    background: #ffffff;
+}
+
+tbody tr:nth-child(even) td {
+    background: var(--bg-secondary);
+}
+
+tbody tr:hover td {
+    background: #f0f0f0;
+}
+
+body.dark-mode thead {
+    background: #0f3460;
+}
+
+/* Code Block */
+.code-block {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1.5rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.6;
+    border-left: 4px solid var(--accent);
+}
+
+body.dark-mode .code-block {
+    background: #0a0a1a;
+}
+
+/* Diagram */
+.diagram {
+    background: var(--bg-tertiary);
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    padding: var(--spacing-xl);
+    margin: 1.5rem 0;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    line-height: 1.8;
+}
+
+body.dark-mode .diagram {
+    background: #0f3460;
+    border-color: #3a3a3a;
+}
+
+/* Checklist */
+.checklist {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.checklist li {
+    padding: 0.6rem 0 0.6rem 2rem;
+    position: relative;
+}
+
+.checklist li:before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+/* Reference Box */
+.reference-box {
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.reference-box h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.reference-list {
+    list-style: none;
+    counter-reset: reference;
+}
+
+.reference-list li {
+    counter-increment: reference;
+    margin-bottom: 0.8rem;
+    padding-left: 2rem;
+    position: relative;
+    font-size: 0.9rem;
+}
+
+.reference-list li:before {
+    content: "[" counter(reference) "]";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 600;
+}
+
+/* Meta Box */
+.meta-box {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.meta-box h4 {
+    margin-top: 0;
+    font-size: 1rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.meta-box ul {
+    list-style: none;
+}
+
+.meta-box li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+
+.meta-box li:last-child {
+    border-bottom: none;
+}
+
+/* Tags */
+.tag {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Reading Progress Bar */
+.reading-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent), #e74c3c, #f39c12);
+    z-index: var(--z-progress);
+    transition: width 0.1s linear;
+    width: 0%;
+}
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+    background: var(--accent);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.dark-toggle:hover {
+    background: var(--accent-hover);
+}
+
+/* Back to Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    color: white;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.back-to-top:hover {
+    background: var(--accent-hover);
+    transform: translateY(-3px);
+}
