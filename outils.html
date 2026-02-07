@@ -72,6 +72,8 @@
                         <li><a href="#controles-cloture">Contrôles de Clôture</a></li>
                     </ul>
                 </li>
+                <li><a href="#kpi">KPI & Indicateurs</a></li>
+                <li><a href="#recette">Recette et Validation</a></li>
                 <li><a href="bibliographie.html">Bibliographie</a></li>
                 <li><a href="faq.html">FAQ</a></li>
                 <li><a href="glossaire.html">Glossaire</a></li>
@@ -109,11 +111,11 @@
 
             <!-- SECTION SPÉCIFICATIONS -->
             <section id="specifications">
-                <h2>1. Spécifications Fonctionnelles et Techniques</h2>
+                <h2>Spécifications Fonctionnelles et Techniques</h2>
 
                 <p>Les spécifications constituent le référentiel contractuel entre maîtrise d'ouvrage et maîtrise d'œuvre. Elles se décomposent en deux volets complémentaires : les spécifications fonctionnelles, qui décrivent le "quoi" (ce que le système doit faire), et les spécifications techniques, qui précisent le "comment" (les contraintes d'implémentation, de performance et de sécurité).</p>
 
-                <h3 id="spec-fonctionnelles">5.1 Spécifications Fonctionnelles</h3>
+                <h3 id="spec-fonctionnelles">Spécifications Fonctionnelles</h3>
 
                 <p>Les spécifications fonctionnelles décrivent ce que le système doit faire du point de vue utilisateur. Elles sont formulées de manière non ambiguë et testable.</p>
 
@@ -154,7 +156,7 @@
                     </tbody>
                 </table>
 
-                <h3 id="spec-techniques">5.2 Spécifications Techniques</h3>
+                <h3 id="spec-techniques">Spécifications Techniques</h3>
 
                 <p>Les spécifications techniques définissent les contraintes d'implémentation, de performance et de sécurité auxquelles la solution doit se conformer.</p>
 
@@ -198,17 +200,17 @@
 
             <!-- SECTION CAHIER DES CHARGES -->
             <section id="cahier-charges">
-                <h2>2. Cahier des Charges (CDC)</h2>
+                <h2>Cahier des Charges (CDC)</h2>
 
                 <p>Le cahier des charges constitue le document contractuel central d'un projet AMOA. Il formalise de manière exhaustive et non ambiguë l'ensemble des exigences du maître d'ouvrage, définit le périmètre précis des prestations attendues, et établit les critères de réception et de contrôle. Sa rédaction requiert une précision juridique et technique permettant son utilisation comme base d'un marché public ou privé.</p>
 
-                <h3 id="objet-marche">6.1 Objet du Marché</h3>
+                <h3 id="objet-marche">Objet du Marché</h3>
 
                 <p>Le cahier des charges constitue le document contractuel qui formalise l'ensemble des exigences du maître d'ouvrage. Son objet définit précisément le périmètre des prestations attendues.</p>
 
                 <p><em>Exemple : "Prestations de fourniture, paramétrage et maintenance d'une solution SaaS de gestion des réservations pour le compte de [Nom du Client], dans le cadre de la modernisation de son système d'information métier."</em></p>
 
-                <h3 id="perimetre">6.2 Périmètre et Volumétrie</h3>
+                <h3 id="perimetre">Périmètre et Volumétrie</h3>
 
                 <p>La définition du périmètre précise les frontières du projet et permet aux prestataires d'évaluer correctement leur proposition :</p>
 
@@ -219,7 +221,7 @@
                     <li><strong>Volumétrie attendue :</strong> 500 transactions quotidiennes en pic</li>
                 </ul>
 
-                <h3 id="livrables">6.3 Livrables Contractuels</h3>
+                <h3 id="livrables">Livrables Contractuels</h3>
 
                 <p>Les livrables sont assortis de dates jalons et constituent des points de contrôle obligatoires :</p>
 
@@ -263,7 +265,7 @@
 
             <!-- SECTION LISTE DE CONTRÔLES -->
             <section id="controles">
-                <h2>3. Liste de Contrôles (Ordonnée)</h2>
+                <h2>Liste de Contrôles (Ordonnée)</h2>
 
                 <p>La liste de contrôles organise le processus de vérification de la conformité de la solution livrée par rapport aux spécifications du cahier des charges. Elle doit être structurée de manière chronologique, suivant les différentes phases de recette : contrôles préalables (configuration, sécurité), contrôles fonctionnels (conformité aux spécifications), contrôles techniques (performance, intégration), et contrôles de clôture (documentation, transfert de compétences).</p>
 
@@ -331,12 +333,44 @@
                 </div>
             </div>
 
+            <!-- === SECTION KPI === -->
+            <section id="kpi">
+                <h2>KPI et Indicateurs de Pilotage</h2>
+                <p>Les indicateurs clés de performance (KPI) permettent de mesurer objectivement l'avancement du projet et la qualité des livrables. Ils alimentent les tableaux de bord présentés en COPIL et COPROJ.</p>
+
+                <h3>KPI Projet (Pendant la réalisation)</h3>
+                <table>
+                    <thead><tr><th>KPI</th><th>Formule</th><th>Cible</th><th>Fréquence</th></tr></thead>
+                    <tbody>
+                        <tr><td>Avancement réel</td><td>Nb tâches terminées / Nb tâches total</td><td>>= avancement prévu</td><td>Hebdomadaire</td></tr>
+                        <tr><td>Taux de conformité</td><td>Tests passés / Tests exécutés</td><td>> 95%</td><td>Par phase</td></tr>
+                        <tr><td>Dérive planning</td><td>(Date réelle - Date prévue) / Durée phase</td><td>< 10%</td><td>Hebdomadaire</td></tr>
+                        <tr><td>Consommation budget</td><td>Dépenses réelles / Budget alloué</td><td>< 100%</td><td>Mensuelle</td></tr>
+                        <tr><td>Densité d'anomalies</td><td>Nb anomalies / Nb fonctionnalités livrées</td><td>< 0,5</td><td>Par sprint</td></tr>
+                        <tr><td>Vélocité équipe</td><td>Story points livrés / Sprint</td><td>Stable ou croissant</td><td>Par sprint</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>KPI Post-Déploiement (Après mise en production)</h3>
+                <table>
+                    <thead><tr><th>KPI</th><th>Formule</th><th>Cible</th></tr></thead>
+                    <tbody>
+                        <tr><td>Taux d'adoption</td><td>Utilisateurs actifs / Utilisateurs formés</td><td>> 80% à M+3</td></tr>
+                        <tr><td>Satisfaction utilisateur</td><td>Note moyenne enquête (1-5)</td><td>>= 4/5</td></tr>
+                        <tr><td>Disponibilité</td><td>Uptime / Temps total</td><td>>= 99,5%</td></tr>
+                        <tr><td>Temps moyen de réponse</td><td>Moyenne temps chargement pages</td><td>< 2 secondes</td></tr>
+                        <tr><td>Tickets support</td><td>Nb incidents / mois</td><td>Décroissant</td></tr>
+                        <tr><td>ROI</td><td>(Gains - Coût projet) / Coût projet</td><td>> 1 à 18 mois</td></tr>
+                    </tbody>
+                </table>
+            </section>
+
             <!-- === SECTION RECETTE === -->
             <section id="recette">
-                <h2>4. Recette et Validation (VABF/VSR)</h2>
+                <h2>Recette et Validation (VABF/VSR)</h2>
                 <p>La recette constitue la phase de vérification formelle de la conformité de la solution livrée aux exigences du cahier des charges. Elle se décompose en deux étapes successives : la VABF et la VSR.</p>
 
-                <h3>4.1 Stratégie de Tests</h3>
+                <h3>Stratégie de Tests</h3>
                 <table>
                     <thead><tr><th>Type de test</th><th>Responsable</th><th>Objectif</th><th>Outils types</th></tr></thead>
                     <tbody>
@@ -350,7 +384,7 @@
                     </tbody>
                 </table>
 
-                <h3>4.2 Modèle de Fiche de Test</h3>
+                <h3>Modèle de Fiche de Test</h3>
                 <div class="case-study">
                     <table style="margin:0;">
                         <tbody>
@@ -365,7 +399,7 @@
                     </table>
                 </div>
 
-                <h3>4.3 Critères de Prononcé de la Recette</h3>
+                <h3>Critères de Prononcé de la Recette</h3>
                 <ul>
                     <li><strong>100%</strong> des tests bloquants (priorité Haute) : statut PASSE</li>
                     <li><strong>95%</strong> des tests majeurs (priorité Moyenne) : statut PASSE</li>
