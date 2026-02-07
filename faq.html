@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Questions Fréquentes AMOA | WikiAMOA</title>
+    <meta name="description" content="Foire aux questions sur l'AMOA : définitions, rôles, tarifs, formations, différences MOA/MOE, méthodologies projet.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Catégories</h3>
+            <ul>
+                <li><a href="#general">Questions Générales</a></li>
+                <li><a href="#roles">Rôles & Responsabilités</a></li>
+                <li><a href="#tarifs">Tarifs & Facturation</a></li>
+                <li><a href="#formations">Formations & Certifications</a></li>
+                <li><a href="#juridique">Aspects Juridiques</a></li>
+                <li><a href="#methodologies">Méthodologies</a></li>
+                <li><a href="#outils">Outils & Livrables</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1>FAQ - Foire Aux Questions</h1>
+                <p class="subtitle">Réponses aux questions fréquentes sur l'AMOA</p>
+                <p class="meta-info">Dernière mise à jour : Février 2026</p>
+            </div>
+
+            <section id="general">
+                <h2>Questions Générales</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Qu'est-ce que l'AMOA exactement ?</h3>
+                    <div class="faq-answer">
+                        <p>L'Assistance à Maîtrise d'Ouvrage (AMOA) est une fonction d'accompagnement du maître d'ouvrage (MOA) dans la définition, le pilotage et la réalisation d'un projet, notamment dans le domaine des systèmes d'information.</p>
+                        <p><strong>Rôle principal :</strong> L'AMOA assiste la MOA dans l'expression des besoins, la rédaction du cahier des charges, le suivi de réalisation et la validation des livrables, sans pour autant se substituer à elle.</p>
+                        <p><strong>Référence normative :</strong> Selon la norme ISO 21500:2012, l'AMOA fait partie des parties prenantes contribuant au management de projet.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quelle est la différence entre MOA, AMOA et MOE ?</h3>
+                    <div class="faq-answer">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Acteur</th>
+                                    <th>Rôle</th>
+                                    <th>Responsabilité</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>MOA</strong> (Maîtrise d'Ouvrage)</td>
+                                    <td>Définit le besoin et valide</td>
+                                    <td>Décision finale, budget, validation</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>AMOA</strong> (Assistance MOA)</td>
+                                    <td>Assiste et conseille la MOA</td>
+                                    <td>Conseil, rédaction, suivi (pas de décision)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>MOE</strong> (Maîtrise d'Œuvre)</td>
+                                    <td>Conçoit et réalise la solution</td>
+                                    <td>Développement, déploiement, garantie</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Analogie :</strong> Si vous construisez une maison : MOA = propriétaire, AMOA = architecte-conseil du propriétaire, MOE = entreprise de construction.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Dans quels types de projets intervient l'AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p>L'AMOA intervient principalement dans les projets de systèmes d'information, notamment :</p>
+                        <ul>
+                            <li>Mise en place d'ERP (SAP, Oracle, Microsoft Dynamics)</li>
+                            <li>Projets de transformation digitale</li>
+                            <li>Migration de systèmes legacy</li>
+                            <li>Projets data (data lake, BI, analytics)</li>
+                            <li>Conformité réglementaire (RGPD, LPM, etc.)</li>
+                            <li>Refonte de sites web / applications métier</li>
+                            <li>Projets cloud et infrastructure</li>
+                        </ul>
+                        <p><strong>Secteurs :</strong> Public (ministères, collectivités), banque/assurance, industrie, santé, retail, télécom.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">L'AMOA est-elle obligatoire pour un projet ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Légalement :</strong> Non, l'AMOA n'est pas obligatoire sauf dans certains marchés publics complexes où elle peut être exigée.</p>
+                        <p><strong>En pratique :</strong> L'AMOA est fortement recommandée (voire indispensable) lorsque :</p>
+                        <ul>
+                            <li>La MOA ne dispose pas de compétences techniques suffisantes</li>
+                            <li>Le projet est stratégique ou complexe (budget &gt; 500k€)</li>
+                            <li>Le projet implique plusieurs métiers ou directions</li>
+                            <li>Des contraintes réglementaires strictes s'appliquent (RGPD, sécurité)</li>
+                        </ul>
+                        <p><strong>Statistique :</strong> Selon le CHAOS Report 2023, les projets avec AMOA ont un taux de succès de 62% contre 29% sans assistance.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="roles">
+                <h2>Rôles & Responsabilités</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quelles sont les missions concrètes de l'AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Phase amont :</strong></p>
+                        <ul>
+                            <li>Recueil et analyse des besoins métier</li>
+                            <li>Étude d'opportunité et de faisabilité</li>
+                            <li>Rédaction du cahier des charges fonctionnel</li>
+                            <li>Définition de la stratégie projet</li>
+                        </ul>
+                        <p><strong>Phase réalisation :</strong></p>
+                        <ul>
+                            <li>Suivi de l'avancement du projet</li>
+                            <li>Interface MOA/MOE (traduction besoins ↔ solution technique)</li>
+                            <li>Validation des livrables intermédiaires</li>
+                            <li>Gestion des risques et des changements</li>
+                        </ul>
+                        <p><strong>Phase recette :</strong></p>
+                        <ul>
+                            <li>Définition des scénarios de tests</li>
+                            <li>Organisation et pilotage de la recette</li>
+                            <li>Validation de la conformité</li>
+                            <li>Accompagnement au démarrage (conduite du changement)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">L'AMOA peut-elle prendre des décisions ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Non.</strong> L'AMOA est un conseil et ne se substitue jamais à la MOA dans ses prérogatives décisionnelles.</p>
+                        <p><strong>Rôle de l'AMOA :</strong> Éclairer la décision en fournissant analyses, recommandations et arbitrages possibles.</p>
+                        <p><strong>Décision finale :</strong> Toujours prise par la MOA (chef de projet MOA, direction métier, comité de pilotage).</p>
+                        <p><strong>Exemple :</strong> L'AMOA peut recommander 3 solutions ERP avec avantages/inconvénients, mais c'est la MOA qui choisit.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tarifs">
+                <h2>Tarifs & Facturation</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quel est le TJM moyen d'un consultant AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Fourchettes 2024 (France) :</strong></p>
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Profil</th>
+                                    <th>Expérience</th>
+                                    <th>TJM (€)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>AMOA Junior</td>
+                                    <td>0-3 ans</td>
+                                    <td>450 - 600€</td>
+                                </tr>
+                                <tr>
+                                    <td>AMOA Confirmé</td>
+                                    <td>3-7 ans</td>
+                                    <td>600 - 850€</td>
+                                </tr>
+                                <tr>
+                                    <td>AMOA Senior</td>
+                                    <td>7-12 ans</td>
+                                    <td>850 - 1100€</td>
+                                </tr>
+                                <tr>
+                                    <td>AMOA Expert / Manager</td>
+                                    <td>&gt; 12 ans</td>
+                                    <td>1100 - 1500€</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Source :</strong> Baromètre Syntec Numérique 2024 + enquête APEC.</p>
+                        <p><strong>Variations :</strong> +15-20% pour Paris, +10% pour secteur bancaire/défense, -10-15% en régions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Comment budgéter une prestation AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Règle empirique :</strong> Budget AMOA = 8 à 15% du budget total projet.</p>
+                        <p><strong>Exemple :</strong></p>
+                        <ul>
+                            <li>Projet SI de 1M€ → AMOA entre 80k€ et 150k€</li>
+                            <li>Petit projet de 200k€ → AMOA entre 16k€ et 30k€</li>
+                        </ul>
+                        <p><strong>Facteurs influençant :</strong></p>
+                        <ul>
+                            <li>Complexité métier (réglementé vs standard)</li>
+                            <li>Maturité de la MOA (faible = plus d'AMOA nécessaire)</li>
+                            <li>Durée du projet (longue = economies d'échelle)</li>
+                            <li>Profil requis (expert métier vs généraliste)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="formations">
+                <h2>Formations & Certifications</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quelles certifications sont reconnues en AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Certifications projet (internationales) :</strong></p>
+                        <ul>
+                            <li><strong>PMP</strong> (Project Management Professional - PMI) : La plus reconnue mondialement</li>
+                            <li><strong>PRINCE2</strong> (Foundation / Practitioner) : Norme britannique, très utilisée</li>
+                            <li><strong>CAPM</strong> (Certified Associate in Project Management) : Niveau entrée PMI</li>
+                        </ul>
+                        <p><strong>Certifications Agile :</strong></p>
+                        <ul>
+                            <li><strong>PSM</strong> (Professional Scrum Master - Scrum.org)</li>
+                            <li><strong>PSPO</strong> (Professional Scrum Product Owner) : Essentiel pour AMOA Agile</li>
+                            <li><strong>SAFe</strong> (Scaled Agile Framework) : Pour grandes organisations</li>
+                        </ul>
+                        <p><strong>Certifications métier :</strong></p>
+                        <ul>
+                            <li><strong>TOGAF</strong> : Architecture d'entreprise</li>
+                            <li><strong>ITIL</strong> : Gestion des services IT</li>
+                            <li><strong>CISA</strong> / <strong>CISSP</strong> : Sécurité (pour AMOA cyber)</li>
+                        </ul>
+                        <p><strong>Coût moyen :</strong> 1500-3500€ selon certification (formation + examen).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quel parcours pour devenir consultant AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Formation initiale recommandée :</strong></p>
+                        <ul>
+                            <li>Bac+5 école d'ingénieur (généraliste ou informatique)</li>
+                            <li>Master management de projet / systèmes d'information</li>
+                            <li>École de commerce avec spécialisation SI</li>
+                        </ul>
+                        <p><strong>Parcours typique :</strong></p>
+                        <ol>
+                            <li><strong>0-2 ans :</strong> Assistant AMOA, Business Analyst</li>
+                            <li><strong>2-5 ans :</strong> Consultant AMOA confirmé</li>
+                            <li><strong>5-10 ans :</strong> AMOA Senior, Chef de projet MOA</li>
+                            <li><strong>&gt; 10 ans :</strong> Manager AMOA, Directeur de projet, Consultant indépendant</li>
+                        </ol>
+                        <p><strong>Compétences clés :</strong></p>
+                        <ul>
+                            <li>Analyse et modélisation (UML, BPMN, Merise)</li>
+                            <li>Rédaction (cahiers des charges, spécifications)</li>
+                            <li>Communication (interface MOA/MOE/utilisateurs)</li>
+                            <li>Gestion de projet (planification, risques, budget)</li>
+                            <li>Connaissance métier (selon secteur)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="juridique">
+                <h2>Aspects Juridiques</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quel type de contrat pour une prestation AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Secteur privé :</strong></p>
+                        <ul>
+                            <li><strong>Contrat de prestation de services</strong> (le plus courant)</li>
+                            <li><strong>Régie</strong> : Facturation au temps passé (TJM × nb jours)</li>
+                            <li><strong>Forfait</strong> : Prix fixe pour un livrable défini (rare en AMOA, plus risqué)</li>
+                        </ul>
+                        <p><strong>Secteur public :</strong></p>
+                        <ul>
+                            <li>Soumis au <strong>Code de la commande publique</strong></li>
+                            <li>Seuils 2024 : &lt; 40k€ (achat simple), 40-90k€ (procédure adaptée), &gt; 90k€ (appel d'offres)</li>
+                            <li>Marchés à bons de commande ou marchés subséquents</li>
+                        </ul>
+                        <p><strong>Clauses importantes :</strong></p>
+                        <ul>
+                            <li>Confidentialité et NDA (données sensibles)</li>
+                            <li>Propriété intellectuelle des livrables</li>
+                            <li>Responsabilité limitée (conseil vs réalisation)</li>
+                            <li>Conditions de résiliation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">L'AMOA est-elle soumise au RGPD ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Oui.</strong> L'AMOA, lorsqu'elle traite des données personnelles dans le cadre de sa mission, est qualifiée de <strong>sous-traitant</strong> au sens du RGPD (article 28).</p>
+                        <p><strong>Obligations :</strong></p>
+                        <ul>
+                            <li>Signer un contrat de sous-traitance avec le responsable de traitement (client)</li>
+                            <li>Garantir la sécurité des données (chiffrement, accès restreint)</li>
+                            <li>Notifier toute violation de données sous 72h</li>
+                            <li>Ne traiter les données que sur instruction documentée</li>
+                            <li>Tenir un registre des activités de traitement</li>
+                        </ul>
+                        <p><strong>Sanctions :</strong> Jusqu'à 20M€ ou 4% du CA mondial (article 83 RGPD).</p>
+                        <p><strong>Référence :</strong> Règlement UE 2016/679 + Guide CNIL du sous-traitant (2024).</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="methodologies">
+                <h2>Méthodologies</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">AMOA en cycle en V ou Agile : quelle différence ?</h3>
+                    <div class="faq-answer">
+                        <table class="comparison-table">
+                            <thead>
+                                <tr>
+                                    <th>Critère</th>
+                                    <th>Cycle en V (Traditionnel)</th>
+                                    <th>Agile / Scrum</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Approche</strong></td>
+                                    <td>Séquentielle, planifiée</td>
+                                    <td>Itérative, adaptative</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Cahier des charges</strong></td>
+                                    <td>Exhaustif en amont</td>
+                                    <td>Backlog évolutif (user stories)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Rôle AMOA</strong></td>
+                                    <td>Rédaction specs, validation jalon</td>
+                                    <td>Product Owner proxy ou support PO</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Livrables</strong></td>
+                                    <td>Documentation lourde</td>
+                                    <td>Incrément fonctionnel à chaque sprint</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Avantages</strong></td>
+                                    <td>Cadre clair, adapté aux gros projets réglementés</td>
+                                    <td>Flexibilité, time-to-market rapide</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Inconvénients</strong></td>
+                                    <td>Rigide, effet tunnel, changements coûteux</td>
+                                    <td>Nécessite forte implication MOA, périmètre flou</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p><strong>Tendance :</strong> 65% des projets SI sont aujourd'hui en mode Agile ou hybride (Agile + V) selon le Baromètre Syntec 2024.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="outils">
+                <h2>Outils & Livrables</h2>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quels outils utilise l'AMOA au quotidien ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Gestion de projet :</strong></p>
+                        <ul>
+                            <li><strong>Jira</strong> : Suivi backlog, sprints (Agile)</li>
+                            <li><strong>Microsoft Project</strong> : Planning, Gantt (cycle V)</li>
+                            <li><strong>Trello / Monday</strong> : Organisation légère</li>
+                            <li><strong>Asana / Notion</strong> : Collaboration</li>
+                        </ul>
+                        <p><strong>Modélisation & specs :</strong></p>
+                        <ul>
+                            <li><strong>Enterprise Architect / Sparx</strong> : UML, BPMN</li>
+                            <li><strong>Bizagi / Draw.io</strong> : Diagrammes processus</li>
+                            <li><strong>Balsamiq / Figma</strong> : Maquettage UI/UX</li>
+                        </ul>
+                        <p><strong>Documentation :</strong></p>
+                        <ul>
+                            <li><strong>Confluence</strong> : Wiki projet</li>
+                            <li><strong>SharePoint</strong> : GED collaborative</li>
+                            <li><strong>Word / Excel / PowerPoint</strong> : Livrables classiques</li>
+                        </ul>
+                        <p><strong>Tests & recette :</strong></p>
+                        <ul>
+                            <li><strong>TestRail / HP ALM</strong> : Gestion campagnes de tests</li>
+                            <li><strong>Selenium / Cucumber</strong> : Tests automatisés (support AMOA)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3 class="faq-question">Quels sont les principaux livrables de l'AMOA ?</h3>
+                    <div class="faq-answer">
+                        <p><strong>Phase cadrage :</strong></p>
+                        <ul>
+                            <li>Note de cadrage / étude d'opportunité</li>
+                            <li>Matrice de risques</li>
+                            <li>Budget prévisionnel</li>
+                        </ul>
+                        <p><strong>Phase spécification :</strong></p>
+                        <ul>
+                            <li>Cahier des charges fonctionnel (CdCF)</li>
+                            <li>Spécifications fonctionnelles détaillées (SFD)</li>
+                            <li>Diagrammes UML (cas d'usage, séquence, activité)</li>
+                            <li>Maquettes écrans / parcours utilisateur</li>
+                        </ul>
+                        <p><strong>Phase pilotage :</strong></p>
+                        <ul>
+                            <li>Planning projet (Gantt / Roadmap)</li>
+                            <li>Compte-rendu COPIL / COTECH</li>
+                            <li>Tableau de bord avancement</li>
+                            <li>Registre des risques et actions</li>
+                        </ul>
+                        <p><strong>Phase recette :</strong></p>
+                        <ul>
+                            <li>Plan de recette</li>
+                            <li>Cahiers de tests (scénarios, jeux de données)</li>
+                            <li>PV de recette / Fiche de non-conformité</li>
+                            <li>VABF (Vérification d'Aptitude au Bon Fonctionnement)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <div class="note-box">
+                <h3>Question non trouvée ?</h3>
+                <p>Cette FAQ est régulièrement enrichie. Si votre question n'apparaît pas, consultez :</p>
+                <ul>
+                    <li><a href="bibliographie.html">La bibliographie</a> pour des sources approfondies</li>
+                    <li><a href="glossaire.html">Le glossaire</a> pour les définitions</li>
+                    <li><a href="index.html">L'encyclopédie complète</a> pour une vue exhaustive</li>
+                </ul>
+            </div>
+        </main>
+
+        <aside class="meta-sidebar">
+            <div class="meta-box">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">← Retour accueil</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">Bibliographie</a></li>
+                </ul>
+            </div>
+
+            <div class="meta-box">
+                <h4>Questions par thème</h4>
+                <ul>
+                    <li>Générales : 4</li>
+                    <li>Rôles : 2</li>
+                    <li>Tarifs : 2</li>
+                    <li>Formations : 2</li>
+                    <li>Juridique : 2</li>
+                    <li>Méthodologies : 1</li>
+                    <li>Outils : 2</li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopédie de référence sur l'Assistance à Maîtrise d'Ouvrage.</p>
+            </div>
+            <div>
+                <h4>Pages Principales</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="methodologies.html">Méthodologies</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">Bibliographie</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cadre Légal</h4>
+                <ul>
+                    <li><a href="juridique.html">Aspects Juridiques</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopédie collaborative | Dernière mise à jour : Février 2026</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/accordion.js"></script>
+</body>
+</html>

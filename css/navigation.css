@@ -1,0 +1,125 @@
+/* ===================================
+   NAVIGATION GLOBALE
+   Menu principal du site multi-pages
+   =================================== */
+
+.global-nav {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 70px;
+    z-index: 999;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xl);
+}
+
+.nav-logo {
+    font-family: var(--font-serif);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    padding: 0.75rem 0;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    flex: 1;
+}
+
+.nav-menu > li {
+    position: relative;
+}
+
+.nav-menu > li > a {
+    display: block;
+    padding: 1rem 1.25rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    border-bottom: 2px solid transparent;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > a.active {
+    background: var(--bg-tertiary);
+    border-bottom-color: var(--accent);
+}
+
+/* Dropdown Menu */
+.nav-dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    border-top: none;
+    list-style: none;
+    margin: 0;
+    padding: 0.5rem 0;
+    min-width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    margin: 0;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.75rem 1.25rem;
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    transition: background 0.2s;
+}
+
+.dropdown-menu a:hover {
+    background: var(--bg-tertiary);
+    color: var(--accent);
+}
+
+/* Dark Mode */
+body.dark-mode .global-nav {
+    background: #0d1117;
+    border-bottom-color: var(--border);
+}
+
+body.dark-mode .dropdown-menu {
+    background: var(--bg-secondary);
+    border-color: var(--border);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .global-nav {
+        display: none;
+    }
+}

@@ -637,3 +637,147 @@ body.dark-mode .stat-card {
     border-color: var(--border);
 }
 
+/* Bibliography Styles */
+.bibliography-entry {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.bibliography-entry:last-child {
+    border-bottom: none;
+}
+
+.bib-authors {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0 0 0.25rem 0;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.bib-title {
+    font-style: italic;
+    color: var(--primary);
+    margin: 0 0 0.5rem 0;
+    font-size: 1.05rem;
+}
+
+.bib-details {
+    color: var(--secondary);
+    margin: 0 0 0.75rem 0;
+    font-size: 0.9rem;
+}
+
+.bib-note {
+    background: var(--bg-secondary);
+    padding: 0.75rem 1rem;
+    border-left: 3px solid var(--accent);
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--primary);
+}
+
+body.dark-mode .bib-note {
+    background: var(--bg-tertiary);
+}
+
+.note-box {
+    background: var(--highlight);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin: 2rem 0;
+    border-radius: 4px;
+}
+
+.note-box h3 {
+    margin-top: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.note-box p {
+    margin-bottom: 0.75rem;
+}
+
+.note-box p:last-child {
+    margin-bottom: 0;
+}
+
+/* FAQ Styles */
+.faq-item {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border-light);
+    padding-bottom: 2rem;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    color: var(--primary);
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.faq-question::before {
+    content: "Q:";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.faq-answer {
+    padding-left: 1.5rem;
+    color: var(--primary);
+}
+
+.faq-answer p {
+    margin-bottom: 1rem;
+}
+
+.faq-answer ul, .faq-answer ol {
+    margin: 1rem 0;
+}
+
+.faq-answer table {
+    margin: 1.5rem 0;
+}
+
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5rem 0;
+}
+
+.comparison-table th,
+.comparison-table td {
+    border: 1px solid var(--border);
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+.comparison-table thead {
+    background: var(--table-header);
+}
+
+.comparison-table th {
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .comparison-table tbody tr:nth-child(even) {
+    background: var(--bg-tertiary);
+}
+
