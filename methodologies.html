@@ -96,7 +96,7 @@
 
             <!-- SECTION MÉTHODOLOGIES -->
             <section id="methodologies">
-                <h2>13. Méthodologies de Gestion de Projet</h2>
+                <h2>1. Méthodologies de Gestion de Projet</h2>
                 <p>Le choix de la méthodologie de gestion de projet conditionne l'organisation des travaux, la fréquence des livrables et le mode de collaboration entre MOA et MOE. L'AMOA doit recommander l'approche la plus adaptée au contexte du projet.</p>
 
                 <div class="tabs">
@@ -220,6 +220,76 @@
                         </tbody>
                     </table>
                 </div>
+            </section>
+
+            <!-- === SECTION GOUVERNANCE === -->
+            <section id="gouvernance">
+                <h2>2. Gouvernance de Projet</h2>
+                <p>La gouvernance projet définit les instances de décision, les circuits de validation et les mécanismes d'escalade. Une gouvernance bien structurée est un facteur clé de succès, permettant de maintenir l'alignement stratégique et de résoudre rapidement les points de blocage.</p>
+
+                <h3>2.1 Instances de Pilotage</h3>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">COPIL - Comité de Pilotage (Stratégique)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Mensuelle ou bimestrielle</p>
+                        <p><strong>Participants :</strong> Direction générale, DSI, MOA, AMOA, Direction MOE</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Valider les orientations stratégiques et arbitrages budgétaires</li>
+                            <li>Décider des évolutions de périmètre (go/no-go)</li>
+                            <li>Traiter les risques de niveau critique (C >= 12)</li>
+                            <li>Valider les jalons majeurs (passage en recette, mise en production)</li>
+                        </ul>
+                        <p><strong>Livrables :</strong> Compte-rendu de décision, tableau de bord projet, registre des risques mis à jour</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">COPROJ - Comité de Projet (Opérationnel)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Hebdomadaire</p>
+                        <p><strong>Participants :</strong> Chef de projet MOA, AMOA, Chef de projet MOE, Référents métier</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Suivre l'avancement opérationnel (% réalisation, reste à faire)</li>
+                            <li>Identifier et traiter les points bloquants</li>
+                            <li>Valider les livrables intermédiaires</li>
+                            <li>Planifier les actions de la semaine suivante</li>
+                        </ul>
+                        <p><strong>Livrables :</strong> Relevé de décisions, plan d'actions mis à jour, rapport d'avancement</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" onclick="toggleAccordion(this)">Comité Technique (Expert)</div>
+                    <div class="accordion-body">
+                        <p><strong>Fréquence :</strong> Selon besoin (convoqué par le COPROJ)</p>
+                        <p><strong>Participants :</strong> Architecte SI, DBA, Expert sécurité, Lead développeur</p>
+                        <p><strong>Objectifs :</strong></p>
+                        <ul>
+                            <li>Instruire les choix techniques (architecture, intégration, performance)</li>
+                            <li>Évaluer les impacts techniques des demandes de changement</li>
+                            <li>Valider la conformité de la solution aux exigences non-fonctionnelles</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>2.2 Matrice RACI</h3>
+                <p>La matrice RACI clarifie les rôles et responsabilités de chaque acteur sur les activités clés du projet.</p>
+                <table>
+                    <thead><tr><th>Activité</th><th>MOA</th><th>AMOA</th><th>MOE</th><th>DSI</th><th>DG</th></tr></thead>
+                    <tbody>
+                        <tr><td>Expression du besoin</td><td><strong>R</strong></td><td>A</td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Rédaction du CDC</td><td>A</td><td><strong>R</strong></td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Choix de solution</td><td>A</td><td><strong>R</strong></td><td>C</td><td>C</td><td>I</td></tr>
+                        <tr><td>Développement</td><td>I</td><td>C</td><td><strong>R</strong></td><td>A</td><td>I</td></tr>
+                        <tr><td>Recette fonctionnelle</td><td>A</td><td><strong>R</strong></td><td>C</td><td>I</td><td>I</td></tr>
+                        <tr><td>Mise en production</td><td>A</td><td>C</td><td><strong>R</strong></td><td>A</td><td>I</td></tr>
+                        <tr><td>Validation budget</td><td>C</td><td>C</td><td>I</td><td>C</td><td><strong>R/A</strong></td></tr>
+                    </tbody>
+                </table>
+                <div class="note"><strong>Légende RACI :</strong> <strong>R</strong> = Réalise | <strong>A</strong> = Approuve (Accountable) | <strong>C</strong> = Consulté | <strong>I</strong> = Informé</div>
             </section>
 
             <!-- Navigation vers autres sections -->

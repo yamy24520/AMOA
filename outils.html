@@ -109,7 +109,7 @@
 
             <!-- SECTION SPÉCIFICATIONS -->
             <section id="specifications">
-                <h2>4. Spécifications Fonctionnelles et Techniques</h2>
+                <h2>1. Spécifications Fonctionnelles et Techniques</h2>
 
                 <p>Les spécifications constituent le référentiel contractuel entre maîtrise d'ouvrage et maîtrise d'œuvre. Elles se décomposent en deux volets complémentaires : les spécifications fonctionnelles, qui décrivent le "quoi" (ce que le système doit faire), et les spécifications techniques, qui précisent le "comment" (les contraintes d'implémentation, de performance et de sécurité).</p>
 
@@ -198,7 +198,7 @@
 
             <!-- SECTION CAHIER DES CHARGES -->
             <section id="cahier-charges">
-                <h2>5. Cahier des Charges (CDC)</h2>
+                <h2>2. Cahier des Charges (CDC)</h2>
 
                 <p>Le cahier des charges constitue le document contractuel central d'un projet AMOA. Il formalise de manière exhaustive et non ambiguë l'ensemble des exigences du maître d'ouvrage, définit le périmètre précis des prestations attendues, et établit les critères de réception et de contrôle. Sa rédaction requiert une précision juridique et technique permettant son utilisation comme base d'un marché public ou privé.</p>
 
@@ -263,7 +263,7 @@
 
             <!-- SECTION LISTE DE CONTRÔLES -->
             <section id="controles">
-                <h2>9. Liste de Contrôles (Ordonnée)</h2>
+                <h2>3. Liste de Contrôles (Ordonnée)</h2>
 
                 <p>La liste de contrôles organise le processus de vérification de la conformité de la solution livrée par rapport aux spécifications du cahier des charges. Elle doit être structurée de manière chronologique, suivant les différentes phases de recette : contrôles préalables (configuration, sécurité), contrôles fonctionnels (conformité aux spécifications), contrôles techniques (performance, intégration), et contrôles de clôture (documentation, transfert de compétences).</p>
 
@@ -330,6 +330,50 @@
                     </a>
                 </div>
             </div>
+
+            <!-- === SECTION RECETTE === -->
+            <section id="recette">
+                <h2>4. Recette et Validation (VABF/VSR)</h2>
+                <p>La recette constitue la phase de vérification formelle de la conformité de la solution livrée aux exigences du cahier des charges. Elle se décompose en deux étapes successives : la VABF et la VSR.</p>
+
+                <h3>4.1 Stratégie de Tests</h3>
+                <table>
+                    <thead><tr><th>Type de test</th><th>Responsable</th><th>Objectif</th><th>Outils types</th></tr></thead>
+                    <tbody>
+                        <tr><td><strong>Tests unitaires</strong></td><td>MOE</td><td>Vérifier chaque composant isolément</td><td>JUnit, pytest, Jest</td></tr>
+                        <tr><td><strong>Tests d'intégration</strong></td><td>MOE</td><td>Vérifier les interactions entre modules</td><td>Postman, SoapUI</td></tr>
+                        <tr><td><strong>Tests fonctionnels</strong></td><td>AMOA / MOA</td><td>Valider la conformité aux spécifications</td><td>Cahier de recette</td></tr>
+                        <tr><td><strong>Tests de charge</strong></td><td>MOE</td><td>Vérifier la performance sous charge</td><td>JMeter, Gatling, k6</td></tr>
+                        <tr><td><strong>Tests de sécurité</strong></td><td>Expert sécu</td><td>Identifier les vulnérabilités</td><td>OWASP ZAP, Burp Suite</td></tr>
+                        <tr><td><strong>Tests d'accessibilité</strong></td><td>AMOA</td><td>Conformité RGAA</td><td>Axe, Lighthouse, Wave</td></tr>
+                        <tr><td><strong>Recette utilisateur (UAT)</strong></td><td>MOA</td><td>Validation métier en conditions réelles</td><td>Scénarios métier</td></tr>
+                    </tbody>
+                </table>
+
+                <h3>4.2 Modèle de Fiche de Test</h3>
+                <div class="case-study">
+                    <table style="margin:0;">
+                        <tbody>
+                            <tr><td style="width:150px;"><strong>Réf. test :</strong></td><td>T-SF02-001</td></tr>
+                            <tr><td><strong>Spécification :</strong></td><td>SF-02 - Confirmation automatique de réservation</td></tr>
+                            <tr><td><strong>Prérequis :</strong></td><td>Utilisateur connecté, au moins 1 créneau disponible</td></tr>
+                            <tr><td><strong>Scénario :</strong></td><td>1. Se connecter en tant que parent<br>2. Sélectionner un créneau de restauration<br>3. Valider la réservation<br>4. Vérifier la réception de l'email de confirmation</td></tr>
+                            <tr><td><strong>Résultat attendu :</strong></td><td>Email reçu sous 5 minutes avec récapitulatif complet</td></tr>
+                            <tr><td><strong>Résultat obtenu :</strong></td><td style="color:#27ae60;font-weight:600;">CONFORME - Email reçu en 12 secondes</td></tr>
+                            <tr><td><strong>Statut :</strong></td><td><span class="tag" style="background:#27ae60;">PASSE</span></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>4.3 Critères de Prononcé de la Recette</h3>
+                <ul>
+                    <li><strong>100%</strong> des tests bloquants (priorité Haute) : statut PASSE</li>
+                    <li><strong>95%</strong> des tests majeurs (priorité Moyenne) : statut PASSE</li>
+                    <li><strong>0</strong> anomalie bloquante ou critique non corrigée</li>
+                    <li>Performance conforme aux SLA contractuels</li>
+                    <li>Documentation technique et utilisateur livrée et validée</li>
+                </ul>
+            </section>
 
         </main>
     </div>
