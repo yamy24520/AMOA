@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volet Juridique et Réglementaire - WikiAMOA</title>
+    <meta name="description" content="Guide complet du cadre juridique et réglementaire en AMOA : marchés publics, types de contrats, clauses essentielles, RGPD et réglementations applicables.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.amoa-management.site/juridique.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="#juridique">Volet Juridique</a>
+                    <ul>
+                        <li><a href="#seuils-marches">Seuils des Marchés Publics</a></li>
+                        <li><a href="#types-contrats">Types de Contrats</a></li>
+                        <li><a href="#clauses-contractuelles">Clauses Contractuelles</a></li>
+                    </ul>
+                </li>
+                <li><a href="#reglementation">Cadre Réglementaire</a>
+                    <ul>
+                        <li><a href="#reglementations">Réglementations Applicables</a></li>
+                        <li><a href="#allergenes">14 Allergènes Réglementaires</a></li>
+                        <li><a href="#rgpd-principes">RGPD - 6 Principes Fondamentaux</a></li>
+                    </ul>
+                </li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="formations.html">Formations</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1 class="article-title">Volet Juridique et Réglementaire</h1>
+                <p class="article-subtitle">Marchés publics, contrats, clauses essentielles et cadre réglementaire applicable aux projets AMOA</p>
+            </div>
+
+            <div class="explore-section">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Sections Connexes</h2>
+                <div class="explore-grid">
+                    <a href="index.html#cahier-charges" class="explore-card">
+                        <h3>Cahier des Charges</h3>
+                        <p>Rédaction et spécifications techniques</p>
+                    </a>
+                    <a href="index.html#gouvernance" class="explore-card">
+                        <h3>Gouvernance Projet</h3>
+                        <p>Comités, instances et pilotage</p>
+                    </a>
+                    <a href="index.html#budget" class="explore-card">
+                        <h3>Budget & Tarifs</h3>
+                        <p>Estimation et planification budgétaire</p>
+                    </a>
+                    <a href="bibliographie.html" class="explore-card">
+                        <h3>Bibliographie</h3>
+                        <p>Références légales et normatives</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION JURIDIQUE -->
+            <section id="juridique">
+                <h2>10. Volet Juridique - Marchés & Contrats</h2>
+
+                <h3 id="seuils-marches">11.1 Seuils des Marchés Publics (2024)</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Montant</th>
+                            <th>Procédure</th>
+                            <th>Caractéristiques</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&lt; 40 000 €</td>
+                            <td><strong>Gré à gré</strong></td>
+                            <td>Procédure libre sans formalisme particulier</td>
+                        </tr>
+                        <tr>
+                            <td>40 000 € - 221 000 €</td>
+                            <td><strong>MAPA</strong></td>
+                            <td>Marché à Procédure Adaptée avec publicité</td>
+                        </tr>
+                        <tr>
+                            <td>&gt; 221 000 €</td>
+                            <td><strong>Appel d'offres</strong></td>
+                            <td>Procédure formalisée avec publicité européenne</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="types-contrats">11.2 Types de Contrats</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type</th>
+                            <th>Principe</th>
+                            <th>Avantages</th>
+                            <th>Inconvénients</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>FORFAIT</strong></td>
+                            <td>Prix fixe pour périmètre défini</td>
+                            <td>Budget maîtrisé, engagement résultat</td>
+                            <td>Rigide, avenants coûteux</td>
+                        </tr>
+                        <tr>
+                            <td><strong>RÉGIE</strong></td>
+                            <td>Facturation au temps passé (J/H)</td>
+                            <td>Flexible, adaptatif</td>
+                            <td>Budget incertain, pas d'engagement résultat</td>
+                        </tr>
+                        <tr>
+                            <td><strong>MIXTE</strong></td>
+                            <td>Forfait + Régie</td>
+                            <td>Compromis équilibré</td>
+                            <td>Plus complexe à gérer</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="clauses-contractuelles">11.3 Clauses Contractuelles Essentielles</h3>
+
+                <h4>Clauses Financières</h4>
+                <ul>
+                    <li>Prix fermes ou révisables</li>
+                    <li>Échéancier de paiement</li>
+                    <li>Délai de paiement (30 jours max pour le secteur public)</li>
+                    <li>Retenue de garantie (5%)</li>
+                </ul>
+
+                <h4>Pénalités</h4>
+                <ul>
+                    <li>Retard : X€/jour ou X%/semaine</li>
+                    <li>Non-respect SLA : réduction facture</li>
+                    <li>Plafond : 10-15% du marché</li>
+                </ul>
+
+                <h4>RGPD (Obligatoire)</h4>
+                <ul>
+                    <li>Sous-traitant au sens de l'article 28</li>
+                    <li>Hébergement Union Européenne</li>
+                    <li>Notification violation 48-72h</li>
+                    <li>Clause d'audit</li>
+                </ul>
+
+                <h4>Réversibilité</h4>
+                <ul>
+                    <li>Export données format ouvert</li>
+                    <li>Accompagnement 3 mois</li>
+                    <li>Destruction après transfert</li>
+                </ul>
+            </section>
+
+            <!-- SECTION RÉGLEMENTATION -->
+            <section id="reglementation">
+                <h2>11. Cadre Réglementaire</h2>
+
+                <h3 id="reglementations">Réglementations Applicables</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Domaine</th>
+                            <th>Réglementation</th>
+                            <th>Points clés à retenir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Données personnelles</td>
+                            <td><strong>RGPD</strong> (UE 2016/679)</td>
+                            <td>Consentement, minimisation, droits des personnes, notification 72h, DPO, registre traitements</td>
+                        </tr>
+                        <tr>
+                            <td>Restauration collective</td>
+                            <td><strong>Loi EGalim</strong></td>
+                            <td>50% produits durables, 20% bio, traçabilité origine, 14 allergènes</td>
+                        </tr>
+                        <tr>
+                            <td>Accessibilité web</td>
+                            <td><strong>RGAA</strong></td>
+                            <td>Obligatoire secteur public, niveau AA minimum</td>
+                        </tr>
+                        <tr>
+                            <td>Facturation publique</td>
+                            <td><strong>Chorus Pro</strong></td>
+                            <td>Obligatoire pour facturer au secteur public</td>
+                        </tr>
+                        <tr>
+                            <td>Hébergement santé</td>
+                            <td><strong>Certification HDS</strong></td>
+                            <td>Obligatoire si données de santé (hôpitaux, médico-social)</td>
+                        </tr>
+                        <tr>
+                            <td>Marchés publics</td>
+                            <td><strong>Code de la Commande Publique</strong></td>
+                            <td>Seuils, procédures, délais, publicité</td>
+                        </tr>
+                        <tr>
+                            <td>Étiquetage alimentaire</td>
+                            <td><strong>Règlement INCO 1169/2011</strong></td>
+                            <td>14 allergènes à afficher obligatoirement</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="allergenes">12.1 Les 14 Allergènes Réglementaires</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>N°</th>
+                            <th>Allergène</th>
+                            <th>N°</th>
+                            <th>Allergène</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Gluten</td>
+                            <td>8</td>
+                            <td>Fruits à coque</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Crustacés</td>
+                            <td>9</td>
+                            <td>Céleri</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Œufs</td>
+                            <td>10</td>
+                            <td>Moutarde</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Poissons</td>
+                            <td>11</td>
+                            <td>Sésame</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Arachides</td>
+                            <td>12</td>
+                            <td>Sulfites</td>
+                        </tr>
+                        <tr>
+                            <td>6</td>
+                            <td>Soja</td>
+                            <td>13</td>
+                            <td>Lupin</td>
+                        </tr>
+                        <tr>
+                            <td>7</td>
+                            <td>Lait</td>
+                            <td>14</td>
+                            <td>Mollusques</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="rgpd-principes">12.2 RGPD - Les 6 Principes Fondamentaux</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Principe</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1. Licéité</strong></td>
+                            <td>Base légale pour traiter (consentement, contrat, obligation légale...)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>2. Finalité</strong></td>
+                            <td>Objectif déterminé, explicite et légitime</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3. Minimisation</strong></td>
+                            <td>Données adéquates, pertinentes, limitées au nécessaire</td>
+                        </tr>
+                        <tr>
+                            <td><strong>4. Exactitude</strong></td>
+                            <td>Données exactes et tenues à jour</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5. Limitation conservation</strong></td>
+                            <td>Durée n'excédant pas celle nécessaire</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6. Sécurité</strong></td>
+                            <td>Protection contre traitement non autorisé ou illicite</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Navigation vers autres sections -->
+            <div class="explore-section" style="margin-top: 3rem;">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Poursuivre la lecture</h2>
+                <div class="explore-grid">
+                    <a href="index.html#definition" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre d'intervention</p>
+                    </a>
+                    <a href="index.html#cahier-charges" class="explore-card">
+                        <h3>Cahier des Charges</h3>
+                        <p>Structure et contenu type d'un CDC</p>
+                    </a>
+                    <a href="index.html#methodologies" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile, SAFe, méthodes hybrides</p>
+                    </a>
+                    <a href="index.html#cas-pratique" class="explore-card">
+                        <h3>Cas Pratique</h3>
+                        <p>Mission AMOA complète en restauration scolaire</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="index.html#definition">Definition et Perimetre</a></li>
+                    <li><a href="index.html#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="index.html#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="index.html#methodologies">Methodologies</a></li>
+                    <li><a href="index.html#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="index.html#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="index.html#budget">Budget et Tarifs</a></li>
+                    <li><a href="index.html#benchmark">Matrice de Choix</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cadre Legal</h4>
+                <ul>
+                    <li><a href="#juridique">Marches et Contrats</a></li>
+                    <li><a href="#reglementation">Reglementation</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL - RGPD</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
