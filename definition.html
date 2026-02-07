@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Définition et Périmètre AMOA | WikiAMOA</title>
+    <meta name="description" content="Définition complète de l'AMOA : rôle, périmètre, missions, différences MOA/AMOA/MOE. Guide de référence encyclopédique.">
+
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher..." id="searchInput">
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="#definition">Définition</a></li>
+                <li><a href="#perimetre">Périmètre</a></li>
+                <li><a href="#acteurs">Les 3 Acteurs</a></li>
+                <li><a href="#missions">Missions de l'AMOA</a></li>
+                <li><a href="#livrables">Livrables</a></li>
+                <li><a href="#benefices">Bénéfices</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1>Définition et Périmètre de l'AMOA</h1>
+                <p class="subtitle">Assistance à Maîtrise d'Ouvrage</p>
+                <p class="meta-info">Dernière mise à jour : Février 2026</p>
+            </div>
+
+            <div class="infobox">
+                <div class="infobox-header">AMOA - Fiche Synthétique</div>
+                <div class="infobox-content">
+                    <div class="infobox-row">
+                        <div class="infobox-label">Domaine</div>
+                        <div class="infobox-value">Gestion de projet SI</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Acronyme</div>
+                        <div class="infobox-value">AMOA</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Origine</div>
+                        <div class="infobox-value">France, années 1990</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Secteur</div>
+                        <div class="infobox-value">Public & Privé</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Cadre légal</div>
+                        <div class="infobox-value">Code de la commande publique</div>
+                    </div>
+                    <div class="infobox-row">
+                        <div class="infobox-label">Livrables clés</div>
+                        <div class="infobox-value">CDC, Spécifications, PV Recette</div>
+                    </div>
+                </div>
+            </div>
+
+            <section id="definition">
+                <h2>Définition</h2>
+
+                <p>L'<strong>Assistance à Maîtrise d'Ouvrage</strong> (AMOA) désigne l'ensemble des activités de conseil et d'accompagnement mises en œuvre pour aider le maître d'ouvrage (MOA) dans la définition, le pilotage et la réception d'un projet de système d'information. L'AMOA se positionne comme interface entre les besoins métier et les solutions techniques proposées par la maîtrise d'œuvre (MOE).</p>
+
+                <p>Cette fonction répond à plusieurs impératifs : traduire les besoins fonctionnels en spécifications exploitables, garantir l'alignement du projet avec les objectifs stratégiques de l'organisation, maîtriser les risques et les coûts, et assurer la qualité des livrables tout au long du cycle de vie du projet.</p>
+
+                <div class="note-box">
+                    <strong>Note historique :</strong> La fonction AMOA s'est structurée en France dans les années 1990, en réponse à l'accroissement de la complexité des systèmes d'information et aux difficultés rencontrées par les organisations pour piloter efficacement leurs projets informatiques.
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="72">0</div>
+                        <div class="stat-label">% des projets SI en échec sans AMOA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="45">0</div>
+                        <div class="stat-label">% de réduction des risques avec AMOA</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="89">0</div>
+                        <div class="stat-label">% de satisfaction MOA accompagnée</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="3">0</div>
+                        <div class="stat-label">x ROI moyen d'une mission AMOA</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="perimetre">
+                <h2>Périmètre d'intervention</h2>
+
+                <h3>Phases couvertes</h3>
+                <ul>
+                    <li><strong>Phase amont :</strong> Cadrage, étude d'opportunité, définition des besoins</li>
+                    <li><strong>Phase conception :</strong> Rédaction du cahier des charges, spécifications fonctionnelles</li>
+                    <li><strong>Phase réalisation :</strong> Suivi de projet, interface MOA/MOE, gestion des risques</li>
+                    <li><strong>Phase recette :</strong> Validation fonctionnelle, VABF, accompagnement au démarrage</li>
+                </ul>
+
+                <h3>Domaines d'expertise</h3>
+                <div class="glossary-grid">
+                    <div class="glossary-item">
+                        <h4>Analyse métier</h4>
+                        <p>Recueil et analyse des besoins, modélisation des processus, identification des parties prenantes</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Pilotage de projet</h4>
+                        <p>Planning, budget, risques, reporting, animation des comités (COPIL, COTECH)</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Spécifications</h4>
+                        <p>Rédaction des cahiers des charges fonctionnels et des spécifications détaillées</p>
+                    </div>
+                    <div class="glossary-item">
+                        <h4>Recette fonctionnelle</h4>
+                        <p>Définition des scénarios de tests, suivi des anomalies, validation de la conformité</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="acteurs">
+                <h2>Les 3 Acteurs Clés : MOA, AMOA, MOE</h2>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Acteur</th>
+                            <th>Rôle Principal</th>
+                            <th>Responsabilités</th>
+                            <th>Livrables</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>MOA</strong><br>(Maîtrise d'Ouvrage)</td>
+                            <td>Porte le besoin métier et finance le projet</td>
+                            <td>
+                                • Définit les objectifs<br>
+                                • Valide les livrables<br>
+                                • Prend les décisions finales<br>
+                                • Gère le budget
+                            </td>
+                            <td>
+                                • Expression de besoin<br>
+                                • Décisions COPIL<br>
+                                • PV de recette<br>
+                                • Validation mise en production
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>AMOA</strong><br>(Assistance MOA)</td>
+                            <td>Conseille et assiste la MOA</td>
+                            <td>
+                                • Analyse les besoins<br>
+                                • Rédige le cahier des charges<br>
+                                • Interface MOA/MOE<br>
+                                • Pilote la recette
+                            </td>
+                            <td>
+                                • Cahier des charges<br>
+                                • Spécifications fonctionnelles<br>
+                                • Plan de recette<br>
+                                • Reporting COPIL/COTECH
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>MOE</strong><br>(Maîtrise d'Œuvre)</td>
+                            <td>Conçoit et réalise la solution technique</td>
+                            <td>
+                                • Propose architecture technique<br>
+                                • Développe la solution<br>
+                                • Livre et garantit<br>
+                                • Assure support technique
+                            </td>
+                            <td>
+                                • Dossier d'architecture technique<br>
+                                • Code source / application<br>
+                                • Documentation technique<br>
+                                • Procès-verbaux de livraison
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note-box">
+                    <h3>Principe de non-substitution</h3>
+                    <p><strong>Important :</strong> L'AMOA <em>conseille</em> la MOA mais ne se substitue jamais à elle dans les décisions stratégiques. La MOA conserve toujours le pouvoir décisionnel final.</p>
+                    <p><strong>Analogie :</strong> Si vous construisez une maison :<br>
+                    • MOA = Propriétaire (vous décidez et payez)<br>
+                    • AMOA = Architecte-conseil (vous aide à définir vos besoins, vérifie la qualité)<br>
+                    • MOE = Entreprise de construction (construit selon vos specs)</p>
+                </div>
+            </section>
+
+            <section id="missions">
+                <h2>Missions de l'AMOA</h2>
+
+                <h3>1. Phase Cadrage & Analyse</h3>
+                <ul>
+                    <li>Recueil et analyse des besoins auprès des utilisateurs et directions métier</li>
+                    <li>Étude d'opportunité et de faisabilité technique/économique</li>
+                    <li>Identification et analyse des risques projet</li>
+                    <li>Définition du périmètre fonctionnel et des objectifs</li>
+                    <li>Estimation budgétaire et planification prévisionnelle</li>
+                </ul>
+
+                <h3>2. Phase Spécification</h3>
+                <ul>
+                    <li>Rédaction du cahier des charges fonctionnel (CdCF) ou CCTP</li>
+                    <li>Élaboration des spécifications fonctionnelles générales (SFG) et détaillées (SFD)</li>
+                    <li>Modélisation des processus métier (BPMN, UML)</li>
+                    <li>Définition des règles de gestion et des contraintes</li>
+                    <li>Création de maquettes et parcours utilisateurs</li>
+                </ul>
+
+                <h3>3. Phase Pilotage</h3>
+                <ul>
+                    <li>Suivi de l'avancement du projet (planning, budget, risques)</li>
+                    <li>Animation des comités de pilotage (COPIL) et comités techniques (COTECH)</li>
+                    <li>Interface permanente entre MOA et MOE (traduction besoins ↔ technique)</li>
+                    <li>Gestion des demandes de changement (change requests)</li>
+                    <li>Reporting régulier auprès des parties prenantes</li>
+                </ul>
+
+                <h3>4. Phase Recette</h3>
+                <ul>
+                    <li>Définition de la stratégie et du plan de recette</li>
+                    <li>Rédaction des cahiers de tests et scénarios de validation</li>
+                    <li>Organisation et pilotage des campagnes de tests (UAT)</li>
+                    <li>Suivi des anomalies et validation des correctifs</li>
+                    <li>Vérification d'Aptitude au Bon Fonctionnement (VABF)</li>
+                </ul>
+
+                <h3>5. Conduite du Changement</h3>
+                <ul>
+                    <li>Accompagnement des utilisateurs (formation, communication)</li>
+                    <li>Préparation du déploiement et des mises en production</li>
+                    <li>Élaboration des supports de formation et documentation utilisateur</li>
+                    <li>Suivi post-déploiement et Vérification de Service Régulier (VSR)</li>
+                </ul>
+            </section>
+
+            <section id="livrables">
+                <h2>Principaux Livrables AMOA</h2>
+
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Livrable</th>
+                            <th>Contenu Type</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cadrage</td>
+                            <td>Note de cadrage</td>
+                            <td>Contexte, enjeux, objectifs, périmètre, planning macro, budget</td>
+                        </tr>
+                        <tr>
+                            <td>Cadrage</td>
+                            <td>Matrice de risques</td>
+                            <td>Identification, évaluation (probabilité/impact), mitigation</td>
+                        </tr>
+                        <tr>
+                            <td>Spécification</td>
+                            <td>Cahier des charges fonctionnel</td>
+                            <td>Besoins, exigences, contraintes, critères d'acceptation</td>
+                        </tr>
+                        <tr>
+                            <td>Spécification</td>
+                            <td>Spécifications fonctionnelles (SFD)</td>
+                            <td>Description détaillée de chaque fonctionnalité, règles de gestion</td>
+                        </tr>
+                        <tr>
+                            <td>Pilotage</td>
+                            <td>Compte-rendu COPIL/COTECH</td>
+                            <td>Avancement, décisions, points de blocage, actions</td>
+                        </tr>
+                        <tr>
+                            <td>Pilotage</td>
+                            <td>Tableau de bord projet</td>
+                            <td>KPI, planning, budget, risques, qualité</td>
+                        </tr>
+                        <tr>
+                            <td>Recette</td>
+                            <td>Plan de recette</td>
+                            <td>Stratégie, périmètre, planning, organisation, critères Go/NoGo</td>
+                        </tr>
+                        <tr>
+                            <td>Recette</td>
+                            <td>Cahier de tests</td>
+                            <td>Scénarios de tests, jeux de données, résultats attendus</td>
+                        </tr>
+                        <tr>
+                            <td>Recette</td>
+                            <td>PV de recette / VABF</td>
+                            <td>Validation de conformité, levée de réserves, autorisation production</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section id="benefices">
+                <h2>Bénéfices d'une Mission AMOA</h2>
+
+                <h3>Pour la MOA</h3>
+                <ul>
+                    <li><strong>Expertise méthodologique :</strong> Accès à des compétences en gestion de projet SI</li>
+                    <li><strong>Gain de temps :</strong> Délégation des tâches chronophages (rédaction, tests)</li>
+                    <li><strong>Réduction des risques :</strong> Identification précoce et mitigation des problèmes</li>
+                    <li><strong>Qualité accrue :</strong> Validation rigoureuse de la conformité aux besoins</li>
+                    <li><strong>Vision externe :</strong> Regard neuf et objectif sur le projet</li>
+                </ul>
+
+                <h3>Pour le Projet</h3>
+                <ul>
+                    <li><strong>Clarification des besoins :</strong> Expression de besoin claire et non ambiguë</li>
+                    <li><strong>Meilleure communication :</strong> Facilitation des échanges MOA/MOE</li>
+                    <li><strong>Maîtrise des coûts :</strong> Suivi budgétaire rigoureux, évitement du scope creep</li>
+                    <li><strong>Respect du planning :</strong> Pilotage actif et anticipation des dérives</li>
+                    <li><strong>Conformité réglementaire :</strong> Intégration des contraintes légales (RGPD, accessibilité)</li>
+                </ul>
+
+                <h3>ROI Moyen</h3>
+                <div class="note-box">
+                    <p><strong>Statistique :</strong> Selon le CHAOS Report 2023 de Standish Group, les projets accompagnés par une AMOA affichent :</p>
+                    <ul>
+                        <li>62% de taux de succès vs 29% sans AMOA</li>
+                        <li>ROI moyen de 3:1 (chaque € investi rapporte 3€ d'économies/gains)</li>
+                        <li>45% de réduction des dépassements budgétaires</li>
+                        <li>30% de réduction des délais de livraison</li>
+                    </ul>
+                    <p><strong>Source :</strong> The CHAOS Report 2023, Standish Group International.</p>
+                </div>
+            </section>
+        </main>
+
+        <aside class="meta-sidebar">
+            <div class="meta-box">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">← Accueil</a></li>
+                    <li><a href="histoire.html">Histoire AMOA</a></li>
+                    <li><a href="methodologies.html">Méthodologies</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="meta-box">
+                <h4>Voir aussi</h4>
+                <ul>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="bibliographie.html">Bibliographie</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopédie de référence AMOA</p>
+            </div>
+            <div>
+                <h4>Pages</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="definition.html">Définition</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="formations.html">Formations</a></li>
+                    <li><a href="bibliographie.html">Bibliographie</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Légal</h4>
+                <ul>
+                    <li><a href="juridique.html">Cadre Juridique</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA | Février 2026</p>
+        </div>
+    </footer>
+
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/stats.js"></script>
+</body>
+</html>
