@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Méthodologies de Gestion de Projet - WikiAMOA</title>
+    <meta name="description" content="Guide complet des méthodologies de gestion de projet en AMOA : Cycle en V, Agile/Scrum, SAFe. Comparatifs, diagrammes et recommandations pour choisir l'approche adaptée.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.amoa-management.site/methodologies.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="#methodologies">Méthodologies de Projet</a>
+                    <ul>
+                        <li><a href="#tab-cycle-v">Cycle en V</a></li>
+                        <li><a href="#tab-agile">Agile / Scrum</a></li>
+                        <li><a href="#tab-safe">SAFe</a></li>
+                        <li><a href="#tab-comparatif">Tableau Comparatif</a></li>
+                    </ul>
+                </li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="formations.html">Formations</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1 class="article-title">Méthodologies de Gestion de Projet</h1>
+                <p class="article-subtitle">Cycle en V, Agile, SAFe : approches, diagrammes et critères de choix pour piloter efficacement vos projets AMOA</p>
+            </div>
+
+            <div class="explore-section">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Sections Connexes</h2>
+                <div class="explore-grid">
+                    <a href="index.html#gouvernance" class="explore-card">
+                        <h3>Gouvernance Projet</h3>
+                        <p>Comités, instances et pilotage</p>
+                    </a>
+                    <a href="index.html#cahier-charges" class="explore-card">
+                        <h3>Cahier des Charges</h3>
+                        <p>Rédaction et spécifications techniques</p>
+                    </a>
+                    <a href="index.html#analyse-risques" class="explore-card">
+                        <h3>Analyse des Risques</h3>
+                        <p>Identification et mitigation</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics et contrats</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION MÉTHODOLOGIES -->
+            <section id="methodologies">
+                <h2>13. Méthodologies de Gestion de Projet</h2>
+                <p>Le choix de la méthodologie de gestion de projet conditionne l'organisation des travaux, la fréquence des livrables et le mode de collaboration entre MOA et MOE. L'AMOA doit recommander l'approche la plus adaptée au contexte du projet.</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="openTab(event, 'tab-cycle-v')">Cycle en V</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-agile')">Agile / Scrum</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-safe')">SAFe</button>
+                    <button class="tab-btn" onclick="openTab(event, 'tab-comparatif')">Comparatif</button>
+                </div>
+
+                <div id="tab-cycle-v" class="tab-content active">
+                    <h4>Cycle en V - Approche Séquentielle</h4>
+                    <p>Méthodologie traditionnelle structurée en phases descendantes (spécification, conception, réalisation) puis ascendantes (tests unitaires, intégration, recette). Chaque phase produit des livrables validés avant passage à la suivante.</p>
+
+                    <div class="cycle-v-diagram">
+                        <div class="v-left">
+                            <div class="v-phase">Spécifications Générales</div>
+                            <div class="v-arrow">↓</div>
+                            <div class="v-phase">Spécifications Détaillées</div>
+                            <div class="v-arrow">↓</div>
+                            <div class="v-phase">Conception Technique</div>
+                            <div class="v-arrow">↓</div>
+                        </div>
+                        <div class="v-center">
+                            <div class="v-bottom">CODAGE / RÉALISATION</div>
+                        </div>
+                        <div class="v-right">
+                            <div class="v-phase">Recette Utilisateur</div>
+                            <div class="v-arrow">↑</div>
+                            <div class="v-phase">Tests d'Intégration</div>
+                            <div class="v-arrow">↑</div>
+                            <div class="v-phase">Tests Unitaires</div>
+                            <div class="v-arrow">↑</div>
+                        </div>
+                    </div>
+
+                    <p><strong>Avantages :</strong> Documentation exhaustive, jalons clairs, adapté aux marchés publics forfaitaires.</p>
+                    <p><strong>Limites :</strong> Rigide face aux changements, effet tunnel, retour utilisateur tardif.</p>
+                </div>
+
+                <div id="tab-agile" class="tab-content">
+                    <h4>Agile / Scrum - Approche Itérative</h4>
+                    <p>Méthodologie itérative organisée en sprints de 2 à 4 semaines, permettant des livraisons incrémentales et un feedback continu du Product Owner (représentant la MOA).</p>
+
+                    <div class="scrum-flow">
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 1 (2-4 sem.)</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
+                        </div>
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 2 (2-4 sem.)</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
+                        </div>
+                        <div class="sprint-box">
+                            <div class="sprint-title">Sprint 3 (2-4 sem.)</div>
+                            <div class="sprint-phase">Planning</div>
+                            <div class="sprint-phase">Daily Standups</div>
+                            <div class="sprint-phase">Dev + Tests</div>
+                            <div class="sprint-phase">Review + Retro</div>
+                            <div class="sprint-output">Increment</div>
+                        </div>
+                        <div class="sprint-continue">...</div>
+                    </div>
+                    <table>
+                        <thead><tr><th>Role Scrum</th><th>Equivalent AMOA</th><th>Responsabilités</th></tr></thead>
+                        <tbody>
+                            <tr><td>Product Owner</td><td>MOA / AMOA</td><td>Priorise le backlog, valide les incréments</td></tr>
+                            <tr><td>Scrum Master</td><td>Chef de projet MOE</td><td>Facilite, lève les obstacles</td></tr>
+                            <tr><td>Dev Team</td><td>Equipe MOE</td><td>Réalise les user stories</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="tab-safe" class="tab-content">
+                    <h4>SAFe - Scaled Agile Framework</h4>
+                    <p>Framework d'agilité à l'échelle, adapté aux grandes organisations avec plusieurs équipes travaillant sur un même programme. Il organise le travail en <strong>Agile Release Trains (ART)</strong> synchronisés sur des <strong>Program Increments (PI)</strong> de 8 à 12 semaines.</p>
+
+                    <div class="safe-levels">
+                        <div class="safe-level portfolio">
+                            <div class="safe-level-title">PORTFOLIO LEVEL</div>
+                            <div class="safe-level-content">Epics stratégiques / Budget Lean</div>
+                        </div>
+                        <div class="safe-arrow">↓</div>
+                        <div class="safe-level program">
+                            <div class="safe-level-title">PROGRAM LEVEL</div>
+                            <div class="safe-level-content">Agile Release Train (ART)</div>
+                            <div class="safe-level-content">PI Planning → Sprints → System Demo</div>
+                        </div>
+                        <div class="safe-arrow">↓</div>
+                        <div class="safe-level team">
+                            <div class="safe-level-title">TEAM LEVEL</div>
+                            <div class="safe-teams">
+                                <span class="safe-team">Équipe 1</span>
+                                <span class="safe-team">Équipe 2</span>
+                                <span class="safe-team">Équipe 3</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p><strong>Usage :</strong> Projets SI de grande envergure (> 50 personnes), programmes multi-équipes, transformation digitale d'entreprise.</p>
+                </div>
+
+                <div id="tab-comparatif" class="tab-content">
+                    <h4>Tableau Comparatif des Méthodologies</h4>
+                    <table>
+                        <thead><tr><th>Critère</th><th>Cycle en V</th><th>Agile / Scrum</th><th>SAFe</th></tr></thead>
+                        <tbody>
+                            <tr><td>Taille projet</td><td>Moyen à Grand</td><td>Petit à Moyen</td><td>Grand à Très Grand</td></tr>
+                            <tr><td>Flexibilité</td><td>Faible</td><td>Très élevée</td><td>Élevée</td></tr>
+                            <tr><td>Documentation</td><td>Exhaustive</td><td>Minimale</td><td>Modérée</td></tr>
+                            <tr><td>Feedback client</td><td>Tardif (recette)</td><td>Continu (sprint review)</td><td>Régulier (PI demo)</td></tr>
+                            <tr><td>Adapté marchés publics</td><td>Oui (forfait)</td><td>Difficile</td><td>Possible (contrat cadre)</td></tr>
+                            <tr><td>Gestion du risque</td><td>Identifié en amont</td><td>Mitigé à chaque sprint</td><td>PI Risk Roster</td></tr>
+                            <tr><td>Durée type</td><td>6 - 18 mois</td><td>3 - 9 mois</td><td>12 - 36 mois</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Navigation vers autres sections -->
+            <div class="explore-section" style="margin-top: 3rem;">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Poursuivre la lecture</h2>
+                <div class="explore-grid">
+                    <a href="index.html#definition" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre d'intervention</p>
+                    </a>
+                    <a href="index.html#cahier-charges" class="explore-card">
+                        <h3>Cahier des Charges</h3>
+                        <p>Structure et contenu type d'un CDC</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, contrats et réglementation</p>
+                    </a>
+                    <a href="index.html#cas-pratique" class="explore-card">
+                        <h3>Cas Pratique</h3>
+                        <p>Mission AMOA complète en restauration scolaire</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="index.html#definition">Definition et Perimetre</a></li>
+                    <li><a href="index.html#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="index.html#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="index.html#methodologies">Methodologies</a></li>
+                    <li><a href="index.html#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="index.html#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="index.html#budget">Budget et Tarifs</a></li>
+                    <li><a href="index.html#benchmark">Matrice de Choix</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cadre Legal</h4>
+                <ul>
+                    <li><a href="juridique.html">Marches et Contrats</a></li>
+                    <li><a href="juridique.html#reglementation">Reglementation</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL - RGPD</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
