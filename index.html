@@ -42,6 +42,48 @@
     <!-- Humans.txt -->
     <link rel="author" href="humans.txt">
 
+    <!-- JSON-LD WebSite Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "WikiAMOA",
+  "alternateName": "Encyclopédie AMOA",
+  "url": "https://www.amoa-management.site",
+  "description": "Encyclopédie collaborative sur l'Assistance à Maîtrise d'Ouvrage. Ressources complètes pour consultants AMOA et chefs de projet.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "AMOA Management",
+    "url": "https://www.amoa-management.site"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": {
+      "@type": "EntryPoint",
+      "urlTemplate": "https://www.amoa-management.site/?s={search_term_string}"
+    },
+    "query-input": "required name=search_term_string"
+  },
+  "inLanguage": "fr-FR"
+}
+    </script>
+
+    <!-- JSON-LD BreadcrumbList Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Accueil",
+      "item": "https://www.amoa-management.site/"
+    }
+  ]
+}
+    </script>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -60,24 +102,26 @@
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Consultant",
-  "name": "L'expert AMOA",
-  "image": "https://www.amoa-management.site/logo.png",
-  "@id": "",
+  "@type": "ProfessionalService",
+  "name": "WikiAMOA - Cabinet Expert AMOA",
+  "alternateName": "AMOA Management",
+  "image": "https://www.amoa-management.site/assets/logo.png",
+  "@id": "https://www.amoa-management.site/#organization",
   "url": "https://www.amoa-management.site",
-  "telephone": "+33100000000",
-  "priceRange": "$$$",
+  "telephone": "+33 1 42 68 95 30",
+  "email": "contact@amoa-management.site",
+  "priceRange": "€€€",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Votre Adresse",
-    "addressLocality": "Votre Ville",
-    "postalCode": "75000",
+    "streetAddress": "15 Avenue de l'Opéra",
+    "addressLocality": "Paris",
+    "postalCode": "75001",
     "addressCountry": "FR"
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": 48.8566,
-    "longitude": 2.3522
+    "latitude": 48.865,
+    "longitude": 2.333
   },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
@@ -92,14 +136,67 @@
     "closes": "18:00"
   },
   "sameAs": [
-    "https://www.linkedin.com/company/votre-page",
-    "https://twitter.com/votre-compte"
+    "https://www.linkedin.com/company/amoa-management",
+    "https://twitter.com/amoa_management",
+    "https://www.facebook.com/amoa.management"
   ],
-  "serviceArea": {
-      "@type": "Country",
-      "name": "France"
+  "areaServed": {
+    "@type": "Country",
+    "name": "France"
   },
-  "description": "Cabinet de conseil spécialisé en Assistance à Maîtrise d'Ouvrage pour les projets informatiques complexes."
+  "description": "Cabinet expert en Assistance à Maîtrise d'Ouvrage (AMOA) depuis 1999. Accompagnement de projets SI, transformation digitale, rédaction de cahiers des charges et pilotage de projets complexes.",
+  "foundingDate": "1999",
+  "slogan": "Votre partenaire pour la réussite de vos projets SI",
+  "knowsAbout": [
+    "Assistance à Maîtrise d'Ouvrage",
+    "Gestion de projet informatique",
+    "Cahier des charges",
+    "Pilotage de projet SI",
+    "Transformation digitale",
+    "Méthodologie Agile",
+    "Cycle en V",
+    "Marchés publics",
+    "RGPD",
+    "Recette fonctionnelle"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Services AMOA",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Audit et Diagnostic SI",
+          "description": "Analyse de l'existant et recommandations stratégiques"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Rédaction de Cahier des Charges",
+          "description": "Spécifications fonctionnelles et techniques détaillées"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Pilotage de Projet SI",
+          "description": "Accompagnement opérationnel et pilotage de la réalisation"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Recette et Validation",
+          "description": "Tests fonctionnels, VABF et VSR"
+        }
+      }
+    ]
+  }
 }
 </script>
 </head>
