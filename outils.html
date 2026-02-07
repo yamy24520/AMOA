@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outils & Templates AMOA - WikiAMOA</title>
+    <meta name="description" content="Outils opérationnels et templates pour l'AMOA : spécifications fonctionnelles et techniques, cahier des charges, listes de contrôles et recette.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.amoa-management.site/outils.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="#specifications">Spécifications</a>
+                    <ul>
+                        <li><a href="#spec-fonctionnelles">Spécifications Fonctionnelles</a></li>
+                        <li><a href="#spec-techniques">Spécifications Techniques</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cahier-charges">Cahier des Charges</a>
+                    <ul>
+                        <li><a href="#objet-marche">Objet du Marché</a></li>
+                        <li><a href="#perimetre">Périmètre et Volumétrie</a></li>
+                        <li><a href="#livrables">Livrables Contractuels</a></li>
+                    </ul>
+                </li>
+                <li><a href="#controles">Liste de Contrôles</a>
+                    <ul>
+                        <li><a href="#controles-config">Contrôles de Configuration</a></li>
+                        <li><a href="#controles-fonctionnels">Contrôles Fonctionnels</a></li>
+                        <li><a href="#controles-techniques">Contrôles Techniques</a></li>
+                        <li><a href="#controles-cloture">Contrôles de Clôture</a></li>
+                    </ul>
+                </li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="formations.html">Formations</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1 class="article-title">Outils & Templates AMOA</h1>
+                <p class="article-subtitle">Outils opérationnels : spécifications, cahier des charges et listes de contrôles pour mener à bien vos missions AMOA</p>
+            </div>
+
+            <div class="explore-section">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Sections Connexes</h2>
+                <div class="explore-grid">
+                    <a href="index.html#methodologies" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile, SAFe et méthodes hybrides</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, contrats et clauses essentielles</p>
+                    </a>
+                    <a href="index.html#gouvernance" class="explore-card">
+                        <h3>Gouvernance</h3>
+                        <p>Comités, instances et pilotage de projet</p>
+                    </a>
+                    <a href="index.html#cas-pratique" class="explore-card">
+                        <h3>Cas Pratique</h3>
+                        <p>Exemple concret de mission AMOA complète</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION SPÉCIFICATIONS -->
+            <section id="specifications">
+                <h2>4. Spécifications Fonctionnelles et Techniques</h2>
+
+                <p>Les spécifications constituent le référentiel contractuel entre maîtrise d'ouvrage et maîtrise d'œuvre. Elles se décomposent en deux volets complémentaires : les spécifications fonctionnelles, qui décrivent le "quoi" (ce que le système doit faire), et les spécifications techniques, qui précisent le "comment" (les contraintes d'implémentation, de performance et de sécurité).</p>
+
+                <h3 id="spec-fonctionnelles">5.1 Spécifications Fonctionnelles</h3>
+
+                <p>Les spécifications fonctionnelles décrivent ce que le système doit faire du point de vue utilisateur. Elles sont formulées de manière non ambiguë et testable.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Réf</th>
+                            <th>Module</th>
+                            <th>Fonctionnalité</th>
+                            <th>Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>SF-01</td>
+                            <td>Gestion Utilisateurs</td>
+                            <td>Permettre à l'administrateur de créer, modifier et supprimer des comptes utilisateurs avec gestion des rôles</td>
+                            <td>Haute</td>
+                        </tr>
+                        <tr>
+                            <td>SF-02</td>
+                            <td>Réservations</td>
+                            <td>Le système doit envoyer automatiquement un email de confirmation dès qu'une réservation est validée</td>
+                            <td>Haute</td>
+                        </tr>
+                        <tr>
+                            <td>SF-03</td>
+                            <td>Reporting</td>
+                            <td>Générer des tableaux de bord personnalisables avec export Excel/PDF</td>
+                            <td>Moyenne</td>
+                        </tr>
+                        <tr>
+                            <td>SF-04</td>
+                            <td>Notifications</td>
+                            <td>Alerter l'utilisateur 24h avant une échéance programmée</td>
+                            <td>Moyenne</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="spec-techniques">5.2 Spécifications Techniques</h3>
+
+                <p>Les spécifications techniques définissent les contraintes d'implémentation, de performance et de sécurité auxquelles la solution doit se conformer.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Réf</th>
+                            <th>Domaine</th>
+                            <th>Exigence technique</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>ST-01</td>
+                            <td>Hébergement</td>
+                            <td>Solution Cloud certifiée ISO 27001 avec hébergement des données en Union Européenne</td>
+                        </tr>
+                        <tr>
+                            <td>ST-02</td>
+                            <td>Disponibilité</td>
+                            <td>Taux de disponibilité de 99,5% garanti par SLA contractuel</td>
+                        </tr>
+                        <tr>
+                            <td>ST-03</td>
+                            <td>Performance</td>
+                            <td>Temps de réponse inférieur à 2 secondes pour 95% des requêtes</td>
+                        </tr>
+                        <tr>
+                            <td>ST-04</td>
+                            <td>Sécurité</td>
+                            <td>Chiffrement TLS 1.3 minimum pour les flux, chiffrement AES-256 pour les données au repos</td>
+                        </tr>
+                        <tr>
+                            <td>ST-05</td>
+                            <td>Sauvegarde</td>
+                            <td>Sauvegarde quotidienne automatique avec rétention de 30 jours minimum</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION CAHIER DES CHARGES -->
+            <section id="cahier-charges">
+                <h2>5. Cahier des Charges (CDC)</h2>
+
+                <p>Le cahier des charges constitue le document contractuel central d'un projet AMOA. Il formalise de manière exhaustive et non ambiguë l'ensemble des exigences du maître d'ouvrage, définit le périmètre précis des prestations attendues, et établit les critères de réception et de contrôle. Sa rédaction requiert une précision juridique et technique permettant son utilisation comme base d'un marché public ou privé.</p>
+
+                <h3 id="objet-marche">6.1 Objet du Marché</h3>
+
+                <p>Le cahier des charges constitue le document contractuel qui formalise l'ensemble des exigences du maître d'ouvrage. Son objet définit précisément le périmètre des prestations attendues.</p>
+
+                <p><em>Exemple : "Prestations de fourniture, paramétrage et maintenance d'une solution SaaS de gestion des réservations pour le compte de [Nom du Client], dans le cadre de la modernisation de son système d'information métier."</em></p>
+
+                <h3 id="perimetre">6.2 Périmètre et Volumétrie</h3>
+
+                <p>La définition du périmètre précise les frontières du projet et permet aux prestataires d'évaluer correctement leur proposition :</p>
+
+                <ul>
+                    <li><strong>Sites concernés :</strong> 5 sites géographiques (dont 1 siège et 4 agences)</li>
+                    <li><strong>Utilisateurs :</strong> 12 administrateurs, 150 utilisateurs standards</li>
+                    <li><strong>Données à reprendre :</strong> 50 000 fiches historiques sur 3 ans glissants</li>
+                    <li><strong>Volumétrie attendue :</strong> 500 transactions quotidiennes en pic</li>
+                </ul>
+
+                <h3 id="livrables">6.3 Livrables Contractuels</h3>
+
+                <p>Les livrables sont assortis de dates jalons et constituent des points de contrôle obligatoires :</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Code</th>
+                            <th>Livrable</th>
+                            <th>Échéance</th>
+                            <th>Format</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>L1</td>
+                            <td>Dossier de Spécifications Détaillées (DSD)</td>
+                            <td>M+1</td>
+                            <td>PDF + Fichiers sources</td>
+                        </tr>
+                        <tr>
+                            <td>L2</td>
+                            <td>Solution en environnement de Recette</td>
+                            <td>M+3</td>
+                            <td>Accès URL + Documentation</td>
+                        </tr>
+                        <tr>
+                            <td>L3</td>
+                            <td>PV de Recette et Guide Utilisateur</td>
+                            <td>M+4</td>
+                            <td>PDF signé</td>
+                        </tr>
+                        <tr>
+                            <td>L4</td>
+                            <td>Solution en Production avec formation</td>
+                            <td>M+5</td>
+                            <td>Accès Production + Supports</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION LISTE DE CONTRÔLES -->
+            <section id="controles">
+                <h2>9. Liste de Contrôles (Ordonnée)</h2>
+
+                <p>La liste de contrôles organise le processus de vérification de la conformité de la solution livrée par rapport aux spécifications du cahier des charges. Elle doit être structurée de manière chronologique, suivant les différentes phases de recette : contrôles préalables (configuration, sécurité), contrôles fonctionnels (conformité aux spécifications), contrôles techniques (performance, intégration), et contrôles de clôture (documentation, transfert de compétences).</p>
+
+                <h3 id="controles-config">Phase 1 : Contrôles de Configuration</h3>
+
+                <ul class="checklist">
+                    <li>Localisation des données en Union Européenne (RGPD)</li>
+                    <li>Validité du certificat SSL/TLS et chiffrement des flux HTTPS</li>
+                    <li>Configuration des sauvegardes automatiques quotidiennes</li>
+                    <li>Activation de l'authentification à double facteur (2FA)</li>
+                    <li>Paramétrages des rôles et permissions utilisateurs</li>
+                </ul>
+
+                <h3 id="controles-fonctionnels">Phase 2 : Contrôles Fonctionnels</h3>
+
+                <ul class="checklist">
+                    <li>Validation du module Gestion Utilisateurs (SF-01)</li>
+                    <li>Test du processus complet de réservation avec notification</li>
+                    <li>Vérification de la génération des exports Excel/PDF</li>
+                    <li>Test des alertes automatiques avant échéance</li>
+                    <li>Validation de la personnalisation des tableaux de bord</li>
+                </ul>
+
+                <h3 id="controles-techniques">Phase 3 : Contrôles Techniques & Performance</h3>
+
+                <ul class="checklist">
+                    <li>Test de montée en charge : 100 utilisateurs simultanés</li>
+                    <li>Mesure du temps de réponse (objectif < 2 secondes)</li>
+                    <li>Vérification du taux de disponibilité sur 7 jours</li>
+                    <li>Test de restauration d'une sauvegarde de moins de 24h</li>
+                    <li>Audit de sécurité et scan de vulnérabilités</li>
+                </ul>
+
+                <h3 id="controles-cloture">Phase 4 : Contrôles de Clôture</h3>
+
+                <ul class="checklist">
+                    <li>Remise de la documentation technique complète</li>
+                    <li>Remise du guide utilisateur et supports de formation</li>
+                    <li>Signature du Procès-Verbal de Recette sans réserve majeure</li>
+                    <li>Transfert de compétences à l'équipe support interne</li>
+                    <li>Archivage de l'ensemble des livrables contractuels</li>
+                </ul>
+            </section>
+
+            <!-- Navigation vers autres sections -->
+            <div class="explore-section" style="margin-top: 3rem;">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Poursuivre la lecture</h2>
+                <div class="explore-grid">
+                    <a href="index.html#definition" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre d'intervention</p>
+                    </a>
+                    <a href="index.html#analyse-risques" class="explore-card">
+                        <h3>Analyse des Risques</h3>
+                        <p>Identification, évaluation et mitigation des risques</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, types de contrats et réglementation</p>
+                    </a>
+                    <a href="index.html#benchmark" class="explore-card">
+                        <h3>Benchmark & Choix</h3>
+                        <p>Matrice de décision et sélection de solutions</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="index.html#definition">Definition et Perimetre</a></li>
+                    <li><a href="index.html#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="index.html#methodologies">Methodologies</a></li>
+                    <li><a href="index.html#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="index.html#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="index.html#budget">Budget et Tarifs</a></li>
+                    <li><a href="index.html#benchmark">Matrice de Choix</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Outils & Templates</h4>
+                <ul>
+                    <li><a href="#specifications">Specifications</a></li>
+                    <li><a href="#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="#controles">Liste de Controles</a></li>
+                    <li><a href="juridique.html">Cadre Juridique</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

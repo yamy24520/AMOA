@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histoire de l'AMOA - Encyclopédie AMOA</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #202122;
+            background-color: #f8f9fa;
+        }
+
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: #f8f9fa;
+            border-right: 1px solid #a2a9b1;
+            padding: 20px;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow-y: auto;
+        }
+
+        .sidebar h3 {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #a2a9b1;
+            color: #54595d;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar a {
+            color: #0645ad;
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            padding: 4px 8px;
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        .sidebar a:hover {
+            background: #eaecf0;
+            text-decoration: underline;
+        }
+
+        .sidebar .period-link {
+            font-weight: 500;
+        }
+
+        .sidebar .sub-links {
+            margin-left: 12px;
+            margin-top: 5px;
+        }
+
+        .sidebar .sub-links a {
+            font-size: 12px;
+            color: #202122;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            padding: 20px 40px;
+            max-width: 900px;
+        }
+
+        .header {
+            border-bottom: 1px solid #a2a9b1;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-family: 'Linux Libertine', Georgia, Times, serif;
+            font-size: 32px;
+            font-weight: normal;
+            margin-bottom: 8px;
+            border-bottom: none;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #54595d;
+        }
+
+        h2 {
+            font-family: 'Linux Libertine', Georgia, Times, serif;
+            font-size: 24px;
+            font-weight: normal;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #a2a9b1;
+        }
+
+        h3 {
+            font-family: 'Linux Libertine', Georgia, Times, serif;
+            font-size: 19px;
+            font-weight: 600;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+
+        /* Timeline Styles */
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            margin: 30px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 30px;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #0645ad, #72777d);
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 70px;
+            margin-bottom: 40px;
+            animation: fadeIn 0.6s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 18px;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #0645ad;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px #0645ad;
+            z-index: 1;
+        }
+
+        .timeline-marker.major {
+            width: 32px;
+            height: 32px;
+            left: 15px;
+            background: #d33;
+            box-shadow: 0 0 0 3px #d33;
+        }
+
+        .timeline-year {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0645ad;
+            margin-bottom: 8px;
+        }
+
+        .timeline-content {
+            background: #f8f9fa;
+            padding: 15px 20px;
+            border-radius: 6px;
+            border-left: 4px solid #0645ad;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .timeline-content h4 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #202122;
+        }
+
+        .timeline-content ul {
+            margin-left: 20px;
+            margin-top: 8px;
+        }
+
+        .timeline-content li {
+            margin-bottom: 6px;
+            font-size: 14px;
+        }
+
+        /* Period Sections */
+        .period {
+            margin-bottom: 50px;
+        }
+
+        .period-header {
+            background: linear-gradient(135deg, #0645ad 0%, #5a8fd4 100%);
+            color: white;
+            padding: 20px 25px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .period-header h2 {
+            border: none;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .period-summary {
+            font-size: 14px;
+            margin-top: 10px;
+            opacity: 0.95;
+        }
+
+        /* Info Box */
+        .infobox {
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .infobox-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #54595d;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* References */
+        .references {
+            background: #f8f9fa;
+            padding: 20px;
+            margin-top: 40px;
+            border-radius: 4px;
+            border: 1px solid #a2a9b1;
+        }
+
+        .references h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        .references ol {
+            margin-left: 20px;
+            font-size: 13px;
+        }
+
+        .references li {
+            margin-bottom: 8px;
+        }
+
+        /* Footer */
+        .footer {
+            background: #eaecf0;
+            border-top: 1px solid #a2a9b1;
+            padding: 20px 40px;
+            margin-top: 40px;
+            font-size: 12px;
+            color: #54595d;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #0645ad;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #fffbea;
+            border-left: 4px solid #f0b429;
+            padding: 15px 20px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .highlight-box strong {
+            color: #ac6c00;
+        }
+
+        /* Navigation tabs */
+        .nav-tabs {
+            display: flex;
+            gap: 5px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #a2a9b1;
+        }
+
+        .nav-tab {
+            padding: 8px 16px;
+            background: #f8f9fa;
+            border: 1px solid #a2a9b1;
+            border-bottom: none;
+            border-radius: 4px 4px 0 0;
+            text-decoration: none;
+            color: #0645ad;
+            font-size: 13px;
+        }
+
+        .nav-tab:hover {
+            background: #eaecf0;
+        }
+
+        .nav-tab.active {
+            background: white;
+            font-weight: bold;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .main-content {
+                padding: 20px;
+            }
+
+            .timeline::before {
+                left: 15px;
+            }
+
+            .timeline-item {
+                padding-left: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="#introduction">Introduction</a></li>
+                <li>
+                    <a href="#periode1" class="period-link">1980-1990 : Émergence</a>
+                    <ul class="sub-links">
+                        <li><a href="#naissance-si">Naissance des SI</a></li>
+                        <li><a href="#premiers-besoins">Premiers besoins AMOA</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#periode2" class="period-link">1990-2000 : Structuration</a>
+                    <ul class="sub-links">
+                        <li><a href="#fonction-amoa">Fonction AMOA</a></li>
+                        <li><a href="#methodologies">Méthodologies</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#periode3" class="period-link">2000-2010 : Professionnalisation</a>
+                    <ul class="sub-links">
+                        <li><a href="#certifications">Certifications</a></li>
+                        <li><a href="#normalisation">Normalisation</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#periode4" class="period-link">2010-2020 : Transition Agile</a>
+                    <ul class="sub-links">
+                        <li><a href="#agilite">Agilité</a></li>
+                        <li><a href="#hybride">Approches hybrides</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#periode5" class="period-link">2020-2026 : Transformation</a>
+                    <ul class="sub-links">
+                        <li><a href="#digital">Digitalisation</a></li>
+                        <li><a href="#ia">Intelligence Artificielle</a></li>
+                        <li><a href="#cloud">Cloud & DevOps</a></li>
+                    </ul>
+                </li>
+                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#references">Références</a></li>
+            </ul>
+
+            <h3 style="margin-top: 30px;">Voir aussi</h3>
+            <ul>
+                <li><a href="index.html">Accueil AMOA</a></li>
+                <li><a href="definition.html">Définition AMOA</a></li>
+                <li><a href="competences.html">Compétences</a></li>
+                <li><a href="methodologies.html">Méthodologies</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="header">
+                <h1>Histoire de l'Assistance à Maîtrise d'Ouvrage (AMOA)</h1>
+                <p class="subtitle">Évolution de la fonction AMOA de 1980 à 2026</p>
+            </div>
+
+            <div class="nav-tabs">
+                <a href="index.html" class="nav-tab">Article</a>
+                <a href="#" class="nav-tab active">Histoire</a>
+                <a href="#" class="nav-tab">Discussion</a>
+            </div>
+
+            <section id="introduction">
+                <p>
+                    L'<strong>Assistance à Maîtrise d'Ouvrage (AMOA)</strong> est une fonction qui s'est progressivement structurée
+                    depuis les années 1980, en parallèle de l'essor des systèmes d'information dans les organisations. Son histoire
+                    est intimement liée à l'évolution des technologies, des méthodologies de gestion de projet et de la transformation
+                    digitale des entreprises.
+                </p>
+                <p>
+                    Cette page retrace l'évolution historique de l'AMOA à travers cinq périodes clés, marquées par des innovations
+                    technologiques, des évolutions réglementaires et des changements méthodologiques majeurs.
+                </p>
+
+                <div class="infobox">
+                    <div class="infobox-title">Chronologie synthétique</div>
+                    <ul style="margin-left: 20px; font-size: 14px;">
+                        <li><strong>1980-1990</strong> : Émergence des premiers besoins d'assistance</li>
+                        <li><strong>1990-2000</strong> : Structuration de la fonction AMOA en France</li>
+                        <li><strong>2000-2010</strong> : Professionnalisation et certifications</li>
+                        <li><strong>2010-2020</strong> : Transition vers l'Agilité</li>
+                        <li><strong>2020-2026</strong> : Transformation digitale et IA</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Période 1: 1980-1990 -->
+            <section id="periode1" class="period">
+                <div class="period-header">
+                    <h2>1980-1990 : Émergence des Systèmes d'Information</h2>
+                    <p class="period-summary">
+                        L'informatisation des entreprises et les premiers besoins d'assistance métier pour accompagner
+                        les projets informatiques.
+                    </p>
+                </div>
+
+                <h3 id="naissance-si">Contexte : La naissance des systèmes d'information</h3>
+                <p>
+                    Dans les années 1980, l'informatique se démocratise dans les entreprises avec l'arrivée des ordinateurs
+                    personnels (IBM PC en 1981) et des premiers systèmes de gestion intégrés. Les directions informatiques
+                    se structurent et les projets SI deviennent des enjeux stratégiques.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">1981</div>
+                        <div class="timeline-content">
+                            <h4>Lancement de l'IBM PC</h4>
+                            <p>
+                                L'ordinateur personnel IBM PC révolutionne l'informatique d'entreprise. Les directions métiers
+                                expriment des besoins croissants d'applications spécifiques.
+                            </p>
+                            <ul>
+                                <li>Démocratisation de l'informatique en entreprise</li>
+                                <li>Émergence du concept de "micro-informatique"</li>
+                                <li>Premiers écarts entre besoins métiers et réalisations techniques</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1983-1985</div>
+                        <div class="timeline-content">
+                            <h4>Premiers ERP et progiciels de gestion</h4>
+                            <p>
+                                SAP R/2 et les premiers progiciels intégrés apparaissent. Les entreprises prennent conscience
+                                de la nécessité d'avoir des experts métiers pour paramétrer ces outils.
+                            </p>
+                            <ul>
+                                <li>SAP R/2 pour mainframes (1979-1980, adoption large en 1983)</li>
+                                <li>Besoin d'interface entre DSI et directions métiers</li>
+                                <li>Émergence de consultants fonctionnels</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1985</div>
+                        <div class="timeline-content">
+                            <h4>Loi MOP en France (Maîtrise d'Ouvrage Publique)</h4>
+                            <p>
+                                La loi n°85-704 du 12 juillet 1985 relative à la maîtrise d'ouvrage publique (loi MOP)
+                                introduit les concepts de MOA et MOE dans le secteur public.
+                            </p>
+                            <ul>
+                                <li>Définition juridique de la maîtrise d'ouvrage</li>
+                                <li>Séparation claire MOA/MOE</li>
+                                <li>Base conceptuelle pour l'AMOA future</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1987-1990</div>
+                        <div class="timeline-content">
+                            <h4>Premières missions d'assistance fonctionnelle</h4>
+                            <p>
+                                Des consultants externes commencent à accompagner les directions métiers dans l'expression
+                                de leurs besoins et le suivi de projets informatiques, sans que le terme "AMOA" soit encore formalisé.
+                            </p>
+                            <ul>
+                                <li>Cabinets de conseil en organisation</li>
+                                <li>Rédaction de cahiers des charges fonctionnels</li>
+                                <li>Assistance à recette et validation métier</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Point clé :</strong> Dans les années 1980, l'AMOA n'existe pas encore en tant que fonction formalisée,
+                    mais les besoins d'interface entre métiers et informatique émergent avec l'informatisation des processus.
+                </div>
+            </section>
+
+            <!-- Période 2: 1990-2000 -->
+            <section id="periode2" class="period">
+                <div class="period-header">
+                    <h2>1990-2000 : Structuration de la Fonction AMOA</h2>
+                    <p class="period-summary">
+                        Formalisation du rôle d'AMOA en France, développement des méthodologies projet et professionnalisation
+                        du conseil en systèmes d'information.
+                    </p>
+                </div>
+
+                <h3 id="fonction-amoa">Formalisation de la fonction AMOA</h3>
+                <p>
+                    Les années 1990 voient la naissance officielle du terme "AMOA" en France, notamment dans le secteur public.
+                    La complexité croissante des projets SI et l'arrivée d'Internet nécessitent une expertise dédiée pour
+                    accompagner la maîtrise d'ouvrage.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">1991-1993</div>
+                        <div class="timeline-content">
+                            <h4>Émergence du terme "AMOA" en France</h4>
+                            <p>
+                                Le terme "Assistance à Maîtrise d'Ouvrage" apparaît dans les marchés publics et les grands
+                                projets d'entreprise. Les SSII créent des départements AMOA.
+                            </p>
+                            <ul>
+                                <li>Distinction claire entre AMOA (côté métier) et AMOE (côté technique)</li>
+                                <li>Premiers référentiels de missions AMOA</li>
+                                <li>Développement du conseil fonctionnel</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1994</div>
+                        <div class="timeline-content">
+                            <h4>SAP R/3 et boom des ERP</h4>
+                            <p>
+                                Le lancement de SAP R/3 (architecture client-serveur) accélère les projets d'intégration.
+                                Les entreprises ont massivement besoin d'AMOA pour paramétrer et adapter les ERP.
+                            </p>
+                            <ul>
+                                <li>Explosion des projets ERP (SAP, Oracle, PeopleSoft)</li>
+                                <li>Besoin d'analystes fonctionnels et consultants AMOA</li>
+                                <li>Développement du marché du conseil SI</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1996</div>
+                        <div class="timeline-content">
+                            <h4>Méthodologie Merise et cycles en V</h4>
+                            <p>
+                                Merise s'impose comme la méthodologie de référence en France pour la conception de SI.
+                                L'AMOA intervient dans les phases amont (MCD, MLD) pour valider les modèles métiers.
+                            </p>
+                            <ul>
+                                <li>Cycle en V comme standard de gestion de projet</li>
+                                <li>Rôle de l'AMOA dans l'expression des besoins</li>
+                                <li>Documentation fonctionnelle structurée</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">1998-2000</div>
+                        <div class="timeline-content">
+                            <h4>Crise du bug de l'an 2000 et Internet</h4>
+                            <p>
+                                La préparation au passage à l'an 2000 mobilise massivement les AMOA pour auditer les systèmes.
+                                Parallèlement, l'essor d'Internet crée de nouveaux besoins (e-commerce, portails web).
+                            </p>
+                            <ul>
+                                <li>Projets massifs de migration et mise à niveau</li>
+                                <li>AMOA sur les projets web et e-business</li>
+                                <li>Professionnalisation du conseil AMOA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-content">
+                            <h4>Normes ISO 9000 et qualité</h4>
+                            <p>
+                                L'ISO 9000:2000 en préparation impose des processus qualité. L'AMOA devient garant de la
+                                conformité fonctionnelle et de la traçabilité des exigences.
+                            </p>
+                            <ul>
+                                <li>Formalisation des processus AMOA</li>
+                                <li>Gestion documentaire et traçabilité</li>
+                                <li>Assurance qualité fonctionnelle</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Point clé :</strong> Les années 1990 consacrent l'AMOA comme fonction à part entière, avec un rôle
+                    clairement défini d'interface entre la maîtrise d'ouvrage et la maîtrise d'œuvre technique.
+                </div>
+            </section>
+
+            <!-- Période 3: 2000-2010 -->
+            <section id="periode3" class="period">
+                <div class="period-header">
+                    <h2>2000-2010 : Professionnalisation et Certifications</h2>
+                    <p class="period-summary">
+                        Développement des certifications professionnelles (PMP, Prince2), normalisation des pratiques et
+                        industrialisation des méthodes AMOA.
+                    </p>
+                </div>
+
+                <h3 id="certifications">L'ère des certifications et de la normalisation</h3>
+                <p>
+                    Les années 2000 marquent une professionnalisation accrue de l'AMOA avec l'arrivée des certifications
+                    internationales en gestion de projet et la publication de référentiels méthodologiques standardisés.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2000-2002</div>
+                        <div class="timeline-content">
+                            <h4>Éclatement de la bulle Internet et recentrage</h4>
+                            <p>
+                                Après l'éclatement de la bulle dot-com, les entreprises rationalisent leurs investissements SI.
+                                L'AMOA devient crucial pour garantir le ROI et la pertinence des projets.
+                            </p>
+                            <ul>
+                                <li>Études d'opportunité et business cases rigoureux</li>
+                                <li>Pilotage des coûts et bénéfices métiers</li>
+                                <li>Priorisation des projets à forte valeur</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2003</div>
+                        <div class="timeline-content">
+                            <h4>Loi Sarbanes-Oxley (SOX) et conformité</h4>
+                            <p>
+                                La loi SOX impose des contrôles stricts sur les systèmes d'information financière.
+                                L'AMOA intervient pour garantir la conformité et la traçabilité.
+                            </p>
+                            <ul>
+                                <li>Audits de conformité et contrôles internes</li>
+                                <li>Documentation exhaustive des processus</li>
+                                <li>AMOA sur les projets de gouvernance SI</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2004-2006</div>
+                        <div class="timeline-content">
+                            <h4>Essor des certifications PMP et Prince2</h4>
+                            <p>
+                                La certification PMP (Project Management Professional) du PMI et Prince2 deviennent des
+                                standards reconnus. De nombreux AMOA se certifient pour professionnaliser leur pratique.
+                            </p>
+                            <ul>
+                                <li>PMBOK Guide comme référence méthodologique</li>
+                                <li>Prince2 (2005) pour la gestion de projet structurée</li>
+                                <li>Reconnaissance professionnelle des AMOA certifiés</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2005</div>
+                        <div class="timeline-content">
+                            <h4>ITIL v3 et gestion des services</h4>
+                            <p>
+                                ITIL (IT Infrastructure Library) version 3 structure la gestion des services IT.
+                                L'AMOA intervient sur les projets de mise en œuvre ITIL et de transformation des processus.
+                            </p>
+                            <ul>
+                                <li>AMOA sur les projets ITSM (IT Service Management)</li>
+                                <li>Alignement métier/IT renforcé</li>
+                                <li>Gestion du changement organisationnel</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2007-2008</div>
+                        <div class="timeline-content">
+                            <h4>SOA et urbanisation des SI</h4>
+                            <p>
+                                L'architecture orientée services (SOA) et l'urbanisation des SI deviennent des priorités.
+                                L'AMOA participe à la cartographie fonctionnelle et à l'optimisation des processus.
+                            </p>
+                            <ul>
+                                <li>Cartographie des processus métiers</li>
+                                <li>Urbanisation et trajectoires d'évolution</li>
+                                <li>Gouvernance SOA et réutilisabilité</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2008-2010</div>
+                        <div class="timeline-content">
+                            <h4>Crise financière et optimisation des coûts</h4>
+                            <p>
+                                La crise de 2008 impose une rationalisation des dépenses IT. L'AMOA doit justifier chaque
+                                investissement et optimiser les budgets projets.
+                            </p>
+                            <ul>
+                                <li>Business cases renforcés et ROI mesurable</li>
+                                <li>Priorisation stricte des projets</li>
+                                <li>Optimisation des processus et réduction des coûts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Point clé :</strong> La décennie 2000 professionnalise l'AMOA via les certifications internationales
+                    et impose une rigueur accrue dans le pilotage des projets et la démonstration de la valeur métier.
+                </div>
+            </section>
+
+            <!-- Période 4: 2010-2020 -->
+            <section id="periode4" class="period">
+                <div class="period-header">
+                    <h2>2010-2020 : Transition Agile et Méthodologies Hybrides</h2>
+                    <p class="period-summary">
+                        Adoption massive de l'Agilité (Scrum, SAFe), transformation digitale et évolution du rôle de l'AMOA
+                        vers le Product Owner et le Business Analyst agile.
+                    </p>
+                </div>
+
+                <h3 id="agilite">La révolution agile</h3>
+                <p>
+                    Les années 2010 sont marquées par l'adoption généralisée des méthodes agiles, qui bouleversent le rôle
+                    traditionnel de l'AMOA. Celui-ci évolue vers des fonctions de Product Owner, Business Analyst agile
+                    ou facilitateur de transformation.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2010-2012</div>
+                        <div class="timeline-content">
+                            <h4>Adoption de Scrum et Kanban</h4>
+                            <p>
+                                Scrum devient la méthodologie agile de référence. L'AMOA traditionnel doit s'adapter au rôle
+                                de Product Owner, gérant le backlog et priorisant les user stories.
+                            </p>
+                            <ul>
+                                <li>Transformation des AMOA en Product Owners</li>
+                                <li>Collaboration continue avec les équipes de développement</li>
+                                <li>User stories et backlog management</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2012</div>
+                        <div class="timeline-content">
+                            <h4>Émergence du Big Data et Analytics</h4>
+                            <p>
+                                L'explosion des données (Big Data) crée de nouveaux besoins d'AMOA spécialisés dans l'analyse
+                                de données, la BI (Business Intelligence) et les projets analytiques.
+                            </p>
+                            <ul>
+                                <li>AMOA Data : définition des besoins analytiques</li>
+                                <li>Projets de DataWarehouse et DataLake</li>
+                                <li>Gouvernance des données</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2014-2016</div>
+                        <div class="timeline-content">
+                            <h4>Transformation digitale et DevOps</h4>
+                            <p>
+                                La transformation digitale s'accélère. L'AMOA accompagne les projets de digitalisation
+                                (mobile, cloud, API) et s'adapte aux pratiques DevOps.
+                            </p>
+                            <ul>
+                                <li>AMOA sur projets mobile et omnicanal</li>
+                                <li>API management et écosystèmes digitaux</li>
+                                <li>Intégration continue et déploiement continu (CI/CD)</li>
+                                <li>Collaboration AMOA-DevOps</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2016</div>
+                        <div class="timeline-content">
+                            <h4>Lancement de SAFe (Scaled Agile Framework)</h4>
+                            <p>
+                                SAFe 4.0 propose un cadre pour l'agilité à l'échelle. L'AMOA évolue vers des rôles de
+                                Product Manager, Business Owner ou Epic Owner dans les grandes organisations.
+                            </p>
+                            <ul>
+                                <li>SAFe Product Owner et Product Manager</li>
+                                <li>Gestion de portefeuilles agiles (Epics, Features)</li>
+                                <li>Alignement stratégique et exécution agile</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2018</div>
+                        <div class="timeline-content">
+                            <h4>RGPD et conformité des données</h4>
+                            <p>
+                                Le Règlement Général sur la Protection des Données (RGPD) entre en vigueur en Europe.
+                                L'AMOA intervient sur les projets de mise en conformité et de gouvernance des données personnelles.
+                            </p>
+                            <ul>
+                                <li>Cartographie des traitements de données</li>
+                                <li>Analyse d'impact (PIA) et conformité RGPD</li>
+                                <li>Privacy by Design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2019-2020</div>
+                        <div class="timeline-content">
+                            <h4>COVID-19 et accélération digitale</h4>
+                            <p>
+                                La pandémie de COVID-19 accélère massivement la transformation digitale. L'AMOA accompagne
+                                des projets de télétravail, de dématérialisation et de digitalisation d'urgence.
+                            </p>
+                            <ul>
+                                <li>Projets de collaboration à distance (Teams, Zoom, etc.)</li>
+                                <li>Dématérialisation accélérée des processus</li>
+                                <li>E-commerce et vente en ligne</li>
+                                <li>Agilité et remote working</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Point clé :</strong> La décennie 2010 transforme radicalement le métier d'AMOA : du cycle en V
+                    traditionnel vers l'agilité, du rédacteur de cahier des charges vers le Product Owner collaboratif.
+                </div>
+            </section>
+
+            <!-- Période 5: 2020-2026 -->
+            <section id="periode5" class="period">
+                <div class="period-header">
+                    <h2>2020-2026 : Transformation Digitale, IA et Cloud Native</h2>
+                    <p class="period-summary">
+                        Intégration de l'Intelligence Artificielle, adoption du Cloud, automatisation et évolution vers
+                        un AMOA augmenté par les technologies émergentes.
+                    </p>
+                </div>
+
+                <h3 id="digital">L'AMOA à l'ère de l'IA et du Cloud</h3>
+                <p>
+                    Depuis 2020, l'AMOA est confronté à une nouvelle révolution technologique avec l'IA générative,
+                    le cloud native, l'automatisation et les architectures distribuées. Le métier se réinvente autour
+                    de nouvelles compétences techniques et stratégiques.
+                </p>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2020-2021</div>
+                        <div class="timeline-content">
+                            <h4>Généralisation du Cloud et SaaS</h4>
+                            <p>
+                                Les migrations vers le Cloud s'accélèrent (AWS, Azure, GCP). L'AMOA accompagne les stratégies
+                                Cloud, les architectures multi-cloud et l'adoption de solutions SaaS.
+                            </p>
+                            <ul>
+                                <li>Cloud Strategy et Cloud Readiness Assessment</li>
+                                <li>Migration vers le Cloud (Lift & Shift, Refactoring)</li>
+                                <li>Adoption de SaaS (Salesforce, Workday, ServiceNow)</li>
+                                <li>FinOps et optimisation des coûts Cloud</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2021-2022</div>
+                        <div class="timeline-content">
+                            <h4>Low-Code / No-Code et Citizen Development</h4>
+                            <p>
+                                Les plateformes Low-Code/No-Code (Microsoft Power Platform, OutSystems, Mendix) permettent
+                                aux métiers de créer leurs propres applications. L'AMOA devient facilitateur et garant de la cohérence.
+                            </p>
+                            <ul>
+                                <li>Gouvernance Low-Code et gestion des Shadow IT</li>
+                                <li>Formation des Citizen Developers</li>
+                                <li>Intégration dans le SI global</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2022-2023</div>
+                        <div class="timeline-content">
+                            <h4>Explosion de l'IA générative (ChatGPT, GPT-4)</h4>
+                            <p>
+                                Le lancement de ChatGPT (novembre 2022) marque un tournant. L'AMOA intègre l'IA générative
+                                dans ses pratiques : automatisation de la documentation, génération de user stories,
+                                assistance à la rédaction.
+                            </p>
+                            <ul>
+                                <li>Utilisation d'IA pour générer des spécifications</li>
+                                <li>Chatbots et assistants virtuels métiers</li>
+                                <li>AMOA sur projets IA et Machine Learning</li>
+                                <li>Éthique et gouvernance de l'IA</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h4>IA Act européen et régulation</h4>
+                            <p>
+                                L'Union Européenne adopte l'IA Act, premier cadre réglementaire mondial sur l'IA.
+                                L'AMOA doit garantir la conformité des systèmes IA aux exigences réglementaires.
+                            </p>
+                            <ul>
+                                <li>Classification des systèmes IA (risque élevé, limité, minimal)</li>
+                                <li>Documentation et traçabilité des modèles IA</li>
+                                <li>Évaluation des impacts et biais algorithmiques</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h4>Automatisation et IA Agents</h4>
+                            <p>
+                                Les agents IA autonomes (AutoGPT, BabyAGI) et l'automatisation intelligente transforment
+                                les processus métiers. L'AMOA orchestre l'intégration de ces agents dans les workflows.
+                            </p>
+                            <ul>
+                                <li>RPA (Robotic Process Automation) augmenté par l'IA</li>
+                                <li>Process Mining et optimisation continue</li>
+                                <li>Hyperautomation et orchestration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker major"></div>
+                        <div class="timeline-year">2025-2026</div>
+                        <div class="timeline-content">
+                            <h4>AMOA augmenté et Product Operating Model</h4>
+                            <p>
+                                L'AMOA devient un "Product Manager augmenté", utilisant l'IA pour analyser les données,
+                                prioriser les features et anticiper les besoins. Adoption du Product Operating Model dans
+                                les grandes organisations.
+                            </p>
+                            <ul>
+                                <li>Data-driven decision making (analytics, A/B testing)</li>
+                                <li>IA pour la priorisation et le roadmapping</li>
+                                <li>Product Ops et amélioration continue</li>
+                                <li>Organisations en squads, tribes, chapitres (modèle Spotify)</li>
+                                <li>Platform Engineering et Developer Experience</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-year">2026</div>
+                        <div class="timeline-content">
+                            <h4>Souveraineté numérique et Cloud de confiance</h4>
+                            <p>
+                                Les enjeux de souveraineté numérique (Cloud de confiance, données sensibles) deviennent
+                                prioritaires en Europe. L'AMOA intègre ces contraintes dans l'architecture des solutions.
+                            </p>
+                            <ul>
+                                <li>SecNumCloud et certifications de sécurité</li>
+                                <li>Architectures hybrides et multi-cloud souveraines</li>
+                                <li>Conformité NIS2 et cyber-résilience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <strong>Point clé :</strong> En 2026, l'AMOA est devenu un acteur stratégique de la transformation digitale,
+                    maîtrisant l'IA, le Cloud, l'automatisation et les nouvelles organisations produit. Le métier continue d'évoluer
+                    rapidement face aux innovations technologiques.
+                </div>
+            </section>
+
+            <!-- Conclusion -->
+            <section id="conclusion">
+                <h2>Conclusion et perspectives</h2>
+                <p>
+                    L'histoire de l'AMOA illustre l'évolution permanente des métiers du numérique. D'un rôle initial de simple
+                    interface entre métiers et informatique dans les années 1980, l'AMOA est devenu un acteur stratégique de la
+                    transformation digitale, combinant expertise métier, compétences techniques et vision stratégique.
+                </p>
+                <p>
+                    Les tendances actuelles (IA générative, automatisation, Cloud native, Product Management) redéfinissent
+                    encore le périmètre du métier. L'AMOA de demain sera probablement un "Product Manager augmenté", capable de :
+                </p>
+                <ul style="margin-left: 30px; margin-top: 10px;">
+                    <li>Piloter des produits numériques en mode continu</li>
+                    <li>Exploiter l'IA pour analyser les données et anticiper les besoins</li>
+                    <li>Orchestrer des écosystèmes technologiques complexes (Cloud, API, microservices)</li>
+                    <li>Garantir la conformité réglementaire et la sécurité</li>
+                    <li>Animer des organisations agiles et distribuées</li>
+                </ul>
+                <p style="margin-top: 15px;">
+                    Cette évolution constante fait de l'AMOA un métier passionnant, au cœur des enjeux business et technologiques
+                    des organisations modernes.
+                </p>
+            </section>
+
+            <!-- References -->
+            <section id="references" class="references">
+                <h2>Références et sources</h2>
+                <ol>
+                    <li>
+                        <strong>Loi MOP (1985)</strong> - Loi n°85-704 du 12 juillet 1985 relative à la maîtrise d'ouvrage publique
+                        et à ses rapports avec la maîtrise d'œuvre privée.
+                    </li>
+                    <li>
+                        <strong>PMBOK Guide</strong> - Project Management Institute (PMI), Guide du corpus des connaissances en
+                        management de projet, éditions 2000-2021.
+                    </li>
+                    <li>
+                        <strong>ITIL v3 (2007)</strong> - Office of Government Commerce (OGC), IT Infrastructure Library version 3,
+                        gestion des services informatiques.
+                    </li>
+                    <li>
+                        <strong>Manifeste Agile (2001)</strong> - Beck, K. et al., "Manifesto for Agile Software Development",
+                        agilemanifesto.org
+                    </li>
+                    <li>
+                        <strong>Scrum Guide</strong> - Schwaber, K. & Sutherland, J., "The Scrum Guide", versions 2010-2020.
+                    </li>
+                    <li>
+                        <strong>SAFe (Scaled Agile Framework)</strong> - Leffingwell, D., "SAFe 4.0 Reference Guide: Scaled Agile
+                        Framework for Lean Enterprises", 2016.
+                    </li>
+                    <li>
+                        <strong>RGPD (2018)</strong> - Règlement (UE) 2016/679 du Parlement européen et du Conseil relatif à la
+                        protection des données personnelles.
+                    </li>
+                    <li>
+                        <strong>IA Act (2023)</strong> - Proposition de règlement européen sur l'intelligence artificielle,
+                        Commission européenne.
+                    </li>
+                    <li>
+                        <strong>Gartner Research</strong> - Rapports sur l'évolution des méthodologies projet et la transformation
+                        digitale (2000-2026).
+                    </li>
+                    <li>
+                        <strong>Cigref</strong> - Club Informatique des Grandes Entreprises Françaises, études sur l'évolution des
+                        métiers du SI (1990-2026).
+                    </li>
+                    <li>
+                        <strong>Syntec Numérique</strong> - Observatoire des métiers du numérique, référentiels de compétences AMOA.
+                    </li>
+                    <li>
+                        <strong>DevOps Institute</strong> - "State of DevOps Reports" (2014-2026), évolution des pratiques DevOps
+                        et impact sur l'AMOA.
+                    </li>
+                </ol>
+            </section>
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-links">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                    <a href="#">À propos</a>
+                    <a href="#">Contact</a>
+                </div>
+                <p>
+                    Dernière modification : 7 février 2026 | Contenu disponible sous licence Creative Commons
+                </p>
+                <p style="margin-top: 8px; font-size: 11px; color: #72777d;">
+                    Cette page fait partie de l'encyclopédie AMOA, un projet documentaire sur l'Assistance à Maîtrise d'Ouvrage
+                    et les métiers du conseil en systèmes d'information.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Smooth scroll pour les liens d'ancrage
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Highlight du lien actif dans la sidebar
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    document.querySelectorAll('.sidebar a').forEach(link => {
+                        link.style.fontWeight = 'normal';
+                        link.style.background = 'transparent';
+                    });
+                    const activeLink = document.querySelector(`.sidebar a[href="#${id}"]`);
+                    if (activeLink) {
+                        activeLink.style.fontWeight = 'bold';
+                        activeLink.style.background = '#eaecf0';
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observer toutes les sections
+        document.querySelectorAll('section[id], h3[id]').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Animation des timeline items au scroll
+        const timelineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(20px)';
+            item.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            timelineObserver.observe(item);
+        });
+
+        // Fonction de recherche (optionnelle)
+        function searchContent(query) {
+            const content = document.querySelector('.main-content').innerText.toLowerCase();
+            return content.includes(query.toLowerCase());
+        }
+
+        // Log de debug
+        console.log('Histoire AMOA - Timeline interactive chargée');
+        console.log('Périodes couvertes : 1980-2026');
+    </script>
+</body>
+</html>

@@ -95,1323 +95,123 @@
         <aside class="sidebar">
             <h3>Sommaire</h3>
             <ul>
-                <li><a href="#definition">Définition</a></li>
-                <li><a href="#contexte">Reformulation Besoin</a></li>
-                <li><a href="#analyse-risques">Analyse des Risques</a></li>
-                <li><a href="#specifications">Spécifications</a></li>
-                <li><a href="#cahier-charges">Cahier des Charges</a></li>
-                <li><a href="#budget">Budget & Tarifs</a></li>
-                <li><a href="#planning">Rétroplanning</a></li>
-                <li><a href="#benchmark">Matrice de Choix</a></li>
-                <li><a href="#controles">Liste de Contrôles</a></li>
-                <li><a href="#juridique">Volet Juridique</a></li>
-                <li><a href="#reglementation">Réglementation</a></li>
-                <li><a href="#cas-pratique">Cas Pratique</a></li>
-                <li><a href="#methodologies">Méthodologies</a></li>
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#explorer">Explorer WikiAMOA</a></li>
                 <li><a href="#gouvernance">Gouvernance Projet</a></li>
                 <li><a href="#conduite-changement">Conduite du Changement</a></li>
                 <li><a href="#recette">Recette & VABF</a></li>
                 <li><a href="#kpi">KPI & Indicateurs</a></li>
-                <li><a href="#glossaire">Glossaire</a></li>
-                <li><a href="#references">Références</a></li>
+            </ul>
+
+            <h3 style="margin-top: 2rem;">Pages Thématiques</h3>
+            <ul>
+                <li><a href="definition.html">Définition & Périmètre</a></li>
+                <li><a href="histoire.html">Histoire de l'AMOA</a></li>
+                <li><a href="methodologies.html">Méthodologies</a></li>
+                <li><a href="outils.html">Outils & Templates</a></li>
+                <li><a href="cas-pratiques.html">Études de Cas</a></li>
+                <li><a href="juridique.html">Cadre Juridique</a></li>
+                <li><a href="formations.html">Certifications</a></li>
+                <li><a href="glossaire.html">Glossaire EN/FR</a></li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </aside>
 
         <main class="main-content">
             <div class="article-header">
-                <h1 class="article-title">Assistance à Maîtrise d'Ouvrage</h1>
-                <p class="article-subtitle">Méthodologie de conduite de projet en système d'information</p>
+                <h1 class="article-title">WikiAMOA</h1>
+                <p class="article-subtitle">Encyclopédie collaborative de l'Assistance à Maîtrise d'Ouvrage</p>
             </div>
 
-            <div class="explore-section">
-                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Explorer WikiAMOA</h2>
-                <div class="explore-grid">
-                    <a href="bibliographie.html" class="explore-card">
-                        <h3>Bibliographie</h3>
-                        <p>27 références académiques, normes ISO, études sectorielles</p>
-                    </a>
-                    <a href="faq.html" class="explore-card">
-                        <h3>FAQ</h3>
-                        <p>15 questions fréquentes avec réponses détaillées</p>
-                    </a>
-                    <a href="glossaire.html" class="explore-card">
-                        <h3>Glossaire</h3>
-                        <p>Terminologie AMOA avec traductions EN/FR</p>
-                    </a>
-                    <a href="formations.html" class="explore-card">
-                        <h3>Formations</h3>
-                        <p>Certifications, parcours carrière, métiers AMOA</p>
-                    </a>
-                </div>
-            </div>
+            <section id="introduction">
+                <h2>Bienvenue sur WikiAMOA</h2>
+                <p>WikiAMOA est une encyclopédie collaborative dédiée à l'<strong>Assistance à Maîtrise d'Ouvrage (AMOA)</strong> dans les projets de systèmes d'information. Cette ressource pédagogique s'adresse aux consultants AMOA, chefs de projet MOA, étudiants et professionnels de la transformation digitale.</p>
 
-            <div class="infobox">
-                <div class="infobox-header">AMOA - Fiche Synthétique</div>
-                <div class="infobox-content">
-                    <div class="infobox-row">
-                        <div class="infobox-label">Domaine</div>
-                        <div class="infobox-value">Gestion de projet SI</div>
-                    </div>
-                    <div class="infobox-row">
-                        <div class="infobox-label">Acronyme</div>
-                        <div class="infobox-value">AMOA</div>
-                    </div>
-                    <div class="infobox-row">
-                        <div class="infobox-label">Origine</div>
-                        <div class="infobox-value">France, années 1990</div>
-                    </div>
-                    <div class="infobox-row">
-                        <div class="infobox-label">Secteur</div>
-                        <div class="infobox-value">Public & Privé</div>
-                    </div>
-                    <div class="infobox-row">
-                        <div class="infobox-label">Cadre légal</div>
-                        <div class="infobox-value">Code de la commande publique</div>
-                    </div>
-                    <div class="infobox-row">
-                        <div class="infobox-label">Livrables clés</div>
-                        <div class="infobox-value">CDC, Spécifications, PV Recette</div>
-                    </div>
-                </div>
-            </div>
-
-            <section id="definition">
-                <h2>1. Définition et Périmètre</h2>
-                
-                <p>L'<strong>Assistance à Maîtrise d'Ouvrage</strong> (AMOA) désigne l'ensemble des activités de conseil et d'accompagnement mises en œuvre pour aider le maître d'ouvrage (MOA) dans la définition, le pilotage et la réception d'un projet de système d'information. L'AMOA se positionne comme interface entre les besoins métier et les solutions techniques proposées par la maîtrise d'œuvre (MOE).</p>
-
-                <p>Cette fonction répond à plusieurs impératifs : traduire les besoins fonctionnels en spécifications exploitables, garantir l'alignement du projet avec les objectifs stratégiques de l'organisation, maîtriser les risques et les coûts, et assurer la qualité des livrables tout au long du cycle de vie du projet.</p>
-
-                <div class="note">
-                    <strong>Note historique :</strong> La fonction AMOA s'est structurée en France dans les années 1990, en réponse à l'accroissement de la complexité des systèmes d'information et aux difficultés rencontrées par les organisations pour piloter efficacement leurs projets informatiques.
-                </div>
+                <p>L'AMOA désigne l'ensemble des activités de conseil et d'accompagnement mises en œuvre pour aider le maître d'ouvrage (MOA) dans la définition, le pilotage et la réception d'un projet SI. L'AMOA se positionne comme interface entre les besoins métier et les solutions techniques proposées par la maîtrise d'œuvre (MOE).</p>
 
                 <div class="stats-grid">
                     <div class="stat-card">
-                        <div class="stat-number" data-target="72">0</div>
-                        <div class="stat-label">% des projets SI en échec sans AMOA</div>
+                        <div class="stat-number" data-target="62">0</div>
+                        <div class="stat-label">% de succès avec AMOA (CHAOS Report 2023)</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="45">0</div>
-                        <div class="stat-label">% de réduction des risques avec AMOA</div>
+                        <div class="stat-number" data-target="29">0</div>
+                        <div class="stat-label">% de succès sans AMOA</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="89">0</div>
-                        <div class="stat-label">% de satisfaction MOA accompagnée</div>
+                        <div class="stat-number" data-target="850">0</div>
+                        <div class="stat-label">EUR TJM moyen consultant AMOA senior</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="3">0</div>
-                        <div class="stat-label">x ROI moyen d'une mission AMOA</div>
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">pages thématiques spécialisées</div>
                     </div>
                 </div>
             </section>
 
-            <section id="contexte">
-                <h2>2. Reformulation du Besoin Client</h2>
-                
-                <p>La reformulation du besoin constitue une étape critique dans toute mission AMOA. Elle vise à traduire les attentes exprimées par le client en une expression de besoin claire, complète et exploitable par les équipes de maîtrise d'œuvre. Cette phase nécessite une capacité d'analyse et de synthèse permettant de dépasser la simple retranscription des propos du client pour enrichir la compréhension du contexte et des enjeux.</p>
-                
-                <div class="note">
-                    <strong>Principe méthodologique :</strong> La reformulation ne doit pas se limiter à une paraphrase du discours initial. Elle doit identifier et expliciter les besoins implicites, déduire les contraintes non exprimées, et mettre en évidence les éléments de contexte qui orienteront les choix de solution.
-                </div>
-                
-                <h3>2.1 Contexte et Enjeux</h3>
-                
-                <p>La phase de reformulation du besoin constitue le socle méthodologique de toute mission AMOA. Elle consiste à identifier précisément le contexte organisationnel du client, les volumes traités, et les dysfonctionnements du système existant.</p>
+            <section id="explorer">
+                <h2>Explorer WikiAMOA</h2>
+                <p>Notre encyclopédie est organisée en pages thématiques couvrant tous les aspects de l'AMOA : fondamentaux, pratique, juridique, formation et ressources.</p>
 
-                <p>Exemple de contexte type : <em>"[Nom du client], situé à [Lieu], est un acteur de [Secteur] gérant [Volume/Effectifs]. Le système actuel [Nom de l'existant] est devenu obsolète en raison de [Problème 1] et [Problème 2]."</em></p>
-
-                <h3>2.2 Problématiques Identifiées</h3>
-                
-                <p>L'analyse des problématiques repose sur trois axes structurants :</p>
-                
-                <ul>
-                    <li><strong>Dysfonctionnements opérationnels :</strong> Erreurs de saisie, ruptures de flux, délais de traitement excessifs</li>
-                    <li><strong>Limites techniques :</strong> Obsolescence technologique, absence d'interopérabilité, manque de scalabilité</li>
-                    <li><strong>Impacts métier :</strong> Perte de productivité, insatisfaction utilisateur, non-conformité réglementaire</li>
-                </ul>
-
-                <h3>2.3 Objectifs du Projet</h3>
-                
-                <p>Les objectifs se déclinent selon trois dimensions complémentaires :</p>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type d'objectif</th>
-                            <th>Description</th>
-                            <th>Exemple</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Fonctionnel</strong></td>
-                            <td>Automatisation de processus</td>
-                            <td>Automatiser 100% des réservations</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Stratégique</strong></td>
-                            <td>Optimisation économique</td>
-                            <td>Réduire les coûts de 15%</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Réglementaire</strong></td>
-                            <td>Conformité légale</td>
-                            <td>Conformité RGPD, Loi EGalim</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>2.4 Contraintes Identifiées</h3>
-                
-                <p>Toute mission AMOA intègre un triptyque de contraintes qu'il convient de formaliser dès l'initialisation :</p>
-                
-                <ul>
-                    <li><strong>Budget :</strong> Enveloppe financière maximale allouée (ex: 150 000 € HT)</li>
-                    <li><strong>Délai :</strong> Date de livraison impérative (ex: 31/12/2026)</li>
-                    <li><strong>Techniques :</strong> Prérequis technologiques (ex: Solution SaaS, API REST, hébergement EU)</li>
-                </ul>
-            </section>
-
-            <section id="analyse-risques">
-                <h2>3. Analyse des Risques</h2>
-                
-                <p>L'analyse des risques constitue un pilier de la gouvernance projet. Elle repose sur une évaluation quantitative combinant probabilité d'occurrence (P) et impact potentiel (I), permettant de calculer un indice de criticité selon la formule : <strong>C = P × I</strong>.</p>
-                
-                <p>Cette approche méthodologique permet de prioriser les actions de mitigation en fonction de l'exposition réelle du projet. Chaque risque identifié doit être assorti de mesures de prévention ou de réduction, définies de manière opérationnelle et assignées à un responsable.</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Risque identifié</th>
-                            <th>P (1-4)</th>
-                            <th>I (1-4)</th>
-                            <th>Criticité</th>
-                            <th>Mesures de mitigation</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>R1</td>
-                            <td>Retard de livraison prestataire</td>
-                            <td>3</td>
-                            <td>4</td>
-                            <td>12</td>
-                            <td>1. Pénalités contractuelles<br>2. Jalons intermédiaires<br>3. Suivi hebdomadaire</td>
-                        </tr>
-                        <tr>
-                            <td>R2</td>
-                            <td>Résistance au changement</td>
-                            <td>3</td>
-                            <td>3</td>
-                            <td>9</td>
-                            <td>1. Plan de formation<br>2. Référents métiers<br>3. Communication continue</td>
-                        </tr>
-                        <tr>
-                            <td>R3</td>
-                            <td>Non-conformité RGPD</td>
-                            <td>2</td>
-                            <td>4</td>
-                            <td>8</td>
-                            <td>1. Clause contractuelle DPO<br>2. Audit de sécurité<br>3. Notification 72h</td>
-                        </tr>
-                        <tr>
-                            <td>R4</td>
-                            <td>Dépassement budgétaire</td>
-                            <td>2</td>
-                            <td>3</td>
-                            <td>6</td>
-                            <td>1. Provision aléas 10%<br>2. Comité de suivi mensuel<br>3. Marché forfaitaire</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="note">
-                    <strong>Seuil d'alerte :</strong> Un risque dont la criticité C ≥ 8 nécessite une inscription au registre des risques et un plan d'action formalisé.
+                <h3 style="margin-top: 2rem;">Fondamentaux</h3>
+                <div class="explore-grid">
+                    <a href="definition.html" class="explore-card">
+                        <h3>Définition & Périmètre</h3>
+                        <p>Rôles MOA/AMOA/MOE, missions, livrables et périmètre d'intervention complet</p>
+                    </a>
+                    <a href="histoire.html" class="explore-card">
+                        <h3>Histoire de l'AMOA</h3>
+                        <p>Timeline 1980-2026 : émergence, structuration, professionnalisation et transformation digitale</p>
+                    </a>
+                    <a href="glossaire.html" class="explore-card">
+                        <h3>Glossaire EN/FR</h3>
+                        <p>60+ termes techniques avec traductions anglais/français et définitions détaillées</p>
+                    </a>
                 </div>
 
-                <h3>3.1 Matrice Visuelle Probabilité / Impact</h3>
-                <div class="risk-matrix-grid">
-                    <div class="risk-label">Impact</div>
-                    <div class="risk-cell risk-yellow">4</div>
-                    <div class="risk-cell risk-orange">8</div>
-                    <div class="risk-cell risk-red">R3=8</div>
-                    <div class="risk-cell risk-red">R1=12</div>
-
-                    <div class="risk-label"></div>
-                    <div class="risk-cell risk-green">3</div>
-                    <div class="risk-cell risk-yellow">6</div>
-                    <div class="risk-cell risk-orange">R2=9</div>
-                    <div class="risk-cell risk-red">12</div>
-
-                    <div class="risk-label"></div>
-                    <div class="risk-cell risk-green">2</div>
-                    <div class="risk-cell risk-green">4</div>
-                    <div class="risk-cell risk-yellow">R4=6</div>
-                    <div class="risk-cell risk-orange">8</div>
-
-                    <div class="risk-label"></div>
-                    <div class="risk-cell risk-green">1</div>
-                    <div class="risk-cell risk-green">2</div>
-                    <div class="risk-cell risk-green">3</div>
-                    <div class="risk-cell risk-yellow">4</div>
-
-                    <div class="risk-label-h"></div>
-                    <div class="risk-label-h">1</div>
-                    <div class="risk-label-h">2</div>
-                    <div class="risk-label-h">3</div>
-                    <div class="risk-label-h">4</div>
-                </div>
-                <p style="text-align:center;font-size:0.85rem;color:var(--secondary);"><em>Axe horizontal : Probabilité | Axe vertical : Impact | Cases colorées : Vert (faible) > Jaune > Orange > Rouge (critique)</em></p>
-                
-                <h3>3.2 Banque de Risques par Catégorie</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Risques types</th>
-                            <th>Contre-mesures types</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Planning</strong></td>
-                            <td>Retard livraison, indisponibilité ressources clés, dépendance tiers, sous-estimation charges</td>
-                            <td>Jalons contractuels, pénalités, suivi hebdomadaire, buffer planning, plan de repli</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Budget</strong></td>
-                            <td>Dépassement budgétaire, coûts cachés, évolution périmètre, révision prix</td>
-                            <td>Marché forfaitaire, provision aléas (5-10%), suivi mensuel, validation avenants COPIL</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Techniques</strong></td>
-                            <td>Problèmes d'intégration, performance insuffisante, connectivité réseau, compatibilité</td>
-                            <td>POC préalable, tests de charge, environnement recette, mode dégradé</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Humains</strong></td>
-                            <td>Résistance au changement, compétences insuffisantes, turnover, manque implication MOA</td>
-                            <td>Implication dès conception, formations adaptées, référents métier, support renforcé</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Fournisseur</strong></td>
-                            <td>Défaillance prestataire, qualité insuffisante, support déficient, pérennité solution</td>
-                            <td>Vérification solidité financière, clause réversibilité, code source en escrow</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Réglementaires</strong></td>
-                            <td>Non-conformité RGPD, violation données, évolution réglementation, audit négatif</td>
-                            <td>Audit conformité, clause notification 48h, certification ISO 27001, DPO identifié</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="specifications">
-                <h2>4. Spécifications Fonctionnelles et Techniques</h2>
-                
-                <p>Les spécifications constituent le référentiel contractuel entre maîtrise d'ouvrage et maîtrise d'œuvre. Elles se décomposent en deux volets complémentaires : les spécifications fonctionnelles, qui décrivent le "quoi" (ce que le système doit faire), et les spécifications techniques, qui précisent le "comment" (les contraintes d'implémentation, de performance et de sécurité).</p>
-                
-                <h3>5.1 Spécifications Fonctionnelles</h3>
-                
-                <p>Les spécifications fonctionnelles décrivent ce que le système doit faire du point de vue utilisateur. Elles sont formulées de manière non ambiguë et testable.</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Réf</th>
-                            <th>Module</th>
-                            <th>Fonctionnalité</th>
-                            <th>Priorité</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>SF-01</td>
-                            <td>Gestion Utilisateurs</td>
-                            <td>Permettre à l'administrateur de créer, modifier et supprimer des comptes utilisateurs avec gestion des rôles</td>
-                            <td>Haute</td>
-                        </tr>
-                        <tr>
-                            <td>SF-02</td>
-                            <td>Réservations</td>
-                            <td>Le système doit envoyer automatiquement un email de confirmation dès qu'une réservation est validée</td>
-                            <td>Haute</td>
-                        </tr>
-                        <tr>
-                            <td>SF-03</td>
-                            <td>Reporting</td>
-                            <td>Générer des tableaux de bord personnalisables avec export Excel/PDF</td>
-                            <td>Moyenne</td>
-                        </tr>
-                        <tr>
-                            <td>SF-04</td>
-                            <td>Notifications</td>
-                            <td>Alerter l'utilisateur 24h avant une échéance programmée</td>
-                            <td>Moyenne</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <h3>5.2 Spécifications Techniques</h3>
-                
-                <p>Les spécifications techniques définissent les contraintes d'implémentation, de performance et de sécurité auxquelles la solution doit se conformer.</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Réf</th>
-                            <th>Domaine</th>
-                            <th>Exigence technique</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>ST-01</td>
-                            <td>Hébergement</td>
-                            <td>Solution Cloud certifiée ISO 27001 avec hébergement des données en Union Européenne</td>
-                        </tr>
-                        <tr>
-                            <td>ST-02</td>
-                            <td>Disponibilité</td>
-                            <td>Taux de disponibilité de 99,5% garanti par SLA contractuel</td>
-                        </tr>
-                        <tr>
-                            <td>ST-03</td>
-                            <td>Performance</td>
-                            <td>Temps de réponse inférieur à 2 secondes pour 95% des requêtes</td>
-                        </tr>
-                        <tr>
-                            <td>ST-04</td>
-                            <td>Sécurité</td>
-                            <td>Chiffrement TLS 1.3 minimum pour les flux, chiffrement AES-256 pour les données au repos</td>
-                        </tr>
-                        <tr>
-                            <td>ST-05</td>
-                            <td>Sauvegarde</td>
-                            <td>Sauvegarde quotidienne automatique avec rétention de 30 jours minimum</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="cahier-charges">
-                <h2>5. Cahier des Charges (CDC)</h2>
-                
-                <p>Le cahier des charges constitue le document contractuel central d'un projet AMOA. Il formalise de manière exhaustive et non ambiguë l'ensemble des exigences du maître d'ouvrage, définit le périmètre précis des prestations attendues, et établit les critères de réception et de contrôle. Sa rédaction requiert une précision juridique et technique permettant son utilisation comme base d'un marché public ou privé.</p>
-                
-                <h3>6.1 Objet du Marché</h3>
-                
-                <p>Le cahier des charges constitue le document contractuel qui formalise l'ensemble des exigences du maître d'ouvrage. Son objet définit précisément le périmètre des prestations attendues.</p>
-
-                <p><em>Exemple : "Prestations de fourniture, paramétrage et maintenance d'une solution SaaS de gestion des réservations pour le compte de [Nom du Client], dans le cadre de la modernisation de son système d'information métier."</em></p>
-
-                <h3>6.2 Périmètre et Volumétrie</h3>
-                
-                <p>La définition du périmètre précise les frontières du projet et permet aux prestataires d'évaluer correctement leur proposition :</p>
-
-                <ul>
-                    <li><strong>Sites concernés :</strong> 5 sites géographiques (dont 1 siège et 4 agences)</li>
-                    <li><strong>Utilisateurs :</strong> 12 administrateurs, 150 utilisateurs standards</li>
-                    <li><strong>Données à reprendre :</strong> 50 000 fiches historiques sur 3 ans glissants</li>
-                    <li><strong>Volumétrie attendue :</strong> 500 transactions quotidiennes en pic</li>
-                </ul>
-
-                <h3>6.3 Livrables Contractuels</h3>
-                
-                <p>Les livrables sont assortis de dates jalons et constituent des points de contrôle obligatoires :</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Code</th>
-                            <th>Livrable</th>
-                            <th>Échéance</th>
-                            <th>Format</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>L1</td>
-                            <td>Dossier de Spécifications Détaillées (DSD)</td>
-                            <td>M+1</td>
-                            <td>PDF + Fichiers sources</td>
-                        </tr>
-                        <tr>
-                            <td>L2</td>
-                            <td>Solution en environnement de Recette</td>
-                            <td>M+3</td>
-                            <td>Accès URL + Documentation</td>
-                        </tr>
-                        <tr>
-                            <td>L3</td>
-                            <td>PV de Recette et Guide Utilisateur</td>
-                            <td>M+4</td>
-                            <td>PDF signé</td>
-                        </tr>
-                        <tr>
-                            <td>L4</td>
-                            <td>Solution en Production avec formation</td>
-                            <td>M+5</td>
-                            <td>Accès Production + Supports</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="budget">
-                <h2>6. Estimation des Coûts (Budget)</h2>
-                
-                <p>L'estimation budgétaire constitue un exercice délicat qui conditionne la viabilité économique du projet. Elle doit être exhaustive et intégrer l'ensemble des postes de dépense prévisibles : prestations intellectuelles, licences logicielles, équipements matériels, et coûts récurrents de maintenance. La méthodologie repose sur une décomposition analytique par nature de prestation, permettant une traçabilité et une justification de chaque ligne budgétaire.</p>
-                
-                <p>L'estimation doit s'appuyer sur des tarifs de marché actualisés et inclure systématiquement une provision pour aléas, généralement comprise entre 5% et 15% du montant total, dimensionnée en fonction du niveau d'incertitude et de la complexité du projet.</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Poste de dépense</th>
-                            <th>Quantité (JH/Unités)</th>
-                            <th>PU HT</th>
-                            <th>Total HT</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Pilotage & AMOA</td>
-                            <td>30 JH</td>
-                            <td>800 €</td>
-                            <td>24 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Paramétrage & Développements</td>
-                            <td>60 JH</td>
-                            <td>650 €</td>
-                            <td>39 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Licences (Année 1)</td>
-                            <td>150 utilisateurs</td>
-                            <td>180 €</td>
-                            <td>27 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Formation utilisateurs</td>
-                            <td>8 JH</td>
-                            <td>1 000 €</td>
-                            <td>8 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Recette et validation</td>
-                            <td>15 JH</td>
-                            <td>750 €</td>
-                            <td>11 250 €</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SOUS-TOTAL</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>109 250 €</strong></td>
-                        </tr>
-                        <tr>
-                            <td>Provision pour aléas (10%)</td>
-                            <td></td>
-                            <td></td>
-                            <td>10 925 €</td>
-                        </tr>
-                        <tr>
-                            <td><strong>TOTAL PROJET HT</strong></td>
-                            <td></td>
-                            <td></td>
-                            <td><strong>120 175 €</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="note">
-                    <strong>Note méthodologique :</strong> La provision pour aléas (10%) est une bonne pratique permettant d'absorber les écarts de réalisation sans déclencher d'avenant budgétaire systématique. Le taux peut être ajusté selon la complexité et l'incertitude du projet (5% à 20%).
-                </div>
-                
-                <h3>7.1 Grille Tarifaire de Référence (2024-2025)</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Catégorie</th>
-                            <th>Élément</th>
-                            <th>Fourchette de prix</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">PRESTATIONS INTELLECTUELLES (Jour/Homme)</td>
-                        </tr>
-                        <tr>
-                            <td>Développement</td>
-                            <td>Développeur junior</td>
-                            <td>400 - 550 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Développement</td>
-                            <td>Développeur senior</td>
-                            <td>550 - 750 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Développement</td>
-                            <td>Développeur expert / Lead</td>
-                            <td>700 - 900 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Gestion de projet</td>
-                            <td>Chef de projet</td>
-                            <td>700 - 1 000 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Conseil</td>
-                            <td>Consultant fonctionnel</td>
-                            <td>700 - 1 000 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Conseil</td>
-                            <td>Consultant senior / Expert</td>
-                            <td>900 - 1 300 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Architecture</td>
-                            <td>Architecte technique</td>
-                            <td>900 - 1 300 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td>Formation</td>
-                            <td>Formateur</td>
-                            <td>800 - 1 500 €/jour</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">LICENCES & ABONNEMENTS</td>
-                        </tr>
-                        <tr>
-                            <td>SaaS</td>
-                            <td>Licence utilisateur / mois</td>
-                            <td>5 - 50 €/user/mois</td>
-                        </tr>
-                        <tr>
-                            <td>SaaS</td>
-                            <td>Setup initial plateforme</td>
-                            <td>5 000 - 30 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Cloud</td>
-                            <td>Hébergement serveur / mois</td>
-                            <td>100 - 500 €/mois</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile</td>
-                            <td>App iOS + Android (simple)</td>
-                            <td>10 000 - 25 000 €</td>
-                        </tr>
-                        <tr>
-                            <td>Mobile</td>
-                            <td>App iOS + Android (complexe)</td>
-                            <td>30 000 - 80 000 €</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">ÉQUIPEMENTS</td>
-                        </tr>
-                        <tr>
-                            <td>Matériel</td>
-                            <td>Borne tactile / tablette durcie</td>
-                            <td>500 - 1 500 €/unité</td>
-                        </tr>
-                        <tr>
-                            <td>Matériel</td>
-                            <td>Badge RFID</td>
-                            <td>0,80 - 2 €/unité</td>
-                        </tr>
-                        <tr>
-                            <td>Matériel</td>
-                            <td>Lecteur RFID</td>
-                            <td>50 - 200 €/unité</td>
-                        </tr>
-                        <tr>
-                            <td>Installation</td>
-                            <td>Installation sur site</td>
-                            <td>200 - 500 €/site</td>
-                        </tr>
-                        <tr>
-                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">MAINTENANCE ANNUELLE</td>
-                        </tr>
-                        <tr>
-                            <td>Logiciel</td>
-                            <td>Maintenance applicative</td>
-                            <td>15-20% du coût initial / an</td>
-                        </tr>
-                        <tr>
-                            <td>Support</td>
-                            <td>Support utilisateurs</td>
-                            <td>2 000 - 10 000 €/an</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="planning">
-                <h2>7. Rétroplanning Global</h2>
-                
-                <p>Le rétroplanning constitue l'outil de pilotage temporel du projet. Il structure l'enchaînement des phases, identifie les jalons de validation, et permet d'anticiper les ressources nécessaires à chaque étape. Sa construction s'effectue classiquement en partant de la date butoir de mise en production pour remonter vers la phase de cadrage, d'où son appellation de "rétroplanning".</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Phase</th>
-                            <th>Activités principales</th>
-                            <th>Échéance</th>
-                            <th>Jalon</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1. Cadrage</td>
-                            <td>Réunion de lancement (Kick-off), validation des spécifications, contractualisation</td>
-                            <td>Mois 1</td>
-                            <td>✓ Lancement officiel</td>
-                        </tr>
-                        <tr>
-                            <td>2. Réalisation</td>
-                            <td>Paramétrage applicatif, développements spécifiques, intégrations API</td>
-                            <td>Mois 2-3</td>
-                            <td>—</td>
-                        </tr>
-                        <tr>
-                            <td>3. Recette</td>
-                            <td>Tests fonctionnels, tests de charge, corrections anomalies, VABF</td>
-                            <td>Mois 4</td>
-                            <td>✓ Recette validée</td>
-                        </tr>
-                        <tr>
-                            <td>4. Déploiement</td>
-                            <td>Migration des données, bascule production, formation utilisateurs finaux</td>
-                            <td>Mois 5</td>
-                            <td>🚀 Mise en production (GO LIVE)</td>
-                        </tr>
-                        <tr>
-                            <td>5. VSR</td>
-                            <td>Support post-déploiement, vérification service régulier, bilan projet</td>
-                            <td>Mois 6</td>
-                            <td>✓ Clôture administrative</td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="note">
-                    <strong>Acronymes :</strong> VABF = Vérification d'Aptitude au Bon Fonctionnement | VSR = Vérification de Service Régulier | GO LIVE = Mise en service effective
+                <h3 style="margin-top: 2rem;">Pratique</h3>
+                <div class="explore-grid">
+                    <a href="methodologies.html" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile/Scrum, SAFe : comparatifs, diagrammes et critères de choix</p>
+                    </a>
+                    <a href="outils.html" class="explore-card">
+                        <h3>Outils & Templates</h3>
+                        <p>Spécifications fonctionnelles/techniques, cahier des charges, contrôles qualité</p>
+                    </a>
+                    <a href="cas-pratiques.html" class="explore-card">
+                        <h3>Études de Cas</h3>
+                        <p>Cas complet restauration scolaire : analyse risques, budget 90K€, planning, benchmark</p>
+                    </a>
                 </div>
 
-                <h3>8.1 Diagramme de Gantt Simplifié</h3>
-                <div class="gantt-chart">
-                    <div class="gantt-months">
-                        <span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span>
-                    </div>
-                    <div class="gantt-row">
-                        <div class="gantt-label">Cadrage</div>
-                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:0%;width:16.6%;background:#3498db;">M1</div></div>
-                    </div>
-                    <div class="gantt-row">
-                        <div class="gantt-label">Réalisation</div>
-                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:16.6%;width:33.3%;background:#2ecc71;">M2-M3</div></div>
-                    </div>
-                    <div class="gantt-row">
-                        <div class="gantt-label">Recette</div>
-                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:50%;width:16.6%;background:#e67e22;">M4</div></div>
-                    </div>
-                    <div class="gantt-row">
-                        <div class="gantt-label">Déploiement</div>
-                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:66.6%;width:16.6%;background:#e74c3c;">M5</div></div>
-                    </div>
-                    <div class="gantt-row">
-                        <div class="gantt-label">VSR</div>
-                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:83.3%;width:16.6%;background:#9b59b6;">M6</div></div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="benchmark">
-                <h2>8. Matrice de Choix / Benchmark Solutions</h2>
-                
-                <p>La matrice de choix est un outil d'aide à la décision permettant de comparer objectivement plusieurs solutions candidates selon des critères pondérés. Elle garantit la transparence et la traçabilité du processus de sélection, critères essentiels dans le cadre des marchés publics. La méthodologie repose sur l'identification de critères discriminants, leur pondération en fonction des priorités stratégiques, et l'évaluation de chaque solution selon un barème normalisé.</p>
-
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Critères de sélection</th>
-                            <th>Pondération</th>
-                            <th>Solution A (On-premise)</th>
-                            <th>Solution B (SaaS)</th>
-                            <th>Solution C (Hybride)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Couverture fonctionnelle</td>
-                            <td>40%</td>
-                            <td>4,5/5 (1,80)</td>
-                            <td>4,8/5 (1,92)</td>
-                            <td>4,2/5 (1,68)</td>
-                        </tr>
-                        <tr>
-                            <td>Ergonomie et UX</td>
-                            <td>20%</td>
-                            <td>3,5/5 (0,70)</td>
-                            <td>4,7/5 (0,94)</td>
-                            <td>4,0/5 (0,80)</td>
-                        </tr>
-                        <tr>
-                            <td>Coût global (TCO 3 ans)</td>
-                            <td>25%</td>
-                            <td>3,0/5 (0,75)</td>
-                            <td>4,5/5 (1,13)</td>
-                            <td>3,8/5 (0,95)</td>
-                        </tr>
-                        <tr>
-                            <td>Garanties Sécurité/RGPD</td>
-                            <td>15%</td>
-                            <td>4,8/5 (0,72)</td>
-                            <td>4,6/5 (0,69)</td>
-                            <td>4,5/5 (0,68)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SCORE TOTAL</strong></td>
-                            <td><strong>100%</strong></td>
-                            <td><strong>3,97/5</strong></td>
-                            <td><strong>4,68/5 ✓</strong></td>
-                            <td><strong>4,11/5</strong></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <div class="note">
-                    <strong>Recommandation :</strong> La Solution B (SaaS) obtient le meilleur score global (4,68/5) et répond le mieux aux critères prioritaires de couverture fonctionnelle et d'ergonomie. Elle présente également un TCO optimisé sur 3 ans.
-                </div>
-                
-                <h3>9.1 Barème de Notation</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Note</th>
-                            <th>Signification</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>0</td>
-                            <td>Non traité ou totalement inadapté</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>Très insuffisant, lacunes majeures</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Partiel, améliorations significatives nécessaires</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Acceptable, conforme aux attentes minimales</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Bon, au-delà des attentes sur certains points</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Excellent, valeur ajoutée significative</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <section id="controles">
-                <h2>9. Liste de Contrôles (Ordonnée)</h2>
-                
-                <p>La liste de contrôles organise le processus de vérification de la conformité de la solution livrée par rapport aux spécifications du cahier des charges. Elle doit être structurée de manière chronologique, suivant les différentes phases de recette : contrôles préalables (configuration, sécurité), contrôles fonctionnels (conformité aux spécifications), contrôles techniques (performance, intégration), et contrôles de clôture (documentation, transfert de compétences).</p>
-
-                <h3>Phase 1 : Contrôles de Configuration</h3>
-                
-                <ul class="checklist">
-                    <li>Localisation des données en Union Européenne (RGPD)</li>
-                    <li>Validité du certificat SSL/TLS et chiffrement des flux HTTPS</li>
-                    <li>Configuration des sauvegardes automatiques quotidiennes</li>
-                    <li>Activation de l'authentification à double facteur (2FA)</li>
-                    <li>Paramétrages des rôles et permissions utilisateurs</li>
-                </ul>
-
-                <h3>Phase 2 : Contrôles Fonctionnels</h3>
-                
-                <ul class="checklist">
-                    <li>Validation du module Gestion Utilisateurs (SF-01)</li>
-                    <li>Test du processus complet de réservation avec notification</li>
-                    <li>Vérification de la génération des exports Excel/PDF</li>
-                    <li>Test des alertes automatiques avant échéance</li>
-                    <li>Validation de la personnalisation des tableaux de bord</li>
-                </ul>
-
-                <h3>Phase 3 : Contrôles Techniques & Performance</h3>
-                
-                <ul class="checklist">
-                    <li>Test de montée en charge : 100 utilisateurs simultanés</li>
-                    <li>Mesure du temps de réponse (objectif < 2 secondes)</li>
-                    <li>Vérification du taux de disponibilité sur 7 jours</li>
-                    <li>Test de restauration d'une sauvegarde de moins de 24h</li>
-                    <li>Audit de sécurité et scan de vulnérabilités</li>
-                </ul>
-
-                <h3>Phase 4 : Contrôles de Clôture</h3>
-                
-                <ul class="checklist">
-                    <li>Remise de la documentation technique complète</li>
-                    <li>Remise du guide utilisateur et supports de formation</li>
-                    <li>Signature du Procès-Verbal de Recette sans réserve majeure</li>
-                    <li>Transfert de compétences à l'équipe support interne</li>
-                    <li>Archivage de l'ensemble des livrables contractuels</li>
-                </ul>
-            </section>
-            
-            <section id="juridique">
-                <h2>10. Volet Juridique - Marchés & Contrats</h2>
-                
-                <h3>11.1 Seuils des Marchés Publics (2024)</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Montant</th>
-                            <th>Procédure</th>
-                            <th>Caractéristiques</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>&lt; 40 000 €</td>
-                            <td><strong>Gré à gré</strong></td>
-                            <td>Procédure libre sans formalisme particulier</td>
-                        </tr>
-                        <tr>
-                            <td>40 000 € - 221 000 €</td>
-                            <td><strong>MAPA</strong></td>
-                            <td>Marché à Procédure Adaptée avec publicité</td>
-                        </tr>
-                        <tr>
-                            <td>&gt; 221 000 €</td>
-                            <td><strong>Appel d'offres</strong></td>
-                            <td>Procédure formalisée avec publicité européenne</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>11.2 Types de Contrats</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Type</th>
-                            <th>Principe</th>
-                            <th>Avantages</th>
-                            <th>Inconvénients</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>FORFAIT</strong></td>
-                            <td>Prix fixe pour périmètre défini</td>
-                            <td>Budget maîtrisé, engagement résultat</td>
-                            <td>Rigide, avenants coûteux</td>
-                        </tr>
-                        <tr>
-                            <td><strong>RÉGIE</strong></td>
-                            <td>Facturation au temps passé (J/H)</td>
-                            <td>Flexible, adaptatif</td>
-                            <td>Budget incertain, pas d'engagement résultat</td>
-                        </tr>
-                        <tr>
-                            <td><strong>MIXTE</strong></td>
-                            <td>Forfait + Régie</td>
-                            <td>Compromis équilibré</td>
-                            <td>Plus complexe à gérer</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>11.3 Clauses Contractuelles Essentielles</h3>
-                
-                <h4>Clauses Financières</h4>
-                <ul>
-                    <li>Prix fermes ou révisables</li>
-                    <li>Échéancier de paiement</li>
-                    <li>Délai de paiement (30 jours max pour le secteur public)</li>
-                    <li>Retenue de garantie (5%)</li>
-                </ul>
-                
-                <h4>Pénalités</h4>
-                <ul>
-                    <li>Retard : X€/jour ou X%/semaine</li>
-                    <li>Non-respect SLA : réduction facture</li>
-                    <li>Plafond : 10-15% du marché</li>
-                </ul>
-                
-                <h4>RGPD (Obligatoire)</h4>
-                <ul>
-                    <li>Sous-traitant au sens de l'article 28</li>
-                    <li>Hébergement Union Européenne</li>
-                    <li>Notification violation 48-72h</li>
-                    <li>Clause d'audit</li>
-                </ul>
-                
-                <h4>Réversibilité</h4>
-                <ul>
-                    <li>Export données format ouvert</li>
-                    <li>Accompagnement 3 mois</li>
-                    <li>Destruction après transfert</li>
-                </ul>
-            </section>
-            
-            <section id="reglementation">
-                <h2>11. Cadre Réglementaire</h2>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Domaine</th>
-                            <th>Réglementation</th>
-                            <th>Points clés à retenir</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Données personnelles</td>
-                            <td><strong>RGPD</strong> (UE 2016/679)</td>
-                            <td>Consentement, minimisation, droits des personnes, notification 72h, DPO, registre traitements</td>
-                        </tr>
-                        <tr>
-                            <td>Restauration collective</td>
-                            <td><strong>Loi EGalim</strong></td>
-                            <td>50% produits durables, 20% bio, traçabilité origine, 14 allergènes</td>
-                        </tr>
-                        <tr>
-                            <td>Accessibilité web</td>
-                            <td><strong>RGAA</strong></td>
-                            <td>Obligatoire secteur public, niveau AA minimum</td>
-                        </tr>
-                        <tr>
-                            <td>Facturation publique</td>
-                            <td><strong>Chorus Pro</strong></td>
-                            <td>Obligatoire pour facturer au secteur public</td>
-                        </tr>
-                        <tr>
-                            <td>Hébergement santé</td>
-                            <td><strong>Certification HDS</strong></td>
-                            <td>Obligatoire si données de santé (hôpitaux, médico-social)</td>
-                        </tr>
-                        <tr>
-                            <td>Marchés publics</td>
-                            <td><strong>Code de la Commande Publique</strong></td>
-                            <td>Seuils, procédures, délais, publicité</td>
-                        </tr>
-                        <tr>
-                            <td>Étiquetage alimentaire</td>
-                            <td><strong>Règlement INCO 1169/2011</strong></td>
-                            <td>14 allergènes à afficher obligatoirement</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>12.1 Les 14 Allergènes Réglementaires</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>N°</th>
-                            <th>Allergène</th>
-                            <th>N°</th>
-                            <th>Allergène</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Gluten</td>
-                            <td>8</td>
-                            <td>Fruits à coque</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Crustacés</td>
-                            <td>9</td>
-                            <td>Céleri</td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Œufs</td>
-                            <td>10</td>
-                            <td>Moutarde</td>
-                        </tr>
-                        <tr>
-                            <td>4</td>
-                            <td>Poissons</td>
-                            <td>11</td>
-                            <td>Sésame</td>
-                        </tr>
-                        <tr>
-                            <td>5</td>
-                            <td>Arachides</td>
-                            <td>12</td>
-                            <td>Sulfites</td>
-                        </tr>
-                        <tr>
-                            <td>6</td>
-                            <td>Soja</td>
-                            <td>13</td>
-                            <td>Lupin</td>
-                        </tr>
-                        <tr>
-                            <td>7</td>
-                            <td>Lait</td>
-                            <td>14</td>
-                            <td>Mollusques</td>
-                        </tr>
-                    </tbody>
-                </table>
-                
-                <h3>12.2 RGPD - Les 6 Principes Fondamentaux</h3>
-                
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Principe</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>1. Licéité</strong></td>
-                            <td>Base légale pour traiter (consentement, contrat, obligation légale...)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>2. Finalité</strong></td>
-                            <td>Objectif déterminé, explicite et légitime</td>
-                        </tr>
-                        <tr>
-                            <td><strong>3. Minimisation</strong></td>
-                            <td>Données adéquates, pertinentes, limitées au nécessaire</td>
-                        </tr>
-                        <tr>
-                            <td><strong>4. Exactitude</strong></td>
-                            <td>Données exactes et tenues à jour</td>
-                        </tr>
-                        <tr>
-                            <td><strong>5. Limitation conservation</strong></td>
-                            <td>Durée n'excédant pas celle nécessaire</td>
-                        </tr>
-                        <tr>
-                            <td><strong>6. Sécurité</strong></td>
-                            <td>Protection contre traitement non autorisé ou illicite</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-
-            <!-- === SECTION 13: CAS PRATIQUE === -->
-            <section id="cas-pratique">
-                <h2>12. Cas Pratique Complet</h2>
-                <p>Ce cas pratique illustre une mission AMOA complète, de l'expression du besoin initial jusqu'à la mise en production, dans le contexte d'une collectivité territoriale souhaitant moderniser son système de gestion de la restauration scolaire.</p>
-
-                <div class="case-study">
-                    <div class="case-study-header">
-                        <div class="case-study-icon">C</div>
-                        <div>
-                            <h4>Commune de Villeneuve-les-Bois (12 500 habitants)</h4>
-                            <p style="margin:0;color:var(--secondary);font-size:0.9rem;">Modernisation du SI de restauration scolaire - Budget : 95 000 EUR HT</p>
-                        </div>
-                    </div>
+                <h3 style="margin-top: 2rem;">Juridique & Normes</h3>
+                <div class="explore-grid">
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Cadre Juridique</h3>
+                        <p>Marchés publics 2024, types de contrats, clauses, RGPD et 7 réglementations clés</p>
+                    </a>
                 </div>
 
-                <h3>13.1 Expression du Besoin Initial (Verbatim Client)</h3>
-                <div class="code-block" style="background:#2d2d2d;">
-<em>"On a un vieux logiciel sous Access qui plante tout le temps. Les parents appellent sans arrêt
-pour inscrire leurs enfants a la cantine. On perd des inscriptions, les factures sont fausses
-une fois sur trois, et on ne sait jamais combien de repas commander.
-Il nous faudrait un truc moderne, en ligne, ou les parents peuvent s'inscrire eux-memes.
-On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 euros."</em>
+                <h3 style="margin-top: 2rem;">Formation & Carrière</h3>
+                <div class="explore-grid">
+                    <a href="formations.html" class="explore-card">
+                        <h3>Certifications & Métiers</h3>
+                        <p>PMP, PRINCE2, SAFe : prix, salaires 45-95K€, parcours carrière et compétences</p>
+                    </a>
                 </div>
 
-                <h3>13.2 Reformulation AMOA Structurée</h3>
-                <p><strong>Contexte :</strong> La commune de Villeneuve-les-Bois (12 500 hab.) gère la restauration scolaire de <strong>1 800 élèves</strong> répartis sur <strong>6 groupes scolaires</strong> via un applicatif Access monoposte déployé en 2009, devenu obsolète et source de dysfonctionnements critiques impactant la qualité de service.</p>
-
-                <p><strong>Problématiques identifiées :</strong></p>
-                <ul>
-                    <li><strong>P1 - Fiabilité :</strong> Taux d'erreur de facturation estimé à 33%, générant des réclamations et un surcoût de traitement administratif</li>
-                    <li><strong>P2 - Accessibilité :</strong> Inscription uniquement par téléphone/guichet, créant des files d'attente et une charge excessive sur le secrétariat (estimée à 2 ETP)</li>
-                    <li><strong>P3 - Pilotage :</strong> Absence de prévisionnel fiable des commandes de repas, entraînant un gaspillage alimentaire estimé à 15%</li>
-                    <li><strong>P4 - Conformité :</strong> Non-conformité aux exigences RGPD (données sur serveur local non sécurisé) et Loi EGalim (pas de traçabilité des produits)</li>
-                </ul>
-
-                <p><strong>Objectifs SMART :</strong></p>
-                <table>
-                    <thead><tr><th>Réf</th><th>Objectif</th><th>Indicateur cible</th><th>Échéance</th></tr></thead>
-                    <tbody>
-                        <tr><td>O1</td><td>Dématérialiser 100% des inscriptions</td><td>0 inscription papier/téléphone</td><td>Rentrée 2026</td></tr>
-                        <tr><td>O2</td><td>Fiabiliser la facturation</td><td>Taux d'erreur < 1%</td><td>M+4</td></tr>
-                        <tr><td>O3</td><td>Optimiser les commandes de repas</td><td>Gaspillage < 5%</td><td>M+6</td></tr>
-                        <tr><td>O4</td><td>Mise en conformité RGPD et EGalim</td><td>Audit conforme</td><td>M+5</td></tr>
-                    </tbody>
-                </table>
-
-                <h3>13.3 Budget Détaillé du Cas</h3>
-                <table>
-                    <thead><tr><th>Poste</th><th>Détail</th><th>Montant HT</th></tr></thead>
-                    <tbody>
-                        <tr><td>Mission AMOA</td><td>20 JH x 800 EUR</td><td>16 000 EUR</td></tr>
-                        <tr><td>Licences SaaS (An 1)</td><td>1 800 élèves x 8 EUR</td><td>14 400 EUR</td></tr>
-                        <tr><td>Paramétrage / Intégration</td><td>35 JH x 650 EUR</td><td>22 750 EUR</td></tr>
-                        <tr><td>Reprise de données</td><td>10 JH x 650 EUR</td><td>6 500 EUR</td></tr>
-                        <tr><td>Formation</td><td>5 jours (agents + admin)</td><td>5 000 EUR</td></tr>
-                        <tr><td>Bornes tactiles (x6)</td><td>6 x 1 200 EUR</td><td>7 200 EUR</td></tr>
-                        <tr><td>Badges RFID</td><td>2 000 x 1,50 EUR</td><td>3 000 EUR</td></tr>
-                        <tr><td>Recette / VABF</td><td>10 JH x 750 EUR</td><td>7 500 EUR</td></tr>
-                        <tr><td><strong>Sous-total</strong></td><td></td><td><strong>82 350 EUR</strong></td></tr>
-                        <tr><td>Aléas (10%)</td><td></td><td>8 235 EUR</td></tr>
-                        <tr><td><strong>TOTAL</strong></td><td></td><td><strong>90 585 EUR</strong></td></tr>
-                    </tbody>
-                </table>
-                <div class="note"><strong>Marge résiduelle :</strong> 95 000 - 90 585 = 4 415 EUR de marge sur l'enveloppe votée, soit 4,6%. Conforme aux bonnes pratiques.</div>
-            </section>
-
-            <!-- === SECTION 14: METHODOLOGIES === -->
-            <section id="methodologies">
-                <h2>13. Méthodologies de Gestion de Projet</h2>
-                <p>Le choix de la méthodologie de gestion de projet conditionne l'organisation des travaux, la fréquence des livrables et le mode de collaboration entre MOA et MOE. L'AMOA doit recommander l'approche la plus adaptée au contexte du projet.</p>
-
-                <div class="tabs">
-                    <button class="tab-btn active" onclick="openTab(event, 'tab-cycle-v')">Cycle en V</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-agile')">Agile / Scrum</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-safe')">SAFe</button>
-                    <button class="tab-btn" onclick="openTab(event, 'tab-comparatif')">Comparatif</button>
-                </div>
-
-                <div id="tab-cycle-v" class="tab-content active">
-                    <h4>Cycle en V - Approche Séquentielle</h4>
-                    <p>Méthodologie traditionnelle structurée en phases descendantes (spécification, conception, réalisation) puis ascendantes (tests unitaires, intégration, recette). Chaque phase produit des livrables validés avant passage à la suivante.</p>
-
-                    <div class="cycle-v-diagram">
-                        <div class="v-left">
-                            <div class="v-phase">Spécifications Générales</div>
-                            <div class="v-arrow">↓</div>
-                            <div class="v-phase">Spécifications Détaillées</div>
-                            <div class="v-arrow">↓</div>
-                            <div class="v-phase">Conception Technique</div>
-                            <div class="v-arrow">↓</div>
-                        </div>
-                        <div class="v-center">
-                            <div class="v-bottom">CODAGE / RÉALISATION</div>
-                        </div>
-                        <div class="v-right">
-                            <div class="v-phase">Recette Utilisateur</div>
-                            <div class="v-arrow">↑</div>
-                            <div class="v-phase">Tests d'Intégration</div>
-                            <div class="v-arrow">↑</div>
-                            <div class="v-phase">Tests Unitaires</div>
-                            <div class="v-arrow">↑</div>
-                        </div>
-                    </div>
-
-                    <p><strong>Avantages :</strong> Documentation exhaustive, jalons clairs, adapté aux marchés publics forfaitaires.</p>
-                    <p><strong>Limites :</strong> Rigide face aux changements, effet tunnel, retour utilisateur tardif.</p>
-                </div>
-
-                <div id="tab-agile" class="tab-content">
-                    <h4>Agile / Scrum - Approche Itérative</h4>
-                    <p>Méthodologie itérative organisée en sprints de 2 à 4 semaines, permettant des livraisons incrémentales et un feedback continu du Product Owner (représentant la MOA).</p>
-
-                    <div class="scrum-flow">
-                        <div class="sprint-box">
-                            <div class="sprint-title">Sprint 1 (2-4 sem.)</div>
-                            <div class="sprint-phase">Planning</div>
-                            <div class="sprint-phase">Daily Standups</div>
-                            <div class="sprint-phase">Dev + Tests</div>
-                            <div class="sprint-phase">Review + Retro</div>
-                            <div class="sprint-output">Increment</div>
-                        </div>
-                        <div class="sprint-box">
-                            <div class="sprint-title">Sprint 2 (2-4 sem.)</div>
-                            <div class="sprint-phase">Planning</div>
-                            <div class="sprint-phase">Daily Standups</div>
-                            <div class="sprint-phase">Dev + Tests</div>
-                            <div class="sprint-phase">Review + Retro</div>
-                            <div class="sprint-output">Increment</div>
-                        </div>
-                        <div class="sprint-box">
-                            <div class="sprint-title">Sprint 3 (2-4 sem.)</div>
-                            <div class="sprint-phase">Planning</div>
-                            <div class="sprint-phase">Daily Standups</div>
-                            <div class="sprint-phase">Dev + Tests</div>
-                            <div class="sprint-phase">Review + Retro</div>
-                            <div class="sprint-output">Increment</div>
-                        </div>
-                        <div class="sprint-continue">...</div>
-                    </div>
-                    <table>
-                        <thead><tr><th>Role Scrum</th><th>Equivalent AMOA</th><th>Responsabilités</th></tr></thead>
-                        <tbody>
-                            <tr><td>Product Owner</td><td>MOA / AMOA</td><td>Priorise le backlog, valide les incréments</td></tr>
-                            <tr><td>Scrum Master</td><td>Chef de projet MOE</td><td>Facilite, lève les obstacles</td></tr>
-                            <tr><td>Dev Team</td><td>Equipe MOE</td><td>Réalise les user stories</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-
-                <div id="tab-safe" class="tab-content">
-                    <h4>SAFe - Scaled Agile Framework</h4>
-                    <p>Framework d'agilité à l'échelle, adapté aux grandes organisations avec plusieurs équipes travaillant sur un même programme. Il organise le travail en <strong>Agile Release Trains (ART)</strong> synchronisés sur des <strong>Program Increments (PI)</strong> de 8 à 12 semaines.</p>
-
-                    <div class="safe-levels">
-                        <div class="safe-level portfolio">
-                            <div class="safe-level-title">PORTFOLIO LEVEL</div>
-                            <div class="safe-level-content">Epics stratégiques / Budget Lean</div>
-                        </div>
-                        <div class="safe-arrow">↓</div>
-                        <div class="safe-level program">
-                            <div class="safe-level-title">PROGRAM LEVEL</div>
-                            <div class="safe-level-content">Agile Release Train (ART)</div>
-                            <div class="safe-level-content">PI Planning → Sprints → System Demo</div>
-                        </div>
-                        <div class="safe-arrow">↓</div>
-                        <div class="safe-level team">
-                            <div class="safe-level-title">TEAM LEVEL</div>
-                            <div class="safe-teams">
-                                <span class="safe-team">Équipe 1</span>
-                                <span class="safe-team">Équipe 2</span>
-                                <span class="safe-team">Équipe 3</span>
-                            </div>
-                        </div>
-                    </div>
-                    <p><strong>Usage :</strong> Projets SI de grande envergure (> 50 personnes), programmes multi-équipes, transformation digitale d'entreprise.</p>
-                </div>
-
-                <div id="tab-comparatif" class="tab-content">
-                    <h4>Tableau Comparatif des Méthodologies</h4>
-                    <table>
-                        <thead><tr><th>Critère</th><th>Cycle en V</th><th>Agile / Scrum</th><th>SAFe</th></tr></thead>
-                        <tbody>
-                            <tr><td>Taille projet</td><td>Moyen à Grand</td><td>Petit à Moyen</td><td>Grand à Très Grand</td></tr>
-                            <tr><td>Flexibilité</td><td>Faible</td><td>Très élevée</td><td>Élevée</td></tr>
-                            <tr><td>Documentation</td><td>Exhaustive</td><td>Minimale</td><td>Modérée</td></tr>
-                            <tr><td>Feedback client</td><td>Tardif (recette)</td><td>Continu (sprint review)</td><td>Régulier (PI demo)</td></tr>
-                            <tr><td>Adapté marchés publics</td><td>Oui (forfait)</td><td>Difficile</td><td>Possible (contrat cadre)</td></tr>
-                            <tr><td>Gestion du risque</td><td>Identifié en amont</td><td>Mitigé à chaque sprint</td><td>PI Risk Roster</td></tr>
-                            <tr><td>Durée type</td><td>6 - 18 mois</td><td>3 - 9 mois</td><td>12 - 36 mois</td></tr>
-                        </tbody>
-                    </table>
+                <h3 style="margin-top: 2rem;">Ressources</h3>
+                <div class="explore-grid">
+                    <a href="bibliographie.html" class="explore-card">
+                        <h3>Bibliographie</h3>
+                        <p>27 références académiques : normes ISO, PMBOK, CHAOS Report 2023, études sectorielles</p>
+                    </a>
+                    <a href="faq.html" class="explore-card">
+                        <h3>FAQ</h3>
+                        <p>15 questions fréquentes : TJM, différences MOA/AMOA, méthodologies, outils</p>
+                    </a>
                 </div>
             </section>
 
@@ -1603,45 +403,6 @@ On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 
                 </table>
             </section>
 
-            <!-- === SECTION 19: GLOSSAIRE === -->
-            <section id="glossaire">
-                <h2>18. Glossaire</h2>
-                <p>Définitions des termes et acronymes utilisés dans le domaine de l'AMOA et de la gestion de projet SI.</p>
-
-                <div class="glossary-grid">
-                    <div class="glossary-item"><div class="glossary-term">AMOA</div><div class="glossary-def">Assistance a Maitrise d'Ouvrage. Fonction de conseil et d'accompagnement du maitre d'ouvrage.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">MOA</div><div class="glossary-def">Maitrise d'Ouvrage. Entité porteuse du besoin et commanditaire du projet.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">MOE</div><div class="glossary-def">Maitrise d'Oeuvre. Entité en charge de la réalisation technique de la solution.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">CDC</div><div class="glossary-def">Cahier des Charges. Document contractuel décrivant l'ensemble des exigences du projet.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">VABF</div><div class="glossary-def">Vérification d'Aptitude au Bon Fonctionnement. Phase de validation de la conformité fonctionnelle.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">VSR</div><div class="glossary-def">Vérification de Service Régulier. Phase de validation du fonctionnement en conditions réelles sur une période définie.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">SLA</div><div class="glossary-def">Service Level Agreement. Engagement contractuel de niveau de service (disponibilité, performance, support).</div></div>
-                    <div class="glossary-item"><div class="glossary-term">COPIL</div><div class="glossary-def">Comité de Pilotage. Instance de décision stratégique du projet.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">COPROJ</div><div class="glossary-def">Comité de Projet. Instance de suivi opérationnel du projet.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">RACI</div><div class="glossary-def">Responsible, Accountable, Consulted, Informed. Matrice de clarification des rôles et responsabilités.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">TCO</div><div class="glossary-def">Total Cost of Ownership. Coût total de possession incluant acquisition, exploitation et maintenance.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">MAPA</div><div class="glossary-def">Marché a Procédure Adaptée. Procédure de passation de marché public simplifiée sous un seuil défini.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">RGPD</div><div class="glossary-def">Reglement Général sur la Protection des Données. Réglementation européenne sur la protection des données personnelles.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">DPO</div><div class="glossary-def">Data Protection Officer. Délégué à la Protection des Données, responsable de la conformité RGPD.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">POC</div><div class="glossary-def">Proof of Concept. Preuve de concept permettant de valider la faisabilité technique d'une solution.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">SaaS</div><div class="glossary-def">Software as a Service. Modèle de distribution logicielle via le cloud, accessible par abonnement.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">UAT</div><div class="glossary-def">User Acceptance Testing. Tests d'acceptation utilisateur, dernière phase de validation avant production.</div></div>
-                    <div class="glossary-item"><div class="glossary-term">RGAA</div><div class="glossary-def">Référentiel Général d'Amélioration de l'Accessibilité. Norme française d'accessibilité numérique.</div></div>
-                </div>
-            </section>
-
-            <section id="references" class="reference-box">
-                <h3>Références et Bibliographie</h3>
-                
-                <ul class="reference-list">
-                    <li>Code de la commande publique, Ordonnance n° 2018-1074 du 26 novembre 2018</li>
-                    <li>Règlement Général sur la Protection des Données (RGPD), Règlement UE 2016/679</li>
-                    <li>AFNOR, Norme NF Z67-108 : Assistance à maîtrise d'ouvrage de projets</li>
-                    <li>PMI, Guide PMBOK (Project Management Body of Knowledge), 7ème édition</li>
-                    <li>CIGREF, Référentiel des métiers du numérique, édition 2022</li>
-                    <li>Direction Interministérielle du Numérique (DINUM), Guide des bonnes pratiques en matière de marchés informatiques</li>
-                </ul>
-            </section>
         </main>
 
         <aside class="meta-sidebar">
@@ -1727,37 +488,33 @@ On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 
                 <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
             </div>
             <div>
-                <h4>Sections Principales</h4>
+                <h4>Fondamentaux</h4>
                 <ul>
-                    <li><a href="#definition">Definition et Perimetre</a></li>
-                    <li><a href="#analyse-risques">Analyse des Risques</a></li>
-                    <li><a href="#cahier-charges">Cahier des Charges</a></li>
-                    <li><a href="#methodologies">Methodologies</a></li>
-                    <li><a href="#gouvernance">Gouvernance Projet</a></li>
+                    <li><a href="definition.html">Definition & Perimetre</a></li>
+                    <li><a href="histoire.html">Histoire de l'AMOA</a></li>
+                    <li><a href="glossaire.html">Glossaire EN/FR</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Pratique</h4>
+                <ul>
+                    <li><a href="methodologies.html">Methodologies</a></li>
+                    <li><a href="outils.html">Outils & Templates</a></li>
+                    <li><a href="cas-pratiques.html">Etudes de Cas</a></li>
                 </ul>
             </div>
             <div>
                 <h4>Ressources</h4>
                 <ul>
-                    <li><a href="#cas-pratique">Cas Pratique Complet</a></li>
-                    <li><a href="#budget">Budget et Tarifs</a></li>
-                    <li><a href="#benchmark">Matrice de Choix</a></li>
-                    <li><a href="#glossaire">Glossaire</a></li>
-                    <li><a href="#references">References</a></li>
-                </ul>
-            </div>
-            <div>
-                <h4>Cadre Legal</h4>
-                <ul>
-                    <li><a href="#juridique">Marches et Contrats</a></li>
-                    <li><a href="#reglementation">Reglementation</a></li>
-                    <li><a href="https://www.cnil.fr" target="_blank">CNIL - RGPD</a></li>
-                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                    <li><a href="juridique.html">Cadre Juridique</a></li>
+                    <li><a href="formations.html">Certifications</a></li>
+                    <li><a href="bibliographie.html">Bibliographie</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
                 </ul>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+            <p>&copy; 2026 WikiAMOA - Encyclopedie collaborative | Contenu a vocation pedagogique</p>
         </div>
     </footer>
 

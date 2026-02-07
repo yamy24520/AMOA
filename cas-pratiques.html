@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cas Pratiques et Études de Cas - WikiAMOA</title>
+    <meta name="description" content="Cas pratiques complets en AMOA : reformulation du besoin, analyse des risques, budgétisation, rétroplanning, benchmark et études de cas détaillées.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.amoa-management.site/cas-pratiques.html" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="#contexte">Reformulation du Besoin</a>
+                    <ul>
+                        <li><a href="#contexte-enjeux">Contexte et Enjeux</a></li>
+                        <li><a href="#problematiques">Problématiques Identifiées</a></li>
+                        <li><a href="#objectifs">Objectifs du Projet</a></li>
+                        <li><a href="#contraintes">Contraintes Identifiées</a></li>
+                    </ul>
+                </li>
+                <li><a href="#analyse-risques">Analyse des Risques</a>
+                    <ul>
+                        <li><a href="#matrice-risques">Matrice Probabilité/Impact</a></li>
+                        <li><a href="#banque-risques">Banque de Risques</a></li>
+                    </ul>
+                </li>
+                <li><a href="#budget">Budget & Tarifs</a>
+                    <ul>
+                        <li><a href="#estimation-couts">Estimation des Coûts</a></li>
+                        <li><a href="#grille-tarifaire">Grille Tarifaire 2024-2025</a></li>
+                    </ul>
+                </li>
+                <li><a href="#planning">Rétroplanning</a>
+                    <ul>
+                        <li><a href="#phases-projet">Phases du Projet</a></li>
+                        <li><a href="#gantt">Diagramme de Gantt</a></li>
+                    </ul>
+                </li>
+                <li><a href="#benchmark">Matrice de Choix</a>
+                    <ul>
+                        <li><a href="#benchmark-solutions">Benchmark Solutions</a></li>
+                        <li><a href="#bareme-notation">Barème de Notation</a></li>
+                    </ul>
+                </li>
+                <li><a href="#cas-pratique">Cas Pratique Complet</a>
+                    <ul>
+                        <li><a href="#expression-besoin">Expression du Besoin</a></li>
+                        <li><a href="#reformulation-amoa">Reformulation AMOA</a></li>
+                        <li><a href="#budget-cas">Budget Détaillé</a></li>
+                    </ul>
+                </li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="formations.html">Formations</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1 class="article-title">Cas Pratiques et Études de Cas</h1>
+                <p class="article-subtitle">Études complètes : reformulation du besoin client, analyse des risques, budgétisation, rétroplanning, benchmark et cas pratiques détaillés</p>
+            </div>
+
+            <div class="explore-section">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Sections Connexes</h2>
+                <div class="explore-grid">
+                    <a href="index.html#definition" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre</p>
+                    </a>
+                    <a href="index.html#cahier-charges" class="explore-card">
+                        <h3>Cahier des Charges</h3>
+                        <p>Rédaction et spécifications</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics et contrats</p>
+                    </a>
+                    <a href="index.html#gouvernance" class="explore-card">
+                        <h3>Gouvernance Projet</h3>
+                        <p>Comités et instances de pilotage</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- SECTION 1: REFORMULATION DU BESOIN CLIENT -->
+            <section id="contexte">
+                <h2>1. Reformulation du Besoin Client</h2>
+
+                <p>La reformulation du besoin constitue une étape critique dans toute mission AMOA. Elle vise à traduire les attentes exprimées par le client en une expression de besoin claire, complète et exploitable par les équipes de maîtrise d'œuvre. Cette phase nécessite une capacité d'analyse et de synthèse permettant de dépasser la simple retranscription des propos du client pour enrichir la compréhension du contexte et des enjeux.</p>
+
+                <div class="note">
+                    <strong>Principe méthodologique :</strong> La reformulation ne doit pas se limiter à une paraphrase du discours initial. Elle doit identifier et expliciter les besoins implicites, déduire les contraintes non exprimées, et mettre en évidence les éléments de contexte qui orienteront les choix de solution.
+                </div>
+
+                <h3 id="contexte-enjeux">1.1 Contexte et Enjeux</h3>
+
+                <p>La phase de reformulation du besoin constitue le socle méthodologique de toute mission AMOA. Elle consiste à identifier précisément le contexte organisationnel du client, les volumes traités, et les dysfonctionnements du système existant.</p>
+
+                <p>Exemple de contexte type : <em>"[Nom du client], situé à [Lieu], est un acteur de [Secteur] gérant [Volume/Effectifs]. Le système actuel [Nom de l'existant] est devenu obsolète en raison de [Problème 1] et [Problème 2]."</em></p>
+
+                <h3 id="problematiques">1.2 Problématiques Identifiées</h3>
+
+                <p>L'analyse des problématiques repose sur trois axes structurants :</p>
+
+                <ul>
+                    <li><strong>Dysfonctionnements opérationnels :</strong> Erreurs de saisie, ruptures de flux, délais de traitement excessifs</li>
+                    <li><strong>Limites techniques :</strong> Obsolescence technologique, absence d'interopérabilité, manque de scalabilité</li>
+                    <li><strong>Impacts métier :</strong> Perte de productivité, insatisfaction utilisateur, non-conformité réglementaire</li>
+                </ul>
+
+                <h3 id="objectifs">1.3 Objectifs du Projet</h3>
+
+                <p>Les objectifs se déclinent selon trois dimensions complémentaires :</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Type d'objectif</th>
+                            <th>Description</th>
+                            <th>Exemple</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Fonctionnel</strong></td>
+                            <td>Automatisation de processus</td>
+                            <td>Automatiser 100% des réservations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Stratégique</strong></td>
+                            <td>Optimisation économique</td>
+                            <td>Réduire les coûts de 15%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Réglementaire</strong></td>
+                            <td>Conformité légale</td>
+                            <td>Conformité RGPD, Loi EGalim</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="contraintes">1.4 Contraintes Identifiées</h3>
+
+                <p>Toute mission AMOA intègre un triptyque de contraintes qu'il convient de formaliser dès l'initialisation :</p>
+
+                <ul>
+                    <li><strong>Budget :</strong> Enveloppe financière maximale allouée (ex: 150 000 € HT)</li>
+                    <li><strong>Délai :</strong> Date de livraison impérative (ex: 31/12/2026)</li>
+                    <li><strong>Techniques :</strong> Prérequis technologiques (ex: Solution SaaS, API REST, hébergement EU)</li>
+                </ul>
+            </section>
+
+            <!-- SECTION 2: ANALYSE DES RISQUES -->
+            <section id="analyse-risques">
+                <h2>2. Analyse des Risques</h2>
+
+                <p>L'analyse des risques constitue un pilier de la gouvernance projet. Elle repose sur une évaluation quantitative combinant probabilité d'occurrence (P) et impact potentiel (I), permettant de calculer un indice de criticité selon la formule : <strong>C = P × I</strong>.</p>
+
+                <p>Cette approche méthodologique permet de prioriser les actions de mitigation en fonction de l'exposition réelle du projet. Chaque risque identifié doit être assorti de mesures de prévention ou de réduction, définies de manière opérationnelle et assignées à un responsable.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Risque identifié</th>
+                            <th>P (1-4)</th>
+                            <th>I (1-4)</th>
+                            <th>Criticité</th>
+                            <th>Mesures de mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>R1</td>
+                            <td>Retard de livraison prestataire</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>12</td>
+                            <td>1. Pénalités contractuelles<br>2. Jalons intermédiaires<br>3. Suivi hebdomadaire</td>
+                        </tr>
+                        <tr>
+                            <td>R2</td>
+                            <td>Résistance au changement</td>
+                            <td>3</td>
+                            <td>3</td>
+                            <td>9</td>
+                            <td>1. Plan de formation<br>2. Référents métiers<br>3. Communication continue</td>
+                        </tr>
+                        <tr>
+                            <td>R3</td>
+                            <td>Non-conformité RGPD</td>
+                            <td>2</td>
+                            <td>4</td>
+                            <td>8</td>
+                            <td>1. Clause contractuelle DPO<br>2. Audit de sécurité<br>3. Notification 72h</td>
+                        </tr>
+                        <tr>
+                            <td>R4</td>
+                            <td>Dépassement budgétaire</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>6</td>
+                            <td>1. Provision aléas 10%<br>2. Comité de suivi mensuel<br>3. Marché forfaitaire</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Seuil d'alerte :</strong> Un risque dont la criticité C ≥ 8 nécessite une inscription au registre des risques et un plan d'action formalisé.
+                </div>
+
+                <h3 id="matrice-risques">2.1 Matrice Visuelle Probabilité / Impact</h3>
+                <div class="risk-matrix-grid">
+                    <div class="risk-label">Impact</div>
+                    <div class="risk-cell risk-yellow">4</div>
+                    <div class="risk-cell risk-orange">8</div>
+                    <div class="risk-cell risk-red">R3=8</div>
+                    <div class="risk-cell risk-red">R1=12</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">3</div>
+                    <div class="risk-cell risk-yellow">6</div>
+                    <div class="risk-cell risk-orange">R2=9</div>
+                    <div class="risk-cell risk-red">12</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">2</div>
+                    <div class="risk-cell risk-green">4</div>
+                    <div class="risk-cell risk-yellow">R4=6</div>
+                    <div class="risk-cell risk-orange">8</div>
+
+                    <div class="risk-label"></div>
+                    <div class="risk-cell risk-green">1</div>
+                    <div class="risk-cell risk-green">2</div>
+                    <div class="risk-cell risk-green">3</div>
+                    <div class="risk-cell risk-yellow">4</div>
+
+                    <div class="risk-label-h"></div>
+                    <div class="risk-label-h">1</div>
+                    <div class="risk-label-h">2</div>
+                    <div class="risk-label-h">3</div>
+                    <div class="risk-label-h">4</div>
+                </div>
+                <p style="text-align:center;font-size:0.85rem;color:var(--secondary);"><em>Axe horizontal : Probabilité | Axe vertical : Impact | Cases colorées : Vert (faible) > Jaune > Orange > Rouge (critique)</em></p>
+
+                <h3 id="banque-risques">2.2 Banque de Risques par Catégorie</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Risques types</th>
+                            <th>Contre-mesures types</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Planning</strong></td>
+                            <td>Retard livraison, indisponibilité ressources clés, dépendance tiers, sous-estimation charges</td>
+                            <td>Jalons contractuels, pénalités, suivi hebdomadaire, buffer planning, plan de repli</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Budget</strong></td>
+                            <td>Dépassement budgétaire, coûts cachés, évolution périmètre, révision prix</td>
+                            <td>Marché forfaitaire, provision aléas (5-10%), suivi mensuel, validation avenants COPIL</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Techniques</strong></td>
+                            <td>Problèmes d'intégration, performance insuffisante, connectivité réseau, compatibilité</td>
+                            <td>POC préalable, tests de charge, environnement recette, mode dégradé</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Humains</strong></td>
+                            <td>Résistance au changement, compétences insuffisantes, turnover, manque implication MOA</td>
+                            <td>Implication dès conception, formations adaptées, référents métier, support renforcé</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Fournisseur</strong></td>
+                            <td>Défaillance prestataire, qualité insuffisante, support déficient, pérennité solution</td>
+                            <td>Vérification solidité financière, clause réversibilité, code source en escrow</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Réglementaires</strong></td>
+                            <td>Non-conformité RGPD, violation données, évolution réglementation, audit négatif</td>
+                            <td>Audit conformité, clause notification 48h, certification ISO 27001, DPO identifié</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 3: BUDGET & TARIFS -->
+            <section id="budget">
+                <h2>3. Budget & Tarifs</h2>
+
+                <h3 id="estimation-couts">3.1 Estimation des Coûts</h3>
+
+                <p>L'estimation budgétaire constitue un exercice délicat qui conditionne la viabilité économique du projet. Elle doit être exhaustive et intégrer l'ensemble des postes de dépense prévisibles : prestations intellectuelles, licences logicielles, équipements matériels, et coûts récurrents de maintenance. La méthodologie repose sur une décomposition analytique par nature de prestation, permettant une traçabilité et une justification de chaque ligne budgétaire.</p>
+
+                <p>L'estimation doit s'appuyer sur des tarifs de marché actualisés et inclure systématiquement une provision pour aléas, généralement comprise entre 5% et 15% du montant total, dimensionnée en fonction du niveau d'incertitude et de la complexité du projet.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Poste de dépense</th>
+                            <th>Quantité (JH/Unités)</th>
+                            <th>PU HT</th>
+                            <th>Total HT</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Pilotage & AMOA</td>
+                            <td>30 JH</td>
+                            <td>800 €</td>
+                            <td>24 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Paramétrage & Développements</td>
+                            <td>60 JH</td>
+                            <td>650 €</td>
+                            <td>39 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Licences (Année 1)</td>
+                            <td>150 utilisateurs</td>
+                            <td>180 €</td>
+                            <td>27 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Formation utilisateurs</td>
+                            <td>8 JH</td>
+                            <td>1 000 €</td>
+                            <td>8 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Recette et validation</td>
+                            <td>15 JH</td>
+                            <td>750 €</td>
+                            <td>11 250 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SOUS-TOTAL</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>109 250 €</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Provision pour aléas (10%)</td>
+                            <td></td>
+                            <td></td>
+                            <td>10 925 €</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL PROJET HT</strong></td>
+                            <td></td>
+                            <td></td>
+                            <td><strong>120 175 €</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Note méthodologique :</strong> La provision pour aléas (10%) est une bonne pratique permettant d'absorber les écarts de réalisation sans déclencher d'avenant budgétaire systématique. Le taux peut être ajusté selon la complexité et l'incertitude du projet (5% à 20%).
+                </div>
+
+                <h3 id="grille-tarifaire">3.2 Grille Tarifaire de Référence (2024-2025)</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Élément</th>
+                            <th>Fourchette de prix</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">PRESTATIONS INTELLECTUELLES (Jour/Homme)</td>
+                        </tr>
+                        <tr>
+                            <td>Développement</td>
+                            <td>Développeur junior</td>
+                            <td>400 - 550 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Développement</td>
+                            <td>Développeur senior</td>
+                            <td>550 - 750 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Développement</td>
+                            <td>Développeur expert / Lead</td>
+                            <td>700 - 900 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Gestion de projet</td>
+                            <td>Chef de projet</td>
+                            <td>700 - 1 000 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Conseil</td>
+                            <td>Consultant fonctionnel</td>
+                            <td>700 - 1 000 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Conseil</td>
+                            <td>Consultant senior / Expert</td>
+                            <td>900 - 1 300 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Architecture</td>
+                            <td>Architecte technique</td>
+                            <td>900 - 1 300 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td>Formation</td>
+                            <td>Formateur</td>
+                            <td>800 - 1 500 €/jour</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">LICENCES & ABONNEMENTS</td>
+                        </tr>
+                        <tr>
+                            <td>SaaS</td>
+                            <td>Licence utilisateur / mois</td>
+                            <td>5 - 50 €/user/mois</td>
+                        </tr>
+                        <tr>
+                            <td>SaaS</td>
+                            <td>Setup initial plateforme</td>
+                            <td>5 000 - 30 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Cloud</td>
+                            <td>Hébergement serveur / mois</td>
+                            <td>100 - 500 €/mois</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>App iOS + Android (simple)</td>
+                            <td>10 000 - 25 000 €</td>
+                        </tr>
+                        <tr>
+                            <td>Mobile</td>
+                            <td>App iOS + Android (complexe)</td>
+                            <td>30 000 - 80 000 €</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">ÉQUIPEMENTS</td>
+                        </tr>
+                        <tr>
+                            <td>Matériel</td>
+                            <td>Borne tactile / tablette durcie</td>
+                            <td>500 - 1 500 €/unité</td>
+                        </tr>
+                        <tr>
+                            <td>Matériel</td>
+                            <td>Badge RFID</td>
+                            <td>0,80 - 2 €/unité</td>
+                        </tr>
+                        <tr>
+                            <td>Matériel</td>
+                            <td>Lecteur RFID</td>
+                            <td>50 - 200 €/unité</td>
+                        </tr>
+                        <tr>
+                            <td>Installation</td>
+                            <td>Installation sur site</td>
+                            <td>200 - 500 €/site</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" style="background: var(--primary); color: white; font-weight: 600;">MAINTENANCE ANNUELLE</td>
+                        </tr>
+                        <tr>
+                            <td>Logiciel</td>
+                            <td>Maintenance applicative</td>
+                            <td>15-20% du coût initial / an</td>
+                        </tr>
+                        <tr>
+                            <td>Support</td>
+                            <td>Support utilisateurs</td>
+                            <td>2 000 - 10 000 €/an</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 4: RÉTROPLANNING -->
+            <section id="planning">
+                <h2>4. Rétroplanning Global</h2>
+
+                <p>Le rétroplanning constitue l'outil de pilotage temporel du projet. Il structure l'enchaînement des phases, identifie les jalons de validation, et permet d'anticiper les ressources nécessaires à chaque étape. Sa construction s'effectue classiquement en partant de la date butoir de mise en production pour remonter vers la phase de cadrage, d'où son appellation de "rétroplanning".</p>
+
+                <h3 id="phases-projet">4.1 Phases du Projet</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>Activités principales</th>
+                            <th>Échéance</th>
+                            <th>Jalon</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1. Cadrage</td>
+                            <td>Réunion de lancement (Kick-off), validation des spécifications, contractualisation</td>
+                            <td>Mois 1</td>
+                            <td>✓ Lancement officiel</td>
+                        </tr>
+                        <tr>
+                            <td>2. Réalisation</td>
+                            <td>Paramétrage applicatif, développements spécifiques, intégrations API</td>
+                            <td>Mois 2-3</td>
+                            <td>—</td>
+                        </tr>
+                        <tr>
+                            <td>3. Recette</td>
+                            <td>Tests fonctionnels, tests de charge, corrections anomalies, VABF</td>
+                            <td>Mois 4</td>
+                            <td>✓ Recette validée</td>
+                        </tr>
+                        <tr>
+                            <td>4. Déploiement</td>
+                            <td>Migration des données, bascule production, formation utilisateurs finaux</td>
+                            <td>Mois 5</td>
+                            <td>🚀 Mise en production (GO LIVE)</td>
+                        </tr>
+                        <tr>
+                            <td>5. VSR</td>
+                            <td>Support post-déploiement, vérification service régulier, bilan projet</td>
+                            <td>Mois 6</td>
+                            <td>✓ Clôture administrative</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Acronymes :</strong> VABF = Vérification d'Aptitude au Bon Fonctionnement | VSR = Vérification de Service Régulier | GO LIVE = Mise en service effective
+                </div>
+
+                <h3 id="gantt">4.2 Diagramme de Gantt Simplifié</h3>
+                <div class="gantt-chart">
+                    <div class="gantt-months">
+                        <span>M1</span><span>M2</span><span>M3</span><span>M4</span><span>M5</span><span>M6</span>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Cadrage</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:0%;width:16.6%;background:#3498db;">M1</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Réalisation</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:16.6%;width:33.3%;background:#2ecc71;">M2-M3</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Recette</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:50%;width:16.6%;background:#e67e22;">M4</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">Déploiement</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:66.6%;width:16.6%;background:#e74c3c;">M5</div></div>
+                    </div>
+                    <div class="gantt-row">
+                        <div class="gantt-label">VSR</div>
+                        <div class="gantt-bar-container"><div class="gantt-bar" style="left:83.3%;width:16.6%;background:#9b59b6;">M6</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- SECTION 5: BENCHMARK / MATRICE DE CHOIX -->
+            <section id="benchmark">
+                <h2>5. Matrice de Choix / Benchmark Solutions</h2>
+
+                <h3 id="benchmark-solutions">5.1 Benchmark Solutions</h3>
+
+                <p>La matrice de choix est un outil d'aide à la décision permettant de comparer objectivement plusieurs solutions candidates selon des critères pondérés. Elle garantit la transparence et la traçabilité du processus de sélection, critères essentiels dans le cadre des marchés publics. La méthodologie repose sur l'identification de critères discriminants, leur pondération en fonction des priorités stratégiques, et l'évaluation de chaque solution selon un barème normalisé.</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critères de sélection</th>
+                            <th>Pondération</th>
+                            <th>Solution A (On-premise)</th>
+                            <th>Solution B (SaaS)</th>
+                            <th>Solution C (Hybride)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Couverture fonctionnelle</td>
+                            <td>40%</td>
+                            <td>4,5/5 (1,80)</td>
+                            <td>4,8/5 (1,92)</td>
+                            <td>4,2/5 (1,68)</td>
+                        </tr>
+                        <tr>
+                            <td>Ergonomie et UX</td>
+                            <td>20%</td>
+                            <td>3,5/5 (0,70)</td>
+                            <td>4,7/5 (0,94)</td>
+                            <td>4,0/5 (0,80)</td>
+                        </tr>
+                        <tr>
+                            <td>Coût global (TCO 3 ans)</td>
+                            <td>25%</td>
+                            <td>3,0/5 (0,75)</td>
+                            <td>4,5/5 (1,13)</td>
+                            <td>3,8/5 (0,95)</td>
+                        </tr>
+                        <tr>
+                            <td>Garanties Sécurité/RGPD</td>
+                            <td>15%</td>
+                            <td>4,8/5 (0,72)</td>
+                            <td>4,6/5 (0,69)</td>
+                            <td>4,5/5 (0,68)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SCORE TOTAL</strong></td>
+                            <td><strong>100%</strong></td>
+                            <td><strong>3,97/5</strong></td>
+                            <td><strong>4,68/5 ✓</strong></td>
+                            <td><strong>4,11/5</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Recommandation :</strong> La Solution B (SaaS) obtient le meilleur score global (4,68/5) et répond le mieux aux critères prioritaires de couverture fonctionnelle et d'ergonomie. Elle présente également un TCO optimisé sur 3 ans.
+                </div>
+
+                <h3 id="bareme-notation">5.2 Barème de Notation</h3>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Note</th>
+                            <th>Signification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0</td>
+                            <td>Non traité ou totalement inadapté</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Très insuffisant, lacunes majeures</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Partiel, améliorations significatives nécessaires</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Acceptable, conforme aux attentes minimales</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Bon, au-delà des attentes sur certains points</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>Excellent, valeur ajoutée significative</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- SECTION 6: CAS PRATIQUE COMPLET -->
+            <section id="cas-pratique">
+                <h2>6. Cas Pratique Complet</h2>
+                <p>Ce cas pratique illustre une mission AMOA complète, de l'expression du besoin initial jusqu'à la mise en production, dans le contexte d'une collectivité territoriale souhaitant moderniser son système de gestion de la restauration scolaire.</p>
+
+                <div class="case-study">
+                    <div class="case-study-header">
+                        <div class="case-study-icon">C</div>
+                        <div>
+                            <h4>Commune de Villeneuve-les-Bois (12 500 habitants)</h4>
+                            <p style="margin:0;color:var(--secondary);font-size:0.9rem;">Modernisation du SI de restauration scolaire - Budget : 95 000 EUR HT</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3 id="expression-besoin">6.1 Expression du Besoin Initial (Verbatim Client)</h3>
+                <div class="code-block" style="background:#2d2d2d;">
+<em>"On a un vieux logiciel sous Access qui plante tout le temps. Les parents appellent sans arrêt
+pour inscrire leurs enfants a la cantine. On perd des inscriptions, les factures sont fausses
+une fois sur trois, et on ne sait jamais combien de repas commander.
+Il nous faudrait un truc moderne, en ligne, ou les parents peuvent s'inscrire eux-memes.
+On a environ 1 800 eleves sur 6 ecoles, et 45 agents. Budget : on a vote 95 000 euros."</em>
+                </div>
+
+                <h3 id="reformulation-amoa">6.2 Reformulation AMOA Structurée</h3>
+                <p><strong>Contexte :</strong> La commune de Villeneuve-les-Bois (12 500 hab.) gère la restauration scolaire de <strong>1 800 élèves</strong> répartis sur <strong>6 groupes scolaires</strong> via un applicatif Access monoposte déployé en 2009, devenu obsolète et source de dysfonctionnements critiques impactant la qualité de service.</p>
+
+                <p><strong>Problématiques identifiées :</strong></p>
+                <ul>
+                    <li><strong>P1 - Fiabilité :</strong> Taux d'erreur de facturation estimé à 33%, générant des réclamations et un surcoût de traitement administratif</li>
+                    <li><strong>P2 - Accessibilité :</strong> Inscription uniquement par téléphone/guichet, créant des files d'attente et une charge excessive sur le secrétariat (estimée à 2 ETP)</li>
+                    <li><strong>P3 - Pilotage :</strong> Absence de prévisionnel fiable des commandes de repas, entraînant un gaspillage alimentaire estimé à 15%</li>
+                    <li><strong>P4 - Conformité :</strong> Non-conformité aux exigences RGPD (données sur serveur local non sécurisé) et Loi EGalim (pas de traçabilité des produits)</li>
+                </ul>
+
+                <p><strong>Objectifs SMART :</strong></p>
+                <table>
+                    <thead><tr><th>Réf</th><th>Objectif</th><th>Indicateur cible</th><th>Échéance</th></tr></thead>
+                    <tbody>
+                        <tr><td>O1</td><td>Dématérialiser 100% des inscriptions</td><td>0 inscription papier/téléphone</td><td>Rentrée 2026</td></tr>
+                        <tr><td>O2</td><td>Fiabiliser la facturation</td><td>Taux d'erreur < 1%</td><td>M+4</td></tr>
+                        <tr><td>O3</td><td>Optimiser les commandes de repas</td><td>Gaspillage < 5%</td><td>M+6</td></tr>
+                        <tr><td>O4</td><td>Mise en conformité RGPD et EGalim</td><td>Audit conforme</td><td>M+5</td></tr>
+                    </tbody>
+                </table>
+
+                <h3 id="budget-cas">6.3 Budget Détaillé du Cas</h3>
+                <table>
+                    <thead><tr><th>Poste</th><th>Détail</th><th>Montant HT</th></tr></thead>
+                    <tbody>
+                        <tr><td>Mission AMOA</td><td>20 JH x 800 EUR</td><td>16 000 EUR</td></tr>
+                        <tr><td>Licences SaaS (An 1)</td><td>1 800 élèves x 8 EUR</td><td>14 400 EUR</td></tr>
+                        <tr><td>Paramétrage / Intégration</td><td>35 JH x 650 EUR</td><td>22 750 EUR</td></tr>
+                        <tr><td>Reprise de données</td><td>10 JH x 650 EUR</td><td>6 500 EUR</td></tr>
+                        <tr><td>Formation</td><td>5 jours (agents + admin)</td><td>5 000 EUR</td></tr>
+                        <tr><td>Bornes tactiles (x6)</td><td>6 x 1 200 EUR</td><td>7 200 EUR</td></tr>
+                        <tr><td>Badges RFID</td><td>2 000 x 1,50 EUR</td><td>3 000 EUR</td></tr>
+                        <tr><td>Recette / VABF</td><td>10 JH x 750 EUR</td><td>7 500 EUR</td></tr>
+                        <tr><td><strong>Sous-total</strong></td><td></td><td><strong>82 350 EUR</strong></td></tr>
+                        <tr><td>Aléas (10%)</td><td></td><td>8 235 EUR</td></tr>
+                        <tr><td><strong>TOTAL</strong></td><td></td><td><strong>90 585 EUR</strong></td></tr>
+                    </tbody>
+                </table>
+                <div class="note"><strong>Marge résiduelle :</strong> 95 000 - 90 585 = 4 415 EUR de marge sur l'enveloppe votée, soit 4,6%. Conforme aux bonnes pratiques.</div>
+            </section>
+
+            <!-- Navigation vers autres sections -->
+            <div class="explore-section" style="margin-top: 3rem;">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Poursuivre la lecture</h2>
+                <div class="explore-grid">
+                    <a href="index.html#definition" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre d'intervention</p>
+                    </a>
+                    <a href="index.html#specifications" class="explore-card">
+                        <h3>Spécifications</h3>
+                        <p>Spécifications fonctionnelles et techniques</p>
+                    </a>
+                    <a href="index.html#methodologies" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile, SAFe, méthodes hybrides</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, contrats et réglementation</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="index.html#definition">Definition et Perimetre</a></li>
+                    <li><a href="#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="index.html#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="index.html#methodologies">Methodologies</a></li>
+                    <li><a href="index.html#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="#budget">Budget et Tarifs</a></li>
+                    <li><a href="#benchmark">Matrice de Choix</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Cadre Legal</h4>
+                <ul>
+                    <li><a href="juridique.html#juridique">Marches et Contrats</a></li>
+                    <li><a href="juridique.html#reglementation">Reglementation</a></li>
+                    <li><a href="https://www.cnil.fr" target="_blank">CNIL - RGPD</a></li>
+                    <li><a href="https://www.legifrance.gouv.fr" target="_blank">Legifrance</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>
