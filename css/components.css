@@ -781,3 +781,215 @@ body.dark-mode .comparison-table tbody tr:nth-child(even) {
     background: var(--bg-tertiary);
 }
 
+/* Explore Section */
+.explore-section {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.explore-card {
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--primary);
+    transition: all 0.2s ease;
+    border-radius: 4px;
+}
+
+.explore-card:hover {
+    border-color: var(--accent);
+    background: var(--bg-tertiary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.explore-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    color: var(--accent);
+}
+
+.explore-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary);
+    line-height: 1.4;
+}
+
+body.dark-mode .explore-section {
+    background: var(--bg-tertiary);
+}
+
+body.dark-mode .explore-card {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .explore-card:hover {
+    background: var(--bg-main);
+}
+
+/* Certification & Job Cards */
+.certification-card,
+.job-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.certification-card h4,
+.job-card h3 {
+    margin: 0 0 1rem 0;
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.cert-details ul,
+.job-card ul {
+    margin: 0.75rem 0;
+}
+
+body.dark-mode .certification-card,
+body.dark-mode .job-card {
+    background: var(--bg-tertiary);
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+    margin: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -2.5rem;
+    width: 2rem;
+    height: 2rem;
+    background: var(--bg-main);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+
+.timeline-content {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    border-radius: 4px;
+}
+
+.timeline-content h4 {
+    margin: 0 0 0.75rem 0;
+    color: var(--accent);
+}
+
+body.dark-mode .timeline-marker {
+    background: var(--bg-secondary);
+}
+
+body.dark-mode .timeline-content {
+    background: var(--bg-tertiary);
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.skill-category {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    border-radius: 4px;
+}
+
+.skill-category h3 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+}
+
+.skill-category ul {
+    margin: 0;
+}
+
+.skill-category li {
+    padding: 0.4rem 0;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.skill-category li:last-child {
+    border-bottom: none;
+}
+
+body.dark-mode .skill-category {
+    background: var(--bg-tertiary);
+}
+
+/* Organization Grid */
+.org-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.org-card {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    padding: 1.25rem;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.org-card h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--accent);
+    font-size: 1.05rem;
+}
+
+.org-card p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+body.dark-mode .org-card {
+    background: var(--bg-tertiary);
+}
+
