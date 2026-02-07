@@ -69,6 +69,7 @@
                     <ul>
                         <li><a href="#estimation-couts">Estimation des Coûts</a></li>
                         <li><a href="#grille-tarifaire">Grille Tarifaire 2024-2025</a></li>
+                        <li><a href="#capex-opex">CAPEX vs OPEX</a></li>
                     </ul>
                 </li>
                 <li><a href="#planning">Rétroplanning</a>
@@ -523,6 +524,156 @@
                             <td>Support</td>
                             <td>Support utilisateurs</td>
                             <td>2 000 - 10 000 €/an</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="capex-opex">CAPEX vs OPEX : Distinction Comptable</h3>
+
+                <p>La distinction entre CAPEX (Capital Expenditure) et OPEX (Operational Expenditure) est fondamentale pour la planification budgétaire et l'optimisation fiscale d'un projet SI. Elle impacte directement la comptabilité, la trésorerie et les décisions d'investissement.</p>
+
+                <div class="note">
+                    <strong>Principe comptable :</strong> Le CAPEX représente un investissement capitalisable inscrit à l'actif du bilan et amorti sur plusieurs années. L'OPEX représente une charge d'exploitation déductible immédiatement du résultat de l'exercice en cours.
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critère</th>
+                            <th>CAPEX (Capital Expenditure)</th>
+                            <th>OPEX (Operational Expenditure)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Définition</strong></td>
+                            <td>Dépenses d'investissement capitalisables</td>
+                            <td>Dépenses de fonctionnement récurrentes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Traitement comptable</strong></td>
+                            <td>Inscrit à l'actif du bilan, amorti sur 3-5 ans</td>
+                            <td>Déductible immédiatement en charges</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Impact trésorerie</strong></td>
+                            <td>Sortie importante en année N</td>
+                            <td>Sorties étalées et prévisibles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exemples SI</strong></td>
+                            <td>Licences perpétuelles, serveurs, développements spécifiques, infrastructures réseau</td>
+                            <td>Abonnements SaaS, maintenance, support, hébergement cloud, formations</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Approbation</strong></td>
+                            <td>Validation CODIR/CA (> seuil)</td>
+                            <td>Budget opérationnel annuel</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Flexibilité</strong></td>
+                            <td>Faible (engagement pluriannuel)</td>
+                            <td>Élevée (résiliation possible)</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4>Exemple de Répartition CAPEX/OPEX sur un Projet</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Poste de dépense</th>
+                            <th>Montant</th>
+                            <th>Type</th>
+                            <th>Justification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Développement application sur-mesure</td>
+                            <td>45 000 €</td>
+                            <td><span class="tag" style="background:#3498db;">CAPEX</span></td>
+                            <td>Actif immatériel capitalisable (amortissement 5 ans)</td>
+                        </tr>
+                        <tr>
+                            <td>Licences perpétuelles (SGBD)</td>
+                            <td>15 000 €</td>
+                            <td><span class="tag" style="background:#3498db;">CAPEX</span></td>
+                            <td>Droit d'usage illimité, amorti sur 3 ans</td>
+                        </tr>
+                        <tr>
+                            <td>Serveurs et infrastructure réseau</td>
+                            <td>8 000 €</td>
+                            <td><span class="tag" style="background:#3498db;">CAPEX</span></td>
+                            <td>Équipements tangibles, amortis sur 3 ans</td>
+                        </tr>
+                        <tr>
+                            <td>Abonnement SaaS (150 users × 12 mois)</td>
+                            <td>27 000 €/an</td>
+                            <td><span class="tag" style="background:#e67e22;">OPEX</span></td>
+                            <td>Charge récurrente, déductible annuellement</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance applicative (20% du dev)</td>
+                            <td>9 000 €/an</td>
+                            <td><span class="tag" style="background:#e67e22;">OPEX</span></td>
+                            <td>Prestations de service annuelles</td>
+                        </tr>
+                        <tr>
+                            <td>Support utilisateurs</td>
+                            <td>5 000 €/an</td>
+                            <td><span class="tag" style="background:#e67e22;">OPEX</span></td>
+                            <td>Charge de fonctionnement</td>
+                        </tr>
+                        <tr>
+                            <td>Hébergement cloud</td>
+                            <td>3 600 €/an</td>
+                            <td><span class="tag" style="background:#e67e22;">OPEX</span></td>
+                            <td>Facturation mensuelle à l'usage</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note">
+                    <strong>Tendance actuelle :</strong> Depuis l'essor du Cloud et du SaaS, on observe une transition progressive du modèle CAPEX (licences perpétuelles, infrastructures on-premise) vers un modèle OPEX (abonnements, pay-as-you-go). Cette évolution offre plus de flexibilité budgétaire mais peut augmenter le TCO (Total Cost of Ownership) à long terme.
+                </div>
+
+                <h4>Critères de Choix CAPEX vs OPEX</h4>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Situation</th>
+                            <th>Modèle recommandé</th>
+                            <th>Justification</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Startup / PME avec trésorerie limitée</td>
+                            <td><strong>OPEX</strong></td>
+                            <td>Pas d'investissement initial lourd, lissage des coûts</td>
+                        </tr>
+                        <tr>
+                            <td>Grande entreprise avec budget d'investissement</td>
+                            <td><strong>CAPEX</strong></td>
+                            <td>Optimisation fiscale via amortissements, contrôle total</td>
+                        </tr>
+                        <tr>
+                            <td>Projet expérimental / POC</td>
+                            <td><strong>OPEX</strong></td>
+                            <td>Flexibilité, possibilité d'arrêt sans perte d'actif</td>
+                        </tr>
+                        <tr>
+                            <td>Application critique à long terme (> 5 ans)</td>
+                            <td><strong>CAPEX</strong></td>
+                            <td>TCO plus faible sur longue durée</td>
+                        </tr>
+                        <tr>
+                            <td>Besoin de scalabilité rapide</td>
+                            <td><strong>OPEX</strong></td>
+                            <td>Cloud permet élasticité et paiement à l'usage</td>
                         </tr>
                     </tbody>
                 </table>
