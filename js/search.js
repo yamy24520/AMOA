@@ -99,7 +99,40 @@ const searchIndex = {
     }
 };
 
-function handleSearch(query) {
+// Cache pour stocker le contenu des pages déjà chargées
+const pageContentCache = {};
+
+async function loadPageContent(page) {
+    if (pageContentCache[page]) {
+        return pageContentCache[page];
+    }
+
+    try {
+        const response = await fetch(page);
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+
+        const sections = [];
+        doc.querySelectorAll('section[id]').forEach(section => {
+            const title = section.querySelector('h2, h3')?.textContent || '';
+            const content = section.textContent || '';
+            sections.push({
+                id: section.id,
+                title: title,
+                content: content
+            });
+        });
+
+        pageContentCache[page] = sections;
+        return sections;
+    } catch (error) {
+        console.error(`Erreur lors du chargement de ${page}:`, error);
+        return [];
+    }
+}
+
+async function handleSearch(query) {
     const resultsContainer = document.getElementById('searchResults');
 
     if (!query || query.length < 2) {
@@ -122,36 +155,32 @@ function handleSearch(query) {
                 page: null, // null = page courante
                 id: section.id,
                 title: title || section.id,
-                preview: content.substring(0, 100).trim() + '...'
+                preview: extractPreview(content, lowerQuery)
             });
         }
     });
 
-    // Recherche dans l'index des autres pages
-    Object.entries(searchIndex).forEach(([page, pageData]) => {
-        // Vérifier si le titre de la page correspond
-        if (pageData.title.toLowerCase().includes(lowerQuery)) {
-            results.push({
-                page: page,
-                id: null,
-                title: pageData.title,
-                preview: 'Page thématique WikiAMOA'
-            });
-        }
+    // Recherche dans toutes les autres pages
+    const searchPromises = Object.entries(searchIndex).map(async ([page, pageData]) => {
+        const sections = await loadPageContent(page);
 
-        // Vérifier chaque section de la page
-        pageData.sections.forEach(section => {
-            const searchText = `${section.title} ${section.keywords}`.toLowerCase();
-            if (searchText.includes(lowerQuery)) {
+        sections.forEach(section => {
+            const titleMatch = section.title.toLowerCase().includes(lowerQuery);
+            const contentMatch = section.content.toLowerCase().includes(lowerQuery);
+
+            if (titleMatch || contentMatch) {
                 results.push({
                     page: page,
                     id: section.id,
                     title: section.title,
-                    preview: `${pageData.title}`
+                    preview: extractPreview(section.content, lowerQuery),
+                    pageTitle: pageData.title
                 });
             }
         });
     });
+
+    await Promise.all(searchPromises);
 
     // Limiter les résultats à 10 pour ne pas surcharger
     const limitedResults = results.slice(0, 10);
@@ -171,8 +200,8 @@ function handleSearch(query) {
                 <div style="padding:0.75rem;border-bottom:1px solid var(--border);cursor:pointer;"
                      onclick="${onClick}">
                     <strong>${result.title}</strong>
-                    ${!isCurrentPage ? '<span style="font-size:11px;color:#666;margin-left:8px;">→ ' + result.preview + '</span>' : ''}
-                    <div style="font-size:12px;color:var(--secondary);margin-top:0.25rem;">${isCurrentPage ? result.preview : 'Cliquez pour accéder à cette page'}</div>
+                    ${!isCurrentPage ? '<span style="font-size:11px;color:#666;margin-left:8px;">→ ' + result.pageTitle + '</span>' : ''}
+                    <div style="font-size:12px;color:var(--secondary);margin-top:0.25rem;">${result.preview}</div>
                 </div>
             `;
         }).join('');
@@ -181,6 +210,24 @@ function handleSearch(query) {
         resultsContainer.innerHTML = '<div style="padding:0.75rem;color:var(--secondary);">Aucun résultat trouvé</div>';
         resultsContainer.style.display = 'block';
     }
+}
+
+function extractPreview(content, query) {
+    const lowerContent = content.toLowerCase();
+    const queryIndex = lowerContent.indexOf(query.toLowerCase());
+
+    if (queryIndex === -1) {
+        return content.substring(0, 100).trim() + '...';
+    }
+
+    const start = Math.max(0, queryIndex - 50);
+    const end = Math.min(content.length, queryIndex + query.length + 50);
+    let preview = content.substring(start, end).trim();
+
+    if (start > 0) preview = '...' + preview;
+    if (end < content.length) preview = preview + '...';
+
+    return preview;
 }
 
 // Fermer les résultats de recherche en cliquant ailleurs
