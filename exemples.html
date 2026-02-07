@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base de Données d'Exemples AMOA - WikiAMOA</title>
+    <meta name="description" content="Collection réutilisable d'exemples : risques projets, fonctionnalités métiers, exigences techniques et jalons de rétroplanning pour l'AMOA.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" href="assets/icons/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="shortcut icon" href="assets/icons/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.amoa-management.site/exemples.html" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.amoa-management.site/exemples.html">
+    <meta property="og:title" content="Base de Données d'Exemples AMOA - Risques, Fonctionnalités, Exigences">
+    <meta property="og:description" content="Collection réutilisable de 10 risques projets, fonctionnalités métiers, exigences techniques et 22 jalons de rétroplanning pour accélérer vos dossiers AMOA.">
+    <meta property="og:image" content="https://www.amoa-management.site/assets/og-image.jpg">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://www.amoa-management.site/exemples.html">
+    <meta name="twitter:title" content="Base de Données d'Exemples AMOA">
+    <meta name="twitter:description" content="Collection réutilisable de risques projets, fonctionnalités métiers, exigences techniques et jalons de rétroplanning.">
+    <meta name="twitter:image" content="https://www.amoa-management.site/assets/og-image.jpg">
+
+    <!-- Mots-clés SEO -->
+    <meta name="keywords" content="exemples AMOA, risques projet, fonctionnalités métiers, exigences techniques, jalons projet, rétroplanning, spécifications fonctionnelles, templates AMOA, cahier des charges, gestion de projet">
+
+    <!-- Robots meta -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Linux+Libertine:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/typography.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/encyclopedia.css">
+    <link rel="stylesheet" href="css/encyclopedia-override.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="reading-progress" id="readingProgress"></div>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Wiki<span class="logo-accent">AMOA</span></div>
+            <div class="search-bar">
+                <input type="text" placeholder="Rechercher dans l'encyclopedie..." id="searchInput" oninput="handleSearch(this.value)">
+                <div id="searchResults" style="position:absolute;background:var(--bg-main);border:1px solid var(--border);border-radius:6px;margin-top:4px;max-height:300px;overflow-y:auto;display:none;z-index:1001;width:100%;box-shadow:0 8px 24px rgba(0,0,0,0.15);"></div>
+            </div>
+            <button class="dark-toggle" onclick="toggleDarkMode()" id="darkToggle">Mode sombre</button>
+        </div>
+    </header>
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>Sommaire</h3>
+            <ul>
+                <li><a href="index.html">Retour à l'accueil</a></li>
+                <li><a href="outils.html">Outils & Templates</a></li>
+                <li><a href="#risques">Risques Projets</a></li>
+                <li><a href="#fonctionnalites">Fonctionnalités Métiers</a>
+                    <ul>
+                        <li><a href="#auth">Authentification</a></li>
+                        <li><a href="#workflow">Workflow</a></li>
+                        <li><a href="#reporting">Reporting</a></li>
+                    </ul>
+                </li>
+                <li><a href="#exigences">Exigences Techniques</a>
+                    <ul>
+                        <li><a href="#performance">Performance</a></li>
+                        <li><a href="#disponibilite">Disponibilité</a></li>
+                        <li><a href="#securite">Sécurité</a></li>
+                        <li><a href="#compatibilite">Compatibilité</a></li>
+                    </ul>
+                </li>
+                <li><a href="#jalons">Jalons & Rétroplanning</a></li>
+                <li><a href="bibliographie.html">Bibliographie</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="glossaire.html">Glossaire</a></li>
+                <li><a href="formations.html">Formations</a></li>
+            </ul>
+        </aside>
+
+        <main class="main-content">
+            <div class="article-header">
+                <h1 class="article-title">Base de Données d'Exemples</h1>
+                <p class="article-subtitle">Collection réutilisable d'exemples de risques, fonctionnalités fonctionnelles, exigences techniques et jalons pour accélérer vos dossiers AMOA</p>
+            </div>
+
+            <div class="explore-section">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Sections Connexes</h2>
+                <div class="explore-grid">
+                    <a href="outils.html" class="explore-card">
+                        <h3>Outils & Templates</h3>
+                        <p>Spécifications, cahier des charges et listes de contrôles</p>
+                    </a>
+                    <a href="cas-pratiques.html" class="explore-card">
+                        <h3>Cas Pratiques</h3>
+                        <p>Études complètes avec analyse des risques et budgets</p>
+                    </a>
+                    <a href="methodologies.html" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile, SAFe et méthodes hybrides</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, contrats et clauses essentielles</p>
+                    </a>
+                </div>
+            </div>
+
+            <!-- === BASE DE DONNEES D'EXEMPLES === -->
+            <section id="banque-exemples">
+                <p>Collection réutilisable d'exemples de risques, fonctionnalités fonctionnelles, exigences techniques et autres éléments récurrents dans les dossiers AMOA.</p>
+
+                <h2 id="risques">Banque de Risques Projets</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Risque</th>
+                            <th>Catégorie</th>
+                            <th>Probabilité</th>
+                            <th>Impact</th>
+                            <th>Mesures de Mitigation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Retard de livraison des développements</td>
+                            <td>Planning</td>
+                            <td>Élevée</td>
+                            <td>Majeur</td>
+                            <td>Planning avec buffer 20%, revues hebdomadaires, jalons intermédiaires</td>
+                        </tr>
+                        <tr>
+                            <td>Mauvaise qualité des spécifications</td>
+                            <td>Qualité</td>
+                            <td>Moyenne</td>
+                            <td>Critique</td>
+                            <td>Ateliers de co-construction métier, relecture croisée, prototypage</td>
+                        </tr>
+                        <tr>
+                            <td>Indisponibilité des experts métiers</td>
+                            <td>Ressources</td>
+                            <td>Moyenne</td>
+                            <td>Majeur</td>
+                            <td>Lettre d'engagement sponsor, prévisionnel de charge métier validé</td>
+                        </tr>
+                        <tr>
+                            <td>Sous-estimation du budget projet</td>
+                            <td>Budget</td>
+                            <td>Moyenne</td>
+                            <td>Critique</td>
+                            <td>Estimation par analogie, réserve pour imprévus 15%, suivi mensuel</td>
+                        </tr>
+                        <tr>
+                            <td>Résistance au changement des utilisateurs</td>
+                            <td>Conduite du changement</td>
+                            <td>Élevée</td>
+                            <td>Majeur</td>
+                            <td>Plan de communication, formation avant MEP, ambassadeurs métiers</td>
+                        </tr>
+                        <tr>
+                            <td>Défaillance technique du prestataire</td>
+                            <td>Fournisseur</td>
+                            <td>Faible</td>
+                            <td>Critique</td>
+                            <td>Clauses contractuelles, pénalités de retard, suivi qualimétrie</td>
+                        </tr>
+                        <tr>
+                            <td>Non-conformité RGPD</td>
+                            <td>Juridique</td>
+                            <td>Moyenne</td>
+                            <td>Critique</td>
+                            <td>PIA (Privacy Impact Assessment), DPO impliqué, audits de conformité</td>
+                        </tr>
+                        <tr>
+                            <td>Mauvaise qualité des données migrées</td>
+                            <td>Données</td>
+                            <td>Élevée</td>
+                            <td>Majeur</td>
+                            <td>Plan de reprise de données, nettoyage amont, recette migration</td>
+                        </tr>
+                        <tr>
+                            <td>Incompatibilité technologique SI existant</td>
+                            <td>Technique</td>
+                            <td>Moyenne</td>
+                            <td>Majeur</td>
+                            <td>Audit d'architecture préalable, POC technique, tests d'intégration</td>
+                        </tr>
+                        <tr>
+                            <td>Fuite de périmètre (scope creep)</td>
+                            <td>Gouvernance</td>
+                            <td>Élevée</td>
+                            <td>Majeur</td>
+                            <td>Baseline fonctionnelle figée, processus de demande de changement</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="fonctionnalites">Banque de Fonctionnalités Métiers (Exemples)</h2>
+                <div class="note">
+                    <strong>Usage :</strong> Exemples de fonctionnalités fonctionnelles réutilisables et adaptables à différents contextes métiers.
+                </div>
+
+                <h3 id="auth">Gestion des Utilisateurs et Authentification</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40%">Fonctionnalité</th>
+                            <th>Description</th>
+                            <th style="width:15%">Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Authentification SSO (Single Sign-On)</td>
+                            <td>Connexion unique via SAML 2.0 ou OpenID Connect avec le système d'authentification d'entreprise</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gestion des rôles et permissions</td>
+                            <td>Administration des profils utilisateurs avec matrice de droits granulaire (lecture, écriture, suppression, validation)</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Double authentification (2FA)</td>
+                            <td>Sécurisation renforcée par code SMS, TOTP (Google Authenticator) ou clé physique FIDO2</td>
+                            <td><span class="tag" style="background:#ff6600;">Moyenne</span></td>
+                        </tr>
+                        <tr>
+                            <td>Traçabilité des connexions</td>
+                            <td>Journalisation des authentications réussies/échouées avec IP, date/heure et appareil</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Réinitialisation mot de passe autonome</td>
+                            <td>Processus self-service avec validation par email/SMS et politique de complexité des mots de passe</td>
+                            <td><span class="tag" style="background:#ff6600;">Moyenne</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="workflow">Workflow et Processus Métier</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40%">Fonctionnalité</th>
+                            <th>Description</th>
+                            <th style="width:15%">Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Circuit de validation à n niveaux</td>
+                            <td>Workflow paramétrable avec validations séquentielles ou parallèles, délégations et suppléances</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Notifications automatiques</td>
+                            <td>Alertes par email, SMS ou push en temps réel sur événements métier (validation, refus, échéance)</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Gestion des pièces justificatives</td>
+                            <td>Upload multiformat (PDF, images, Office), scan automatique antivirus, archivage horodaté</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Historique et audit trail</td>
+                            <td>Traçabilité complète des actions (création, modification, validation) avec utilisateur, date et motif</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Règles métier automatisées</td>
+                            <td>Moteur de règles configurables sans développement (si montant > X alors validation niveau 2)</td>
+                            <td><span class="tag" style="background:#ff6600;">Moyenne</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="reporting">Reporting et Tableaux de Bord</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:40%">Fonctionnalité</th>
+                            <th>Description</th>
+                            <th style="width:15%">Priorité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tableau de bord temps réel</td>
+                            <td>Indicateurs clés mis à jour en temps réel avec graphiques interactifs (lignes, barres, camemberts)</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Exports multiformats</td>
+                            <td>Génération de rapports au format Excel, PDF, CSV avec mise en forme automatique</td>
+                            <td><span class="tag" style="background:#d33;">Haute</span></td>
+                        </tr>
+                        <tr>
+                            <td>Filtres et segments dynamiques</td>
+                            <td>Interface de filtrage multi-critères avec sauvegarde de vues personnalisées</td>
+                            <td><span class="tag" style="background:#ff6600;">Moyenne</span></td>
+                        </tr>
+                        <tr>
+                            <td>Planification d'envois automatiques</td>
+                            <td>Scheduleur de rapports programmés (quotidien, hebdomadaire, mensuel) par email</td>
+                            <td><span class="tag" style="background:#999;">Basse</span></td>
+                        </tr>
+                        <tr>
+                            <td>Drill-down et navigation hiérarchique</td>
+                            <td>Navigation du macro au micro (national → région → agence → utilisateur)</td>
+                            <td><span class="tag" style="background:#ff6600;">Moyenne</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="exigences">Banque d'Exigences Techniques</h2>
+
+                <h3 id="performance">Performance et Scalabilité</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:35%">Exigence</th>
+                            <th>Critère de Mesure</th>
+                            <th style="width:20%">Cible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Temps de réponse page</td>
+                            <td>Temps chargement complet (DOM ready)</td>
+                            <td>< 2 secondes</td>
+                        </tr>
+                        <tr>
+                            <td>Temps de réponse API</td>
+                            <td>Latence requête REST/GraphQL (P95)</td>
+                            <td>< 500 ms</td>
+                        </tr>
+                        <tr>
+                            <td>Utilisateurs simultanés</td>
+                            <td>Nombre de sessions actives sans dégradation</td>
+                            <td>> 500</td>
+                        </tr>
+                        <tr>
+                            <td>Transactions par seconde (TPS)</td>
+                            <td>Débit maximal soutenable</td>
+                            <td>> 100 TPS</td>
+                        </tr>
+                        <tr>
+                            <td>Taille maximale base de données</td>
+                            <td>Volume supporté sans ralentissement</td>
+                            <td>> 500 Go</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="disponibilite">Disponibilité et Résilience</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:35%">Exigence</th>
+                            <th>Critère de Mesure</th>
+                            <th style="width:20%">Cible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Disponibilité (SLA)</td>
+                            <td>Uptime mensuel</td>
+                            <td>99,9% (8h d'indispo/an max)</td>
+                        </tr>
+                        <tr>
+                            <td>RTO (Recovery Time Objective)</td>
+                            <td>Temps max de rétablissement après incident</td>
+                            <td>< 4 heures</td>
+                        </tr>
+                        <tr>
+                            <td>RPO (Recovery Point Objective)</td>
+                            <td>Perte de données max acceptable</td>
+                            <td>< 1 heure</td>
+                        </tr>
+                        <tr>
+                            <td>Sauvegarde automatique</td>
+                            <td>Fréquence backup full + incrémental</td>
+                            <td>Full hebdo + incr quotidien</td>
+                        </tr>
+                        <tr>
+                            <td>Redondance infrastructure</td>
+                            <td>Architecture haute disponibilité</td>
+                            <td>Multi-AZ ou multi-datacenter</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="securite">Sécurité et Conformité</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:35%">Exigence</th>
+                            <th>Critère de Mesure</th>
+                            <th style="width:20%">Cible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Chiffrement des données au repos</td>
+                            <td>Algorithme et niveau de chiffrement</td>
+                            <td>AES-256</td>
+                        </tr>
+                        <tr>
+                            <td>Chiffrement des échanges</td>
+                            <td>Protocole de transport sécurisé</td>
+                            <td>TLS 1.3 minimum</td>
+                        </tr>
+                        <tr>
+                            <td>Politique de mots de passe</td>
+                            <td>Complexité minimale</td>
+                            <td>12 car. min, maj/min/chiffre/spécial</td>
+                        </tr>
+                        <tr>
+                            <td>Délai d'expiration de session</td>
+                            <td>Timeout inactivité</td>
+                            <td>15 minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Journalisation sécurité</td>
+                            <td>Rétention logs d'audit</td>
+                            <td>6 mois minimum (RGPD)</td>
+                        </tr>
+                        <tr>
+                            <td>Tests de pénétration</td>
+                            <td>Fréquence des pentests</td>
+                            <td>Annuel + avant MEP majeure</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3 id="compatibilite">Compatibilité et Interopérabilité</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:35%">Exigence</th>
+                            <th>Critère de Mesure</th>
+                            <th style="width:20%">Cible</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Navigateurs supportés</td>
+                            <td>Compatibilité cross-browser</td>
+                            <td>Chrome, Firefox, Safari, Edge (2 dernières versions)</td>
+                        </tr>
+                        <tr>
+                            <td>Responsive design</td>
+                            <td>Adaptation écrans mobiles/tablettes</td>
+                            <td>Smartphone (360px), tablette (768px), desktop (1920px)</td>
+                        </tr>
+                        <tr>
+                            <td>Accessibilité</td>
+                            <td>Conformité WCAG</td>
+                            <td>WCAG 2.1 niveau AA / RGAA 4.1</td>
+                        </tr>
+                        <tr>
+                            <td>APIs documentées</td>
+                            <td>Documentation technique API</td>
+                            <td>OpenAPI 3.0 (Swagger) avec exemples</td>
+                        </tr>
+                        <tr>
+                            <td>Format d'échange de données</td>
+                            <td>Standards supportés</td>
+                            <td>JSON, XML, CSV</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="jalons">Banque de Jalons Projet (Rétroplanning)</h2>
+                <div class="note">
+                    <strong>Usage :</strong> Exemples de jalons projet réutilisables pour structurer un rétroplanning cohérent avec phases, livrables et instances de validation.
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:15%">Code Jalon</th>
+                            <th style="width:25%">Intitulé</th>
+                            <th style="width:35%">Livrables associés</th>
+                            <th style="width:25%">Instance de validation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>J0</strong></td>
+                            <td>Lancement officiel du projet</td>
+                            <td>Note de lancement, Charte projet, Planning macro</td>
+                            <td>COPIL de lancement</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J1</strong></td>
+                            <td>Validation du cadrage</td>
+                            <td>Note de cadrage, Analyse de l'existant, Macro-planning, Budget prévisionnel</td>
+                            <td>COPIL #1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J2</strong></td>
+                            <td>Validation de l'expression de besoins</td>
+                            <td>Document d'expression de besoins (DEB), User stories, Maquettes fonctionnelles</td>
+                            <td>Atelier de validation MOA/métiers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J3</strong></td>
+                            <td>Validation du Cahier des Charges</td>
+                            <td>Cahier des Charges Fonctionnel (CDCF), Spécifications fonctionnelles générales, Grille d'évaluation des offres</td>
+                            <td>COPIL #2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J4</strong></td>
+                            <td>Sélection du prestataire MOE</td>
+                            <td>Matrice de choix, Analyse comparative des offres, PV de sélection</td>
+                            <td>Comité de sélection</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J5</strong></td>
+                            <td>Signature du contrat MOE</td>
+                            <td>Contrat signé, Plan d'Assurance Qualité (PAQ), Convention de services</td>
+                            <td>Direction générale + Juridique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J6</strong></td>
+                            <td>Validation des spécifications détaillées</td>
+                            <td>Spécifications Fonctionnelles Détaillées (SFD), Cas d'usage détaillés, Maquettes validées</td>
+                            <td>COPROJ + Référents métiers</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J7</strong></td>
+                            <td>Validation de l'architecture technique</td>
+                            <td>Dossier d'Architecture Technique (DAT), Matrice de flux, Plan d'intégration</td>
+                            <td>COTECH</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J8</strong></td>
+                            <td>Recette de l'environnement de développement</td>
+                            <td>Procès-verbal d'installation, Tests d'infrastructure, Accès et droits configurés</td>
+                            <td>AMOA + DSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J9</strong></td>
+                            <td>Livraison Version 1 (MVP ou Sprint 1)</td>
+                            <td>Code source V1, Documentation technique, Release notes</td>
+                            <td>COPROJ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J10</strong></td>
+                            <td>Validation du plan de recette</td>
+                            <td>Stratégie de tests, Cahier de recette, Jeux de données de test, Planning de recette</td>
+                            <td>AMOA + MOA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J11</strong></td>
+                            <td>Début de la recette fonctionnelle</td>
+                            <td>Environnement de recette opérationnel, Données de test chargées</td>
+                            <td>COPROJ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J12</strong></td>
+                            <td>Validation du plan de migration des données</td>
+                            <td>Plan de reprise de données, Scripts de migration testés, Matrice de mapping</td>
+                            <td>COTECH + AMOA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J13</strong></td>
+                            <td>Validation VABF (Recette fonctionnelle)</td>
+                            <td>Procès-Verbal de VABF, Taux de conformité > 95%, Liste des réserves mineures</td>
+                            <td>COPIL #3</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J14</strong></td>
+                            <td>Validation du plan de formation</td>
+                            <td>Programme de formation, Supports pédagogiques, Planning des sessions</td>
+                            <td>MOA + RH</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J15</strong></td>
+                            <td>Fin des formations utilisateurs</td>
+                            <td>Feuilles d'émargement, Évaluations à chaud, Guides utilisateurs diffusés</td>
+                            <td>MOA + AMOA</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J16</strong></td>
+                            <td>Validation du plan de mise en production</td>
+                            <td>Run book de déploiement, Plan de bascule, Plan de rollback, Procédure de support</td>
+                            <td>COTECH + DSI</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J17</strong></td>
+                            <td>Autorisation de mise en production</td>
+                            <td>Go/No-Go décision, Checklist pré-MEP validée, Communication aux utilisateurs</td>
+                            <td>COPIL #4 (décisionnel)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J18</strong></td>
+                            <td>Mise en production (GO LIVE)</td>
+                            <td>Application en production, Migration données réelle effectuée, Support renforcé activé</td>
+                            <td>Cellule de crise MEP</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J19</strong></td>
+                            <td>Bilan post-démarrage (J+7)</td>
+                            <td>Rapport d'incidents, Statistiques d'usage, Points d'amélioration</td>
+                            <td>COPROJ</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J20</strong></td>
+                            <td>Validation VSR (Vérification Service Régulier)</td>
+                            <td>PV de VSR, Bilan de charge, Disponibilité mesurée, Levée des réserves VABF</td>
+                            <td>COPIL #5 (clôture)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J21</strong></td>
+                            <td>Transfert de compétences</td>
+                            <td>Documentation d'exploitation, Procédures de maintenance, Formation équipe support</td>
+                            <td>DSI + Support N2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>J22</strong></td>
+                            <td>Clôture administrative du projet</td>
+                            <td>Bilan projet (coûts, délais, qualité), REX (Retour d'expérience), Archivage documentaire</td>
+                            <td>COPIL final</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Exemple de Séquencement Temporel (Projet 6 mois)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Jalon</th>
+                            <th>Mois 1</th>
+                            <th>Mois 2</th>
+                            <th>Mois 3</th>
+                            <th>Mois 4</th>
+                            <th>Mois 5</th>
+                            <th>Mois 6</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>J0-J3 (Cadrage)</td>
+                            <td style="background:#e8f4f8;">●●●●</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>J4-J5 (Consultation)</td>
+                            <td></td>
+                            <td style="background:#fef3cd;">●●</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>J6-J9 (Conception & Dev)</td>
+                            <td></td>
+                            <td style="background:#d4edda;">●●</td>
+                            <td style="background:#d4edda;">●●●●</td>
+                            <td style="background:#d4edda;">●●</td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>J10-J13 (Recette)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="background:#fff3cd;">●●</td>
+                            <td style="background:#fff3cd;">●●●●</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>J14-J18 (Déploiement)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="background:#f8d7da;">●●</td>
+                            <td style="background:#f8d7da;">●●</td>
+                        </tr>
+                        <tr>
+                            <td>J19-J22 (Clôture)</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td style="background:#e2e3e5;">●●●●</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="note" style="margin-top:2rem;">
+                    <strong>💡 Usage recommandé :</strong> Cette base de données est un point de départ pour accélérer la rédaction de vos documents AMOA. Adaptez chaque exemple au contexte spécifique de votre projet en ajustant les priorités, les cibles et les critères de mesure. Pour le rétroplanning, ajustez le nombre et la nature des jalons selon la complexité et la durée de votre projet.
+                </div>
+            </section>
+
+            <!-- Navigation vers autres sections -->
+            <div class="explore-section" style="margin-top: 3rem;">
+                <h2 style="font-size: 1.3rem; margin-bottom: 1rem;">Poursuivre la lecture</h2>
+                <div class="explore-grid">
+                    <a href="definition.html" class="explore-card">
+                        <h3>Définition AMOA</h3>
+                        <p>Concepts fondamentaux et périmètre d'intervention</p>
+                    </a>
+                    <a href="cas-pratiques.html" class="explore-card">
+                        <h3>Cas Pratiques</h3>
+                        <p>Études complètes avec analyse des risques et budgets</p>
+                    </a>
+                    <a href="juridique.html" class="explore-card">
+                        <h3>Volet Juridique</h3>
+                        <p>Marchés publics, types de contrats et réglementation</p>
+                    </a>
+                    <a href="methodologies.html" class="explore-card">
+                        <h3>Méthodologies</h3>
+                        <p>Cycle en V, Agile, SAFe et approches hybrides</p>
+                    </a>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h4>WikiAMOA</h4>
+                <p style="font-size:0.9rem;">Encyclopedie de reference sur l'Assistance a Maitrise d'Ouvrage. Ressource pedagogique pour consultants et chefs de projet.</p>
+            </div>
+            <div>
+                <h4>Sections Principales</h4>
+                <ul>
+                    <li><a href="index.html#definition">Definition et Perimetre</a></li>
+                    <li><a href="index.html#analyse-risques">Analyse des Risques</a></li>
+                    <li><a href="outils.html#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="index.html#methodologies">Methodologies</a></li>
+                    <li><a href="index.html#gouvernance">Gouvernance Projet</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ressources</h4>
+                <ul>
+                    <li><a href="index.html#cas-pratique">Cas Pratique Complet</a></li>
+                    <li><a href="index.html#budget">Budget et Tarifs</a></li>
+                    <li><a href="index.html#benchmark">Matrice de Choix</a></li>
+                    <li><a href="glossaire.html">Glossaire</a></li>
+                    <li><a href="bibliographie.html">References</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Outils & Templates</h4>
+                <ul>
+                    <li><a href="outils.html#specifications">Specifications</a></li>
+                    <li><a href="outils.html#cahier-charges">Cahier des Charges</a></li>
+                    <li><a href="outils.html#controles">Liste de Controles</a></li>
+                    <li><a href="exemples.html">Base d'Exemples</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>WikiAMOA - Encyclopedie collaborative |  Contenu a vocation pedagogique</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/darkmode.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/stats.js"></script>
+    <script src="js/navigation.js"></script>
+</body>
+</html>

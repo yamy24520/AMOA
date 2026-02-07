@@ -1,0 +1,32 @@
+# robots.txt pour WikiAMOA
+# Site web encyclopédique sur l'Assistance à Maîtrise d'Ouvrage
+
+# Autoriser tous les robots de recherche
+User-agent: *
+Allow: /
+
+# Priorités pour Google et Bing
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Bloquer l'accès aux fichiers système et techniques
+Disallow: /.git/
+Disallow: /.github/
+Disallow: /.vscode/
+Disallow: /.claude/
+Disallow: /node_modules/
+Disallow: *.backup
+Disallow: *.log
+
+# Autoriser explicitement les assets
+Allow: /assets/
+Allow: /css/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://www.amoa-management.site/sitemap.xml

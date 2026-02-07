@@ -1,0 +1,36 @@
+# humanstxt.org/
+# Les humains derrière ce site
+
+/* ÉQUIPE */
+    Développeur / Designer : Corport
+    Site : WikiAMOA
+    Twitter / X : @wikioamoa
+    Localisation : France
+
+/* SITE */
+    Standards : HTML5, CSS3, JavaScript ES6
+    Composants : Design système personnalisé
+    Logiciels : VS Code, Git, Claude Code
+    Typographie : Linux Libertine (Google Fonts)
+    Couleurs : Palette personnalisée avec thème clair/sombre
+    Accessibilité : WCAG 2.1 AA
+
+/* REMERCIEMENTS */
+    Inspiré par Wikipedia pour la présentation encyclopédique
+    Communauté AMOA pour l'expertise métier
+    Utilisateurs pour leurs retours précieux
+
+/* TECHNIQUES */
+    Framework : Vanilla JavaScript (zéro dépendance)
+    Architecture : HTML statique, CSS modulaire
+    SEO : Optimisation complète (sitemap, robots, meta tags)
+    Performance : Compression GZIP, cache optimisé
+    Sécurité : Headers HTTP sécurisés, HTTPS obligatoire
+
+/* DERNIÈRE MISE À JOUR */
+    Date : 2026-02-07
+    Version : 2.0
+
+/* CONTACT */
+    Email : contact@amoa-management.site
+    Site : https://www.amoa-management.site
